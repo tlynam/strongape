@@ -1,0 +1,38 @@
+<%= form_for(@date_of_workout) do |date_of_workout_fields| %>
+  <% if @date_of_workout.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@date_of_workout.errors.count, "error") %> prohibited this date_of_workout from being saved:</h2>
+
+      <ul>
+      <% @date_of_workout.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <h1>Workout Date <%= date_of_workout_fields.text_field :date_of_workouts, :style=>"background-color : #65B249", :size => 7, :class => "datepicker" %></h1>
+  </div>
+
+<div class ="fields">
+  <div class="workout">
+  <%= date_of_workout_fields.fields_for :exercises do |builder| %>
+    <%= render 'exercise_fields', :f => builder %>
+  <% end %>
+  <div class="add_exercise_button"><%= link_to_add_fields "Add Exercises", date_of_workout_fields, :exercises %> Exercise</div>
+  </div>
+</div>
+  
+
+  <div class="actions">
+    <%= date_of_workout_fields.submit "Save Workout" %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  jQuery(function() {
+	jQuery(".datepicker").datepicker();
+	return false;
+  });
+</script>

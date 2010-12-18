@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+  <%= @date_of_workout.date_of_workouts.strftime("%B %e %Y") %>
+
+        <div class="fields">
+          <% @exercises = Exercise.find_all_by_workout_id(@date_of_workout.id) %>
+          <% @exercises.each do |exercise| %>
+            <%= exercise.name %>
+
+            <div class="fields">
+              <%  @exercise_groups = ExerciseGroup.find_all_by_exercise_id(exercise.id) %>
+              <% @exercise_groups.each do |exercise_group| %>
+                <%= exercise_group.sets %> Sets
+                <%= exercise_group.reps %> Reps<br/>
+                Wt or Dist: <%= exercise_group.weight %>
+                or <%= exercise_group.percentage_of_max %>% of Max<br/>
+                Desc <%= exercise_group.description %></br>
+              <% end %>
+            </div>
+
+          <% end %>
+        </div>
+
+
+<%= link_to 'Edit', edit_date_of_workout_path(@date_of_workout) %> |
+<%= link_to 'Back', date_of_workouts_path %>

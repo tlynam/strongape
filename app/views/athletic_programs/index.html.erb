@@ -1,0 +1,22 @@
+<h1>Programs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @athletic_programs.each do |athletic_program| %>
+  <tr>
+    <td><%= link_to athletic_program.program_name, athletic_program %></td>
+    <td><%= link_to 'Edit', edit_athletic_program_path(athletic_program) %></td>
+    <td><%= link_to 'Delete', athletic_program, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Program', new_athletic_program_path %>

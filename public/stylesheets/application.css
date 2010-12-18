@@ -1,0 +1,151 @@
+body {
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+  background: url(/images/Forested_Mountainside.jpg);
+}
+
+#container {
+  width: 75%;
+  margin-left: 150px;
+  font-size: 12px;
+}
+
+#binder {
+  width: 75%;
+  margin: auto;
+  background: url(/images/middle2.png);
+  background-repeat:repeat-y;
+  font-size: 12px;
+  padding: 10px 40px 50px 40px;
+}
+
+#header {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  background: url(/images/top2.png);
+  background-size: 100%;
+  padding-right: 40px;
+  padding-left: 40px;
+  -moz-border-radius-topright: 25px 50px;
+  border-top-right-radius: 25px 50px;
+  background-position:center-bottom;
+}
+
+#footer {
+  width: 75%;
+  margin: auto;
+  background: url(/images/top2.png);
+  background-size: 100%;
+  padding-right: 40px;
+  padding-left: 40px;
+  -moz-border-radius-bottomright: 25px 50px;
+  border-bottom-right-radius: 25px 50px;
+  background-position:center-top;
+}
+
+#bottom {
+  padding-top: 12px;
+  font-size: 12px;
+  text-align: center;
+}
+
+#flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.clear {
+  clear: both;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+.colors, .task, .tag{border-left:10px solid #eee; padding-left:10px;}
+.task{border-color:#999; margin:2em 0;}
+
+h1 {
+font-size: 16px;
+color: darkgreen;
+font-weight: bold;
+margin-top: 0px;
+margin-bottom: 3px;
+}
+
+h2 {
+font-size: 14px;
+color: #488C3B;
+font-weight: bold;
+margin-top: 0px;
+margin-bottom: 3px;
+}
+
+.fields{
+    margin-left: 5em;
+}
+
+.workout{
+    margin-left: -5em;
+}
+
+.add_button{
+    margin-left: 3em;
+
+}
+
+.add_exercise_button{
+    margin-left: 10em;
+}
+
+.add_exercise_group_button{
+    margin-left: 15em;
+}
+
+#gorilla{
+    width: 75%;
+    margin-left: 20%;
+    margin-bottom: -5px;
+}
+
+img{
+  border-style: none;
+}

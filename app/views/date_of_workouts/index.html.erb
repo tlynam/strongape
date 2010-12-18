@@ -1,0 +1,22 @@
+<div class="notebook">
+
+<h1>Workouts</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+  </tr>
+
+<% @date_of_workouts.each do |date_of_workout| %>
+  <tr>
+    <td><%= link_to date_of_workout.date_of_workouts.strftime("%B %e %Y"), date_of_workout %></td>
+    <td><%= link_to 'Edit', edit_date_of_workout_path(date_of_workout) %></td>
+    <td><%= link_to 'Delete', date_of_workout, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Date', new_date_of_workout_path %>
+</div>

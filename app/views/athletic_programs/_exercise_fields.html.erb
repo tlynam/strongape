@@ -1,0 +1,11 @@
+<div class ="fields">
+  <p>
+    <%= f.label :name, "Exercise" %>
+    <%= f.text_field :name, :style=>"background-color : #488C3B", :size => 15 %>
+    <%= link_to_remove_fields "remove", f %><br/>
+  </p>
+  <%= f.fields_for :exercise_groups do |builder| %>
+    <%= render 'exercise_group_fields', :f => builder %>
+  <% end %>
+  <div class="add_exercise_group_button"><%= link_to_add_fields "Add Exercise Group", f, :exercise_groups %> Specifics</div>
+</div>

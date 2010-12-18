@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= @athletic_program.program_name %>
+</p>
+
+    <div class="fields">
+      <% @workouts = Workout.find_all_by_id(@athletic_program.id) %>
+      <% @workouts.each do |workout| %>
+        <%= workout.workout_time.strftime("%B %e %Y") %>
+
+        <div class="fields">
+          <% @exercises = Exercise.find_all_by_workout_id(workout.id) %>
+          <% @exercises.each do |exercise| %>
+            <%= exercise.name %>
+
+            <div class="fields">
+              <%  @exercise_groups = ExerciseGroup.find_all_by_exercise_id(exercise.id) %>
+              <% @exercise_groups.each do |exercise_group| %>
+                <%= exercise_group.sets %> Sets
+                <%= exercise_group.reps %> Reps<br/>
+                Wt or Dist: <%= exercise_group.weight %>
+                or <%= exercise_group.percentage_of_max %>% of Max<br/>
+                Desc <%= exercise_group.description %></br>
+              <% end %>
+            </div>
+
+          <% end %>
+        </div>
+
+      <% end %>
+    </div>
+
+<%= link_to 'Edit', edit_athletic_program_path(@athletic_program) %> |
+<%= link_to 'Back', athletic_programs_path %>

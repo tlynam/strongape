@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  program_name: MyString
+  number_of_weeks: 1
+
+two:
+  program_name: MyString
+  number_of_weeks: 1

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  program_week_id: 1
+  workout_day_name: MyString
+  workout_number: 1
+  number_of_exercises: 1
+
+two:
+  program_week_id: 1
+  workout_day_name: MyString
+  workout_number: 1
+  number_of_exercises: 1

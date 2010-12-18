@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  workout_id: 1
+  exercise_name: MyString
+  exercise_number: 1
+  number_of_exercise_groups: 1
+
+two:
+  workout_id: 1
+  exercise_name: MyString
+  exercise_number: 1
+  number_of_exercise_groups: 1

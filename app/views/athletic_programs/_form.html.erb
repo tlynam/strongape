@@ -1,0 +1,26 @@
+<%= form_for(@athletic_program) do |athletic_program_fields| %>
+
+  <% if @athletic_program.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@athletic_program.errors.count, "error") %> prohibited this athletic_program from being saved:</h2>
+      <ul>
+      <% @athletic_program.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<h1><%= athletic_program_fields.label :program_name, "Program Name" %><%= athletic_program_fields.text_field :program_name, :size => 23, :style=>"background-color : #94E470" %></h1>
+
+    <%= athletic_program_fields.fields_for :workouts do |builder| %>
+      <%= render 'workout_fields', :f => builder %>
+    <% end %>
+    <div class="add_button"><%= link_to_add_workout "Workout", athletic_program_fields, :workouts %> Date</div>
+
+  <br/>
+  <div class="actions">
+    <%= athletic_program_fields.submit "Save Program" %>
+  </div>
+
+<% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  athletic_program_id: 1
+  number_of_days: 1
+  week_number: 1
+
+two:
+  athletic_program_id: 1
+  number_of_days: 1
+  week_number: 1
