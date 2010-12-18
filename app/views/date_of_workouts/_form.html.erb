@@ -20,7 +20,7 @@
   <%= date_of_workout_fields.fields_for :exercises do |builder| %>
     <%= render 'exercise_fields', :f => builder %>
   <% end %>
-  <div class="add_exercise_button"><%= link_to_add_fields "Add Exercises", date_of_workout_fields, :exercises %> Exercise</div>
+  <div class="add_exercise_button"><%= link_to_add_fields "Add Exercises", date_of_workout_fields, :exercises %>
   </div>
 </div>
   

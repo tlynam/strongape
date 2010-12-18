@@ -14,9 +14,10 @@ body {
   width: 75%;
   margin: auto;
   background: url(/images/middle2.png);
+  background-size: 100%;
   background-repeat:repeat-y;
   font-size: 12px;
-  padding: 10px 40px 50px 40px;
+  padding-bottom: 20px;
 }
 
 #header {
@@ -25,8 +26,7 @@ body {
   margin-right: auto;
   background: url(/images/top2.png);
   background-size: 100%;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding: auto;
   -moz-border-radius-topright: 25px 50px;
   border-top-right-radius: 25px 50px;
   background-position:center-bottom;
@@ -37,8 +37,7 @@ body {
   margin: auto;
   background: url(/images/top2.png);
   background-size: 100%;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding: auto;
   -moz-border-radius-bottomright: 25px 50px;
   border-bottom-right-radius: 25px 50px;
   background-position:center-top;
@@ -133,7 +132,14 @@ margin-bottom: 3px;
 }
 
 .add_exercise_button{
-    margin-left: 10em;
+    margin-left: 5em;
+    padding: 5px;
+}
+
+.exercise_text{
+    position: relative;
+    z-index: -1;
+    margin-left: -7em;
 }
 
 .add_exercise_group_button{
@@ -141,11 +147,14 @@ margin-bottom: 3px;
 }
 
 #gorilla{
-    width: 75%;
     margin-left: 20%;
-    margin-bottom: -5px;
 }
 
 img{
   border-style: none;
+}
+
+img.expand{
+    width: 70%;
+    margin-bottom: -4px;
 }
