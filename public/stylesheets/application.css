@@ -158,3 +158,12 @@ img.expand{
     width: 70%;
     margin-bottom: -4px;
 }
+
+#homepage {
+  width: 100%;
+  background-color: lightgreen;
+  padding: 30px;
+  margin-right: 30px;
+  text-align: left;
+  font-size: 20px;
+}
