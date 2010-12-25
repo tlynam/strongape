@@ -43,7 +43,7 @@ production:
   reconnect: false
   database: strong_ape_production
   pool: 5
-  username: root
-  password: funnydb^
+  username: tlynam
+  password: S1102LHarry
   socket: /var/run/mysqld/mysqld.sock
 

@@ -8,7 +8,9 @@
   <%= f.fields_for :exercises do |builder| %>
     <%= render 'exercise_fields', :f => builder %>
   <% end %>
-  <div class="add_exercise_button"><%= link_to_add_fields "Add Exercises", f, :exercises %> Exercise</div>
+  <div class="add_exercise_button"><%= link_to_add_fields "Add Exercises", f, :exercises %>
+    <div class="add_exercise_button2"<%= link_to_add_fields2 "Add Exercise", f, :exercises %></div>
+  </div>
   </div>
 </div>
 

@@ -7,7 +7,7 @@ body {
 #container {
   width: 75%;
   margin-left: 150px;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 #binder {
@@ -34,7 +34,8 @@ body {
 
 #footer {
   width: 75%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   background: url(/images/top2.png);
   background-size: 100%;
   padding: auto;
@@ -128,12 +129,29 @@ margin-bottom: 3px;
 
 .add_button{
     margin-left: 3em;
+    padding: 5px;
+    margin-top: 25px;
+    border-style: dashed;
+    border-width: 1px;
+    width: 139px;
+}
 
+.add_button2{
+    margin-top: -23px;
+    margin-left: 20px;
 }
 
 .add_exercise_button{
     margin-left: 5em;
     padding: 5px;
+    border-style: dashed;
+    border-width: 1px;
+    width: 139px;
+}
+
+.add_exercise_button2{
+    margin-top: -23px;
+    margin-left: 20px;
 }
 
 .exercise_text{
@@ -144,6 +162,15 @@ margin-bottom: 3px;
 
 .add_exercise_group_button{
     margin-left: 15em;
+    padding: 5px;
+    border-style: dashed;
+    border-width: 1px;
+    width: 200px;
+}
+
+.add_exercise_group_button2{
+    margin-top: -23px;
+    margin-left: 20px;
 }
 
 #gorilla{
