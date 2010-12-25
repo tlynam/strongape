@@ -7,7 +7,7 @@ body {
 #container {
   width: 75%;
   margin-left: 150px;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 #binder {
@@ -68,38 +68,30 @@ margin-bottom: 3px;
 
 .fields{
     margin-left: 5em;
+    line-height: 180%;
 }
 
 .add_workout_button{
     margin-left: 3em;
-    padding: 5px;
-    margin-top: 25px;
-    border-style: dashed;
-    border-width: 1px;
-    width: 105px;
 }
 
 .add_exercise_button{
     margin-left: 5em;
-    padding: 5px;
-    border-style: dashed;
-    border-width: 1px;
-    width: 155px;
-    text-decoration: none;
 }
 
 .add_exercise_group_button{
     margin-left: 15em;
-    padding: 5px;
-    border-style: dashed;
-    border-width: 1px;
-    width: 205px;
 }
 
 /* unvisited link */
 a:link{
     text-decoration: none;
     color: black;
+    border-width: 1px;
+    border-color: black;
+    border-style: dashed;
+    padding-right: 4px;
+    padding-left: 4px;
 }
 
 #gorilla{

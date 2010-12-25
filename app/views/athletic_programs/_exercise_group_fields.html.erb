@@ -3,5 +3,5 @@
   Reps<%= f.select :reps, (1..20), {} %>
   Wt or Dist <%= f.text_field :weight , :size => 4, :style => "background-color : #1F6617" %> or <%= f.select :percentage_of_max, (0..100).step(5), {} %>% Max<br/>
   Desc <%= f.text_field :description, :size => 38, :style => "background-color : #1F6617" %>
-  <%= link_to_remove_fields "remove", f %><br/>
+  <%= link_to_remove_fields "Delete", f %><br/>
 </p>
