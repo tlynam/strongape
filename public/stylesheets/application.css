@@ -50,6 +50,82 @@ body {
   text-align: center;
 }
 
+h1 {
+font-size: 16px;
+color: darkgreen;
+font-weight: bold;
+margin-top: 0px;
+margin-bottom: 3px;
+}
+
+h2 {
+font-size: 14px;
+color: #488C3B;
+font-weight: bold;
+margin-top: 0px;
+margin-bottom: 3px;
+}
+
+.fields{
+    margin-left: 5em;
+}
+
+.add_workout_button{
+    margin-left: 3em;
+    padding: 5px;
+    margin-top: 25px;
+    border-style: dashed;
+    border-width: 1px;
+    width: 105px;
+}
+
+.add_exercise_button{
+    margin-left: 5em;
+    padding: 5px;
+    border-style: dashed;
+    border-width: 1px;
+    width: 155px;
+    text-decoration: none;
+}
+
+.add_exercise_group_button{
+    margin-left: 15em;
+    padding: 5px;
+    border-style: dashed;
+    border-width: 1px;
+    width: 205px;
+}
+
+/* unvisited link */
+a:link{
+    text-decoration: none;
+    color: black;
+}
+
+#gorilla{
+    margin-left: 20%;
+}
+
+img{
+  border-style: none;
+}
+
+img.expand{
+    width: 70%;
+    margin-bottom: -4px;
+}
+
+#homepage {
+  width: 100%;
+  background-color: lightgreen;
+  padding: 30px;
+  margin-right: 30px;
+  text-align: left;
+  font-size: 20px;
+}
+
+/* Crap I don't understand */
+
 #flash_notice, #flash_error {
   padding: 5px 8px;
   margin: 10px 0;
@@ -102,95 +178,3 @@ body {
 
 .colors, .task, .tag{border-left:10px solid #eee; padding-left:10px;}
 .task{border-color:#999; margin:2em 0;}
-
-h1 {
-font-size: 16px;
-color: darkgreen;
-font-weight: bold;
-margin-top: 0px;
-margin-bottom: 3px;
-}
-
-h2 {
-font-size: 14px;
-color: #488C3B;
-font-weight: bold;
-margin-top: 0px;
-margin-bottom: 3px;
-}
-
-.fields{
-    margin-left: 5em;
-}
-
-.workout{
-    margin-left: -5em;
-}
-
-.add_button{
-    margin-left: 3em;
-    padding: 5px;
-    margin-top: 25px;
-    border-style: dashed;
-    border-width: 1px;
-    width: 139px;
-}
-
-.add_button2{
-    margin-top: -23px;
-    margin-left: 20px;
-}
-
-.add_exercise_button{
-    margin-left: 5em;
-    padding: 5px;
-    border-style: dashed;
-    border-width: 1px;
-    width: 139px;
-}
-
-.add_exercise_button2{
-    margin-top: -23px;
-    margin-left: 20px;
-}
-
-.exercise_text{
-    position: relative;
-    z-index: -1;
-    margin-left: -7em;
-}
-
-.add_exercise_group_button{
-    margin-left: 15em;
-    padding: 5px;
-    border-style: dashed;
-    border-width: 1px;
-    width: 200px;
-}
-
-.add_exercise_group_button2{
-    margin-top: -23px;
-    margin-left: 20px;
-}
-
-#gorilla{
-    margin-left: 20%;
-}
-
-img{
-  border-style: none;
-}
-
-img.expand{
-    width: 70%;
-    margin-bottom: -4px;
-}
-
-#homepage {
-  width: 100%;
-  background-color: lightgreen;
-  padding: 30px;
-  margin-right: 30px;
-  text-align: left;
-  font-size: 20px;
-}

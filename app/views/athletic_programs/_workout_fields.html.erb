@@ -3,14 +3,12 @@
   <p>
     <%= f.label :workout_time, "Day" %>
     <%= f.text_field :workout_time, :style=>"background-color : #65B249", :size => 7, :class => "datepicker" %>
-    <%= link_to_remove_fields "remove", f %><br/>
+    <%= link_to_remove_fields "Delete", f %><br/>
   </p>
   <%= f.fields_for :exercises do |builder| %>
     <%= render 'exercise_fields', :f => builder %>
   <% end %>
-  <div class="add_exercise_button"><%= link_to_add_fields "Add Exercises", f, :exercises %>
-    <div class="add_exercise_button2"<%= link_to_add_fields2 "Add Exercise", f, :exercises %></div>
-  </div>
+  <div class="add_exercise_button"><%= link_to_add_fields "Add Exercises", f, :exercises %></div>
   </div>
 </div>
 
