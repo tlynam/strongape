@@ -15,7 +15,7 @@
 <% end %>
 </table>
 
-<br />
+<p><%= if @date_of_workouts.count == 0 then "Start Working Out!" end %></p>
 
 <%= link_to 'New Workout', new_date_of_workout_path %>
 </div>
