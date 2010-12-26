@@ -51,6 +51,13 @@ body {
   text-align: center;
 }
 
+.date_and_description{
+}
+
+.date_and_description h1{
+  border-right: 0px;
+}
+
 h1 {
 font-size: 16px;
 color: darkgreen;
@@ -171,7 +178,89 @@ img.expand{
   border-style: none;
 }
 
-/* Crap I don't understand */
+#notebook{
+    font-size: 18px;
+}
+
+#notebook h1{
+    font-size: 24px;
+}
+
+#journal{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 14px
+}
+
+#journal a:link{
+    text-decoration: none;
+    color: darkgreen;
+    border-width: 1px;
+    border-color: black;
+    border-style: dotted;
+    padding:100%;
+}
+
+#journal a:visited{
+    text-decoration: none;
+    color: darkgreen;
+    border-width: 1px;
+    border-color: black;
+    border-style: dotted;
+    padding:100%;
+}
+
+#journal a:hover{
+    text-decoration: none;
+    color: darkgreen;
+    border-width: 1px;
+    border-color: black;
+    border-style: dotted;
+    padding:100%;
+}
+
+#journal a:active{
+    text-decoration: none;
+    color: darkgreen;
+    border-width: 1px;
+    border-color: black;
+    border-style: dotted;
+    padding:100%;
+}
+
+#workout_date_index_header{
+    color: darkgreen;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 1em;
+    margin-bottom: -1em;
+}
+
+#workout_date_index_col{
+    width: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #flash_notice, #flash_error {
   padding: 5px 8px;

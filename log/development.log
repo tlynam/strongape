@@ -46355,3 +46355,2196 @@ Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
 Rendered date_of_workouts/_form.html.erb (44.2ms)
 Rendered date_of_workouts/edit.html.erb within layouts/application (47.1ms)
 Completed 200 OK in 84ms (Views: 49.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/date_of_workouts/2/edit" for 127.0.0.1 at 2010-12-26 00:07:49 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 2) LIMIT 1[0m
+  [1m[35mExercise Load (0.2ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 2)
+  [1m[36mExerciseGroup Load (0.3ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 2)[0m
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (20.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.9ms)
+Rendered date_of_workouts/_form.html.erb (44.0ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 56ms (Views: 48.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/date_of_workouts/2/edit" for 127.0.0.1 at 2010-12-26 00:08:11 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDateOfWorkout Load (0.0ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 2) LIMIT 1
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 2)[0m
+  [1m[35mExerciseGroup Load (0.1ms)[0m  SELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 2)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (47.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (71.9ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (74.8ms)
+Completed 200 OK in 84ms (Views: 77.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/3/edit" for 127.0.0.1 at 2010-12-26 00:08:14 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDateOfWorkout Load (0.0ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 3) LIMIT 1[0m
+  [1m[35mExercise Load (0.1ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 3)
+  [1m[36mExerciseGroup Load (0.1ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 3)[0m
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (20.0ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (43.6ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 56ms (Views: 48.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-26 00:08:17 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 00:08:19 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 00:08:20 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (8.9ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (16.4ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 46ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 00:08:36 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (8.9ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (16.4ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 46ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/2/edit" for 127.0.0.1 at 2010-12-26 00:08:40 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDateOfWorkout Load (0.0ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 2) LIMIT 1[0m
+  [1m[35mExercise Load (0.1ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 2)
+  [1m[36mExerciseGroup Load (0.1ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 2)[0m
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (48.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (73.0ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (75.9ms)
+Completed 200 OK in 86ms (Views: 78.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/2/edit" for 127.0.0.1 at 2010-12-26 00:08:47 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDateOfWorkout Load (0.0ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 2) LIMIT 1
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 2)[0m
+  [1m[35mExerciseGroup Load (0.1ms)[0m  SELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 2)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (20.1ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.0ms)
+Rendered date_of_workouts/_form.html.erb (45.3ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (48.2ms)
+Completed 200 OK in 89ms (Views: 50.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 00:08:50 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (37.1ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (44.6ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 75ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 00:18:44 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.1ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
+Rendered date_of_workouts/_form.html.erb (16.6ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 75ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-26 00:18:44 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 00:19:08 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 00:19:16 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 44ms (Views: 37.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 00:19:18 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.1ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.9ms)
+Rendered date_of_workouts/_form.html.erb (43.7ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 75ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-26 00:19:30 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 00:19:31 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 00:19:33 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.2ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (28.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (30.9ms)
+Rendered date_of_workouts/_form.html.erb (43.9ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 75ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 00:20:06 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-26 00:20:07 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:13:22 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:13:24 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.4ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.7ms)
+Rendered date_of_workouts/_form.html.erb (44.8ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (47.7ms)
+Completed 200 OK in 75ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:13:25 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:13:39 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.1ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (16.6ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 75ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:15:33 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 17ms (Views: 9.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:17:11 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 16ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:17:19 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 43ms (Views: 36.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-26 01:17:36 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:18:09 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:19:58 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 17ms (Views: 9.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:20:34 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:20:49 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 16ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:20:55 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 16ms (Views: 9.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:21:17 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 23ms (Views: 10.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:22:00 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 17ms (Views: 9.8ms | ActiveRecord: 0.1ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.9ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.1ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (4.7ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateAthleticPrograms (20100906093132)
+  [1m[35mSQL (4.3ms)[0m  CREATE TABLE `athletic_programs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `program_name` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100906093132')[0m
+Migrating to CreateWorkouts (20100906093233)
+  [1m[35mSQL (2.2ms)[0m  CREATE TABLE `workouts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `program_week_id` int(11), `athletic_program_id` int(11), `workout_time` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100906093233')[0m
+Migrating to CreateExercises (20100906093248)
+  [1m[35mSQL (6.7ms)[0m  CREATE TABLE `exercises` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `workout_id` int(11), `date_of_workout_id` int(11), `name` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100906093248')[0m
+Migrating to CreateExerciseGroups (20100908213001)
+  [1m[35mSQL (2.7ms)[0m  CREATE TABLE `exercise_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `exercise_id` int(11), `weight` int(11), `percentage_of_max` int(11), `sets` int(11), `reps` int(11), `description` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (9.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100908213001')[0m
+Migrating to CreateDateOfWorkouts (20100913223728)
+  [1m[35mSQL (2.1ms)[0m  CREATE TABLE `date_of_workouts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `date` datetime, `description` text) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100913223728')[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `athletic_programs`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `athletic_programs`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `date_of_workouts`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `date_of_workouts`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercise_groups`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `exercise_groups`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercises`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `exercises`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `workouts`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `workouts`
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:22:40 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.2ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 12ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:22:43 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.1ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
+Rendered date_of_workouts/_form.html.erb (16.8ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 74ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:22:45 -0800
+  Processing by DateOfWorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oQgUTQHynJKAiXeo1PCBs6WDJzoNNBACVl9BEOL+mcs=", "date_of_workout"=>{"date"=>"2010-12-26", "exercises_attributes"=>{"0"=>{"name"=>"", "_destroy"=>"false", "exercise_groups_attributes"=>{"0"=>{"sets"=>"1", "reps"=>"1", "weight"=>"", "percentage_of_max"=>"0", "description"=>"", "_destroy"=>"false"}}}}}, "commit"=>"Save Workout"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `date_of_workouts`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `date_of_workouts` (`date`, `description`) VALUES ('2010-12-26 00:00:00', NULL)
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercises`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `exercises` (`workout_id`, `date_of_workout_id`, `name`) VALUES (NULL, 1, '')
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercise_groups`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `exercise_groups` (`exercise_id`, `weight`, `percentage_of_max`, `sets`, `reps`, `description`) VALUES (1, NULL, 0, 1, 1, '')
+  [1m[36mSQL (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/date_of_workouts?%23%3CDateOfWorkout%3A0x00000002d352a0%3E=index&notice=Date+of+workout+was+successfully+created.
+Completed 302 Found in 38ms
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x00000002d352a0%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2010-12-26 01:22:45 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x00000002d352a0>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[35mDateOfWorkout Load (0.2ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 43ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1" for 127.0.0.1 at 2010-12-26 01:22:48 -0800
+  Processing by DateOfWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDateOfWorkout Load (0.2ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1[0m
+  [1m[35mExercise Load (0.1ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.`workout_id` = 1)
+Rendered date_of_workouts/show.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 28ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:22:50 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDateOfWorkout Load (0.0ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1[0m
+  [1m[35mExercise Load (0.2ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)
+  [1m[36mExerciseGroup Load (0.3ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)[0m
+Rendered date_of_workouts/_exercise_group_fields.html.erb (2.3ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (48.3ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (72.4ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (75.3ms)
+Completed 200 OK in 85ms (Views: 77.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:24:14 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDateOfWorkout Load (0.0ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)[0m
+  [1m[35mExerciseGroup Load (0.1ms)[0m  SELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (21.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.0ms)
+Rendered date_of_workouts/_form.html.erb (75.6ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (78.5ms)
+Completed 200 OK in 89ms (Views: 80.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:24:23 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDateOfWorkout Load (0.0ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1[0m
+  [1m[35mExercise Load (0.1ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)
+  [1m[36mExerciseGroup Load (0.1ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)[0m
+Rendered date_of_workouts/_exercise_group_fields.html.erb (2.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (25.9ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.3ms)
+Rendered date_of_workouts/_form.html.erb (85.2ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (88.8ms)
+Completed 200 OK in 108ms (Views: 100.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:24:35 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDateOfWorkout Load (0.0ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)[0m
+  [1m[35mExerciseGroup Load (0.1ms)[0m  SELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (21.9ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.9ms)
+Rendered date_of_workouts/_form.html.erb (78.8ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (82.1ms)
+Completed 200 OK in 93ms (Views: 84.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:24:49 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDateOfWorkout Load (0.0ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1[0m
+  [1m[35mExercise Load (0.1ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)
+  [1m[36mExerciseGroup Load (0.1ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)[0m
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (21.1ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.2ms)
+Rendered date_of_workouts/_form.html.erb (77.4ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (80.4ms)
+Completed 200 OK in 90ms (Views: 82.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:24:54 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDateOfWorkout Load (0.0ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)[0m
+  [1m[35mExerciseGroup Load (0.1ms)[0m  SELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (21.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (73.6ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (76.4ms)
+Completed 200 OK in 87ms (Views: 78.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:24:58 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDateOfWorkout Load (0.0ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1[0m
+  [1m[35mExercise Load (0.1ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)
+  [1m[36mExerciseGroup Load (0.1ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)[0m
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (47.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.9ms)
+Rendered date_of_workouts/_form.html.erb (71.6ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (74.4ms)
+Completed 200 OK in 84ms (Views: 76.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:26:12 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDateOfWorkout Load (0.0ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)[0m
+  [1m[35mExerciseGroup Load (0.1ms)[0m  SELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (20.9ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
+Rendered date_of_workouts/_form.html.erb (74.1ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (77.1ms)
+Completed 200 OK in 87ms (Views: 79.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:26:21 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDateOfWorkout Load (0.0ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1[0m
+  [1m[35mExercise Load (0.1ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)
+  [1m[36mExerciseGroup Load (0.1ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)[0m
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (29.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (50.9ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.9ms)
+Rendered date_of_workouts/_form.html.erb (75.1ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (77.9ms)
+Completed 200 OK in 88ms (Views: 80.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:26:32 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDateOfWorkout Load (0.0ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)[0m
+  [1m[35mExerciseGroup Load (0.2ms)[0m  SELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.9ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (23.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.9ms)
+Rendered date_of_workouts/_form.html.erb (82.5ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (85.4ms)
+Completed 200 OK in 95ms (Views: 87.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:27:45 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.3ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (31.6ms)
+Rendered date_of_workouts/_form.html.erb (44.7ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (47.6ms)
+Completed 200 OK in 76ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:28:00 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDateOfWorkout Load (0.0ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1[0m
+  [1m[35mExercise Load (0.1ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)
+  [1m[36mExerciseGroup Load (0.1ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)[0m
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (21.1ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
+Rendered date_of_workouts/_form.html.erb (73.4ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (76.2ms)
+Completed 200 OK in 85ms (Views: 78.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:28:27 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDateOfWorkout Load (0.0ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)[0m
+  [1m[35mExerciseGroup Load (0.1ms)[0m  SELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (20.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (31.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (34.0ms)
+Rendered date_of_workouts/_form.html.erb (75.4ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (78.5ms)
+Completed 200 OK in 88ms (Views: 80.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:28:44 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDateOfWorkout Load (0.0ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1[0m
+  [1m[35mExercise Load (0.1ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)
+  [1m[36mExerciseGroup Load (0.1ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)[0m
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (20.4ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (72.7ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (75.8ms)
+Completed 200 OK in 86ms (Views: 78.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:28:54 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDateOfWorkout Load (0.0ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)[0m
+  [1m[35mExerciseGroup Load (0.1ms)[0m  SELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (20.1ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (47.7ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (50.4ms)
+Rendered date_of_workouts/_form.html.erb (92.1ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (95.3ms)
+Completed 200 OK in 105ms (Views: 97.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:29:11 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDateOfWorkout Load (0.0ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1[0m
+  [1m[35mExercise Load (0.1ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)
+  [1m[36mExerciseGroup Load (0.1ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)[0m
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (20.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (71.8ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (74.7ms)
+Completed 200 OK in 84ms (Views: 76.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:29:27 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDateOfWorkout Load (0.0ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)[0m
+  [1m[35mExerciseGroup Load (0.1ms)[0m  SELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (23.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (42.0ms)
+Rendered date_of_workouts/_form.html.erb (86.1ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (89.9ms)
+Completed 200 OK in 100ms (Views: 92.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:29:38 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDateOfWorkout Load (0.0ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1[0m
+  [1m[35mExercise Load (0.1ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)
+  [1m[36mExerciseGroup Load (0.1ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)[0m
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (20.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
+Rendered date_of_workouts/_form.html.erb (76.9ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (79.8ms)
+Completed 200 OK in 90ms (Views: 82.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:29:46 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDateOfWorkout Load (0.0ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)[0m
+  [1m[35mExerciseGroup Load (0.1ms)[0m  SELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (20.9ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.9ms)
+Rendered date_of_workouts/_form.html.erb (81.8ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (85.0ms)
+Completed 200 OK in 95ms (Views: 87.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:29:59 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDateOfWorkout Load (0.0ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1[0m
+  [1m[35mExercise Load (0.1ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)
+  [1m[36mExerciseGroup Load (0.1ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)[0m
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.9ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (21.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.9ms)
+Rendered date_of_workouts/_form.html.erb (73.4ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (76.5ms)
+Completed 200 OK in 86ms (Views: 78.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:30:36 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:30:38 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.3ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
+Rendered date_of_workouts/_form.html.erb (17.1ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 75ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:32:44 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.0ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (16.6ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 48ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:32:55 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.9ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (11.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.2ms)
+Rendered date_of_workouts/_form.html.erb (21.7ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 98ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:34:01 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.0ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.0ms)
+Rendered date_of_workouts/_form.html.erb (17.0ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 48ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:34:25 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.9ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (39.3ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.0ms)
+Rendered date_of_workouts/_form.html.erb (47.3ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (50.4ms)
+Completed 200 OK in 80ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:34:45 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.3ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.0ms)
+Rendered date_of_workouts/_form.html.erb (17.3ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 77ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:35:01 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (10.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (39.6ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (42.6ms)
+Rendered date_of_workouts/_form.html.erb (57.5ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 99ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:36:05 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (10.0ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.9ms)
+Rendered date_of_workouts/_form.html.erb (18.1ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 80ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:36:08 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.0ms)
+Rendered date_of_workouts/_form.html.erb (17.7ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 53ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:37:15 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (17.4ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 75ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:37:36 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (10.3ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.1ms)
+Rendered date_of_workouts/_form.html.erb (18.6ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 63ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:37:45 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (38.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.0ms)
+Rendered date_of_workouts/_form.html.erb (46.7ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 80ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:37:58 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.4ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
+Rendered date_of_workouts/_form.html.erb (17.1ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 77ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:38:08 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (30.6ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (33.0ms)
+Rendered date_of_workouts/_form.html.erb (46.4ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (49.4ms)
+Completed 200 OK in 79ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:38:11 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.3ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (17.1ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 76ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:38:24 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.0ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (16.7ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 49ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:38:28 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (37.1ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
+Rendered date_of_workouts/_form.html.erb (44.8ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (47.6ms)
+Completed 200 OK in 76ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:38:30 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (17.2ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 75ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:38:36 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.4ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (33.0ms)
+Rendered date_of_workouts/_form.html.erb (46.4ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 80ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:41:17 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+ERROR: compiling _app_views_date_of_workouts__form_html_erb___2961106237056186742_24576320_3750530165697287781 RAISED /home/todd/strongape/app/views/date_of_workouts/_form.html.erb:16: syntax error, unexpected ')'
+...9", :rows => 3, :cola => 100% );@output_buffer.safe_concat('...
+...                               ^
+/home/todd/strongape/app/views/date_of_workouts/_form.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+/home/todd/strongape/app/views/date_of_workouts/_form.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+/home/todd/strongape/app/views/date_of_workouts/_form.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_date_of_workouts__form_html_erb___2961106237056186742_24576320_3750530165697287781(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "date_of_workouts/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append=  form_for(@date_of_workout) do |date_of_workout_fields| @output_buffer.safe_concat('
+');   if @date_of_workout.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@date_of_workout.errors.count, "error") );@output_buffer.safe_concat(' prohibited this date_of_workout from being saved:</h2>
+
+      <ul>
+');@output_buffer.append_if_string=        @date_of_workout.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  <div class="date_and_description">
+    <h1>Workout Date ');@output_buffer.append= ( date_of_workout_fields.text_field :date, :style=>"background-color : #65B249", :size => 7, :value => @date_of_workout.date.strftime("%Y-%m-%d"), :class => "datepicker" );@output_buffer.safe_concat('</h1>
+    <h1>Description ');@output_buffer.append= ( date_of_workout_fields.text_area :description, :style=>"background-color : #65B249", :rows => 3, :cola => 100% );@output_buffer.safe_concat('</h1>
+  </div>
+
+<div class ="fields">
+  <div class="workout">
+  ');@output_buffer.append=  date_of_workout_fields.fields_for :exercises do |builder| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( render 'exercise_fields', :f => builder );@output_buffer.safe_concat('
+');   end 
+@output_buffer.safe_concat('  <div class="add_exercise_button">');@output_buffer.append= ( link_to_add_fields "Add Exercises", date_of_workout_fields, :exercises );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    
+  </div>
+</div>
+</br>
+</div>
+
+');@output_buffer.append= ( date_of_workout_fields.submit "Save Workout" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+'); end 
+@output_buffer.safe_concat('<br></br>
+
+<script type="text/javascript">
+  jQuery(function() {
+	jQuery(".datepicker").datepicker({ dateFormat: \'yy-mm-dd\'});
+	return false;
+  });
+</script>');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:333:in `render_partial'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:262:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:260:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:378:in `_render_partial'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:31:in `render'
+/home/todd/strongape/app/views/date_of_workouts/new.html.erb:1:in `_app_views_date_of_workouts_new_html_erb___509827968218688126_24639240__3065005444863421077'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:135:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/todd/strongape/app/controllers/date_of_workouts_controller.rb:31:in `new'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__2953693050518568580__process_action__119542690780589516__callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered date_of_workouts/_form.html.erb (0.9ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (1.7ms)
+Completed   in 60ms
+
+ActionView::Template::Error (/home/todd/strongape/app/views/date_of_workouts/_form.html.erb:16: syntax error, unexpected ')'
+...9", :rows => 3, :cola => 100% );@output_buffer.safe_concat('...
+...                               ^
+/home/todd/strongape/app/views/date_of_workouts/_form.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+/home/todd/strongape/app/views/date_of_workouts/_form.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+/home/todd/strongape/app/views/date_of_workouts/_form.html.erb:44: syntax error, unexpected keyword_end, expecting ')'):
+    13: 
+    14:   <div class="date_and_description">
+    15:     <h1>Workout Date <%= date_of_workout_fields.text_field :date, :style=>"background-color : #65B249", :size => 7, :value => @date_of_workout.date.strftime("%Y-%m-%d"), :class => "datepicker" %></h1>
+    16:     <h1>Description <%= date_of_workout_fields.text_area :description, :style=>"background-color : #65B249", :rows => 3, :cola => 100% %></h1>
+    17:   </div>
+    18: 
+    19: <div class ="fields">
+  app/views/date_of_workouts/new.html.erb:1:in `_app_views_date_of_workouts_new_html_erb___509827968218688126_24639240__3065005444863421077'
+  app/controllers/date_of_workouts_controller.rb:31:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:41:21 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.2ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (16.9ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 77ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:41:26 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (10.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.4ms)
+Rendered date_of_workouts/_form.html.erb (19.7ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 62ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:42:32 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.4ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (17.1ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 77ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:42:40 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.1ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
+Rendered date_of_workouts/_form.html.erb (17.0ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 49ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:42:45 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (38.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (46.8ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 80ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:42:47 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
+Rendered date_of_workouts/_form.html.erb (17.1ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 74ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:42:51 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (39.7ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (42.4ms)
+Rendered date_of_workouts/_form.html.erb (55.9ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (59.2ms)
+Completed 200 OK in 88ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:42:57 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (2.1ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (11.1ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.5ms)
+Rendered date_of_workouts/_form.html.erb (22.1ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 93ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:43:02 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (10.0ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (2.2ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (12.3ms)
+Rendered date_of_workouts/_form.html.erb (26.6ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 58ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:43:21 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (10.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.9ms)
+Rendered date_of_workouts/_form.html.erb (18.8ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 87ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:43:26 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.0ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.9ms)
+Rendered date_of_workouts/_form.html.erb (16.9ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 50ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:43:31 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (2.0ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (36.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (2.2ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.8ms)
+Rendered date_of_workouts/_form.html.erb (45.6ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (48.6ms)
+Completed 200 OK in 77ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:43:54 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.3ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (17.0ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 75ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:48:54 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (29.0ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (31.6ms)
+Rendered date_of_workouts/_form.html.erb (44.9ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 77ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:49:01 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:50:17 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 15ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:50:21 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDateOfWorkout Load (0.0ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1[0m
+  [1m[35mExercise Load (0.1ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)
+  [1m[36mExerciseGroup Load (0.1ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)[0m
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (20.1ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (31.1ms)
+Rendered date_of_workouts/_form.html.erb (72.2ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (75.5ms)
+Completed 200 OK in 85ms (Views: 78.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/date_of_workouts/1" for 127.0.0.1 at 2010-12-26 01:50:23 -0800
+  Processing by DateOfWorkoutsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oQgUTQHynJKAiXeo1PCBs6WDJzoNNBACVl9BEOL+mcs=", "date_of_workout"=>{"date"=>"2010-12-26", "description"=>"Test", "exercises_attributes"=>{"0"=>{"name"=>"", "_destroy"=>"false", "exercise_groups_attributes"=>{"0"=>{"sets"=>"1", "reps"=>"1", "weight"=>"", "percentage_of_max"=>"0", "description"=>"", "_destroy"=>"false", "id"=>"1"}}, "id"=>"1"}}}, "commit"=>"Save Workout", "id"=>"1"}
+  [1m[35mDateOfWorkout Load (0.0ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mExercise Load (0.2ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1) AND (`exercises`.`id` IN (1))
+  [1m[36mExerciseGroup Load (0.1ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1) AND (`exercise_groups`.`id` IN (1))[0m
+  [1m[35mAREL (5.2ms)[0m  UPDATE `date_of_workouts` SET `description` = 'Test' WHERE (`date_of_workouts`.`id` = 1)
+  [1m[36mSQL (2.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/date_of_workouts/1?%23%3CDateOfWorkout%3A0x00000002a31cc0%3E=index&notice=Date+of+workout+was+successfully+updated.
+Completed 302 Found in 75ms
+
+
+Started GET "/date_of_workouts/1?%23%3CDateOfWorkout%3A0x00000002a31cc0%3E=index&notice=Date+of+workout+was+successfully+updated." for 127.0.0.1 at 2010-12-26 01:50:24 -0800
+  Processing by DateOfWorkoutsController#show as HTML
+  Parameters: {"#<DateOfWorkout:0x00000002a31cc0>"=>"index", "notice"=>"Date of workout was successfully updated.", "id"=>"1"}
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT `exercises`.* FROM `exercises` WHERE (`exercises`.`workout_id` = 1)[0m
+Rendered date_of_workouts/show.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 32ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:50:26 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.2ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 15ms (Views: 8.4ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/date_of_workouts/1/edit" for 127.0.0.1 at 2010-12-26 01:51:15 -0800
+  Processing by DateOfWorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDateOfWorkout Load (0.0ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1[0m
+  [1m[35mExercise Load (0.1ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1)
+  [1m[36mExerciseGroup Load (0.1ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1)[0m
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (20.9ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (71.8ms)
+Rendered date_of_workouts/edit.html.erb within layouts/application (74.6ms)
+Completed 200 OK in 84ms (Views: 76.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/date_of_workouts/1" for 127.0.0.1 at 2010-12-26 01:51:35 -0800
+  Processing by DateOfWorkoutsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oQgUTQHynJKAiXeo1PCBs6WDJzoNNBACVl9BEOL+mcs=", "date_of_workout"=>{"date"=>"2010-12-26", "description"=>"směr, jako starý nepřítel. Dej si skúšala novú o sa rozhodujeme. Každého tu nepoznám už nemáš vôbec nemám náladu. Pocity sa prechádzam po tom, že mi Nezhroutím se Pet a čo, vôbec našiel. ", "exercises_attributes"=>{"0"=>{"name"=>"", "_destroy"=>"false", "exercise_groups_attributes"=>{"0"=>{"sets"=>"1", "reps"=>"1", "weight"=>"", "percentage_of_max"=>"0", "description"=>"", "_destroy"=>"false", "id"=>"1"}}, "id"=>"1"}}}, "commit"=>"Save Workout", "id"=>"1"}
+  [1m[35mDateOfWorkout Load (0.0ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mExercise Load (0.0ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.date_of_workout_id = 1) AND (`exercises`.`id` IN (1))
+  [1m[36mExerciseGroup Load (0.0ms)[0m  [1mSELECT `exercise_groups`.* FROM `exercise_groups` WHERE (`exercise_groups`.exercise_id = 1) AND (`exercise_groups`.`id` IN (1))[0m
+  [1m[35mAREL (0.2ms)[0m  UPDATE `date_of_workouts` SET `description` = 'směr, jako starý nepřítel. Dej si skúšala novú o sa rozhodujeme. Každého tu nepoznám už nemáš vôbec nemám náladu. Pocity sa prechádzam po tom, že mi Nezhroutím se Pet a čo, vôbec našiel. ' WHERE (`date_of_workouts`.`id` = 1)
+  [1m[36mSQL (9.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/date_of_workouts/1?%23%3CDateOfWorkout%3A0x00000002db34c0%3E=index&notice=Date+of+workout+was+successfully+updated.
+Completed 302 Found in 60ms
+
+
+Started GET "/date_of_workouts/1?%23%3CDateOfWorkout%3A0x00000002db34c0%3E=index&notice=Date+of+workout+was+successfully+updated." for 127.0.0.1 at 2010-12-26 01:51:35 -0800
+  Processing by DateOfWorkoutsController#show as HTML
+  Parameters: {"#<DateOfWorkout:0x00000002db34c0>"=>"index", "notice"=>"Date of workout was successfully updated.", "id"=>"1"}
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT `exercises`.* FROM `exercises` WHERE (`exercises`.`workout_id` = 1)[0m
+Rendered date_of_workouts/show.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 58ms (Views: 21.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:51:37 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.2ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 15ms (Views: 8.2ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:52:16 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 15ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:52:48 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 15ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:53:22 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 42ms (Views: 8.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 01:53:24 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.3ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (17.2ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 78ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:53:41 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 43ms (Views: 36.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:53:47 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:54:00 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:54:40 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 42ms (Views: 8.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:54:48 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 15ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:55:07 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 15ms (Views: 8.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:55:16 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 41ms (Views: 34.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:55:48 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:56:03 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 19ms (Views: 10.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:57:30 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 43ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 01:57:44 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 17ms (Views: 10.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:00:58 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:01:48 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 15ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:01:56 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 15ms (Views: 8.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:02:01 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:02:14 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 15ms (Views: 8.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:02:20 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 40ms (Views: 34.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:03:34 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 15ms (Views: 8.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:03:45 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 15ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:04:06 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 41ms (Views: 35.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:04:49 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 14ms (Views: 7.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:05:26 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:05:34 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 46ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:05:57 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:06:04 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:06:09 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 40ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:06:18 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:06:23 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 14ms (Views: 7.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:06:40 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 41ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 02:06:46 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.2ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (16.9ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 75ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:06:48 -0800
+  Processing by DateOfWorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H5/n0ivEe3zMShz3STb/yZXxEM1D+GoCLz8JFBBEe1E=", "date_of_workout"=>{"date"=>"2010-12-26", "description"=>"", "exercises_attributes"=>{"0"=>{"name"=>"", "_destroy"=>"false", "exercise_groups_attributes"=>{"0"=>{"sets"=>"1", "reps"=>"1", "weight"=>"", "percentage_of_max"=>"0", "description"=>"", "_destroy"=>"false"}}}}}, "commit"=>"Save Workout"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `date_of_workouts`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `date_of_workouts` (`date`, `description`) VALUES ('2010-12-26 00:00:00', '')[0m
+  [1m[35mSQL (0.2ms)[0m  describe `exercises`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `exercises` (`workout_id`, `date_of_workout_id`, `name`) VALUES (NULL, 2, '')[0m
+  [1m[35mSQL (0.2ms)[0m  describe `exercise_groups`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `exercise_groups` (`exercise_id`, `weight`, `percentage_of_max`, `sets`, `reps`, `description`) VALUES (2, NULL, 0, 1, 1, '')[0m
+  [1m[35mSQL (1.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/date_of_workouts?%23%3CDateOfWorkout%3A0x000000021b76a8%3E=index&notice=Date+of+workout+was+successfully+created.
+Completed 302 Found in 64ms
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x000000021b76a8%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2010-12-26 02:06:48 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x000000021b76a8>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[36mDateOfWorkout Load (0.2ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x000000021b76a8%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2010-12-26 02:06:58 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x000000021b76a8>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:07:04 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 43ms (Views: 37.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:07:22 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:07:46 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:07:56 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x000000021b76a8%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2010-12-26 02:08:02 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x000000021b76a8>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (46.3ms)
+Completed 200 OK in 57ms (Views: 49.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x000000021b76a8%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2010-12-26 02:09:22 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x000000021b76a8>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x000000021b76a8%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2010-12-26 02:09:47 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x000000021b76a8>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x000000021b76a8%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2010-12-26 02:13:50 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x000000021b76a8>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 15ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x000000021b76a8%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2010-12-26 02:13:58 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x000000021b76a8>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x000000021b76a8%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2010-12-26 02:14:10 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x000000021b76a8>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 15ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x000000021b76a8%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2010-12-26 02:14:29 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x000000021b76a8>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x000000021b76a8%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2010-12-26 02:14:44 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x000000021b76a8>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 42ms (Views: 35.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x000000021b76a8%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2010-12-26 02:14:55 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x000000021b76a8>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:22:55 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 02:24:31 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (10.1ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
+Rendered date_of_workouts/_form.html.erb (17.7ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 76ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:24:45 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:25:43 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 15ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:26:34 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:31:22 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.5ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 46ms (Views: 9.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:31:48 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 02:31:58 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (28.9ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (36.9ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.0ms)
+Rendered date_of_workouts/_form.html.erb (45.1ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (47.9ms)
+Completed 200 OK in 76ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:32:01 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 16ms (Views: 9.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-26 02:36:58 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:37:00 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:38:48 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 16ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:39:01 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:40:12 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:40:17 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:40:51 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 42ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:41:04 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 19ms (Views: 10.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:42:42 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 16ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:46:29 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:46:49 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 43ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:47:04 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:47:08 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 15ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:49:52 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:49:59 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 43ms (Views: 9.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:50:09 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:50:22 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:50:41 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:52:06 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 43ms (Views: 36.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:52:16 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:52:19 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:52:25 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.9ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 65ms (Views: 11.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:55:01 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 16ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-26 02:56:33 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (2.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (30.0ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (39.3ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.9ms)
+Rendered date_of_workouts/_form.html.erb (47.6ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (50.7ms)
+Completed 200 OK in 80ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:57:07 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:58:56 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 43ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:59:13 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:59:20 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:59:38 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 42ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 02:59:53 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 03:00:54 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 03:01:53 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 21ms (Views: 9.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 03:02:07 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 42ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 03:02:43 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/1" for 127.0.0.1 at 2010-12-26 03:02:50 -0800
+  Processing by DateOfWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDateOfWorkout Load (21.3ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts` WHERE (`date_of_workouts`.`id` = 1) LIMIT 1[0m
+  [1m[35mExercise Load (0.1ms)[0m  SELECT `exercises`.* FROM `exercises` WHERE (`exercises`.`workout_id` = 1)
+Rendered date_of_workouts/show.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 56ms (Views: 27.4ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 03:02:52 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 44ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 03:03:27 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 03:03:34 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 17ms (Views: 11.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 03:05:16 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 43ms (Views: 35.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 03:05:57 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 03:06:12 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 17ms (Views: 9.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 03:06:30 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 42ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 03:06:46 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 03:07:04 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 03:07:14 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.1ms)
