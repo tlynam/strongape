@@ -79,10 +79,9 @@ margin-bottom: 3px;
     line-height: 180%;
 }
 
-/* unvisited link */
-a:link{
+#notebook a:link{
     text-decoration: none;
-    color: blue;
+    color: darkgreen;
     border-width: 1px;
     border-color: black;
     border-style: dashed;
@@ -91,9 +90,9 @@ a:link{
     padding-top: 2px;
 }
 
-a:visited{
+#notebook a:visited{
     text-decoration: none;
-    color: blue;
+    color: darkgreen;
     border-width: 1px;
     border-color: black;
     border-style: dashed;
@@ -102,9 +101,9 @@ a:visited{
     padding-top: 2px;
 }
 
-a:hover{
+#notebook a:hover{
     text-decoration: none;
-    color: blue;
+    color: darkgreen;
     border-width: 1px;
     border-color: black;
     border-style: dashed;
@@ -113,9 +112,9 @@ a:hover{
     padding-top: 2px;
 }
 
-a:active{
+#notebook a:active{
     text-decoration: none;
-    color: blue;
+    color: darkgreen;
     border-width: 1px;
     border-color: black;
     border-style: dashed;
@@ -158,22 +157,7 @@ img.expand{
   font-size: 20px;
 }
 
-#homepage a:link{
-  text-decoration: none;
-  border-style: none;
-}
-
-#homepage a:visited{
-  text-decoration: none;
-  border-style: none;
-}
-
-#homepage a:hover{
-  text-decoration: none;
-  border-style: none;
-}
-
-#homepage a:active{
+#homepage a:link, a:visited, a:hover, a:active{
   text-decoration: none;
   border-style: none;
 }
@@ -181,15 +165,19 @@ img.expand{
 #notebook{
     font-size: 18px;
 }
-
 #notebook h1{
     font-size: 24px;
+    padding-bottom: 30px;
 }
 
 #journal{
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 20px;
     font-size: 14px
+}
+
+#journal tr{
+    padding-bottom: 10px;
 }
 
 #journal a:link{
@@ -198,7 +186,9 @@ img.expand{
     border-width: 1px;
     border-color: black;
     border-style: dotted;
-    padding:100%;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 2px;
 }
 
 #journal a:visited{
@@ -207,7 +197,9 @@ img.expand{
     border-width: 1px;
     border-color: black;
     border-style: dotted;
-    padding:100%;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 2px;
 }
 
 #journal a:hover{
@@ -216,7 +208,9 @@ img.expand{
     border-width: 1px;
     border-color: black;
     border-style: dotted;
-    padding:100%;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 2px;
 }
 
 #journal a:active{
@@ -225,7 +219,9 @@ img.expand{
     border-width: 1px;
     border-color: black;
     border-style: dotted;
-    padding:100%;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 2px;
 }
 
 #workout_date_index_header{
@@ -233,13 +229,13 @@ img.expand{
     font-size: 16px;
     font-weight: bold;
     margin-left: 1em;
-    margin-bottom: -1em;
+    margin-bottom: -40px;
 }
 
 #workout_date_index_col{
     width: 90px;
+    text-align: center;
 }
-
 
 
 
