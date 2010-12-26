@@ -55,23 +55,23 @@ body {
 }
 
 .date_and_description h1{
-  border-right: 0px;
+    border-right: 0px;
 }
 
 h1 {
-font-size: 16px;
-color: darkgreen;
-font-weight: bold;
-margin-top: 0px;
-margin-bottom: 3px;
+    font-size: 16px;
+    color: darkgreen;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 3px;
 }
 
 h2 {
-font-size: 14px;
-color: #488C3B;
-font-weight: bold;
-margin-top: 0px;
-margin-bottom: 3px;
+    font-size: 14px;
+    color: #488C3B;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 3px;
 }
 
 .fields{
@@ -166,6 +166,13 @@ img.expand{
     font-size: 18px;
 }
 
+#notebook h1{
+    margin-left: 50px;
+    margin-top: -25px;
+    padding-bottom: 20px;
+    font-weight: normal;
+}
+
 #journal{
     padding-bottom: 20px;
     font-size: 14px
@@ -173,6 +180,7 @@ img.expand{
 
 #journal td{
     padding-bottom: 30px;
+    padding-right: 5px;
 }
 
 #journal th{
@@ -181,6 +189,11 @@ img.expand{
     font-weight: bold;
     padding-bottom: 20px;
     margin-right: 40px;
+    text-align: left;
+}
+
+#workout_date_index_col{
+    text-align: left;
 }
 
 #journal a:link{
@@ -225,11 +238,6 @@ img.expand{
     padding-right: 4px;
     padding-left: 4px;
     padding-top: 2px;
-}
-
-#workout_date_index_col{
-    width: 90px;
-    text-align: center;
 }
 
 

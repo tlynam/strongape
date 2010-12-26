@@ -2,7 +2,7 @@
 
 <table id ="journal">
   <tr>
-    <th>Workout Date</th>
+    <th>Date</th>
     <th>Description</th>
   </tr>
 <% @date_of_workouts.each do |date_of_workout| %>
@@ -15,7 +15,7 @@
 <% end %>
 </table>
 
-<p><%= if @date_of_workouts.count == 0 then "Start Working Out!" end %></p>
+<h1><%= if @date_of_workouts.count == 0 then "Start Working Out!" end %></h1>
 
 <%= link_to 'New Workout', new_date_of_workout_path %>
 </div>
