@@ -1,0 +1,60 @@
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x00000003d2c898%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2010-12-25 20:04:33 -0800
+
+Mysql::Error (Access denied for user 'tlynam'@'localhost' (using password: YES)):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.2ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x00000003d2c898%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2010-12-25 20:06:30 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x00000003d2c898>"=>"index", "notice"=>"Date of workout was successfully created."}
+Rendered date_of_workouts/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 75ms (Views: 5.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-25 20:06:32 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.3ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
+Rendered date_of_workouts/_form.html.erb (16.7ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 81ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/date_of_workouts" for 127.0.0.1 at 2010-12-25 20:06:36 -0800
+  Processing by DateOfWorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oQgUTQHynJKAiXeo1PCBs6WDJzoNNBACVl9BEOL+mcs=", "date_of_workout"=>{"date"=>"12/25/2010", "exercises_attributes"=>{"0"=>{"name"=>"Squat", "_destroy"=>"false", "exercise_groups_attributes"=>{"0"=>{"sets"=>"1", "reps"=>"1", "weight"=>"", "percentage_of_max"=>"0", "description"=>"", "_destroy"=>"false"}}}}}, "commit"=>"Save Workout"}
+Redirected to http://localhost:3000/date_of_workouts?%23%3CDateOfWorkout%3A0x00000001306b18%3E=index&notice=Date+of+workout+was+successfully+created.
+Completed 302 Found in 66ms
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x00000001306b18%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2010-12-25 20:06:37 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x00000001306b18>"=>"index", "notice"=>"Date of workout was successfully created."}
+Rendered date_of_workouts/index.html.erb within layouts/application (11.1ms)
+Completed   in 19ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    9: 
+    10: <% @date_of_workouts.each do |date_of_workout| %>
+    11:   <tr>
+    12:     <td><%= link_to date_of_workout.date.id, date_of_workout %></td>
+    13:     <td><%= link_to 'Edit', edit_date_of_workout_path(date_of_workout) %></td>
+    14:     <td><%= link_to 'Delete', date_of_workout, :confirm => 'Are you sure?', :method => :delete %></td>
+    15:   </tr>
+  app/views/date_of_workouts/index.html.erb:12:in `block in _app_views_date_of_workouts_index_html_erb___3413445171292244762_18264840__1881598349039321291'
+  app/views/date_of_workouts/index.html.erb:10:in `each'
+  app/views/date_of_workouts/index.html.erb:10:in `_app_views_date_of_workouts_index_html_erb___3413445171292244762_18264840__1881598349039321291'
+  app/controllers/date_of_workouts_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.7ms)

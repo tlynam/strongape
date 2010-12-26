@@ -24,7 +24,7 @@ class DateOfWorkoutsController < ApplicationController
   # GET /date_of_workouts/new
   # GET /date_of_workouts/new.xml
   def new
-    @date_of_workout = DateOfWorkout.new
+    @date_of_workout = DateOfWorkout.new :date => Time.now.strftime("%B %e %Y")
     exercise = @date_of_workout.exercises.build
     exercise.exercise_groups.build
 

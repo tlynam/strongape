@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <h1>Workout Date <%= date_of_workout_fields.text_field :date_of_workouts, :style=>"background-color : #65B249", :size => 7, :class => "datepicker" %></h1>
+    <h1>Workout Date <%= date_of_workout_fields.text_field :date, :style=>"background-color : #65B249", :size => 6, :class => "datepicker" %></h1>
   </div>
 
 <div class ="fields">
@@ -26,17 +26,15 @@
 </div>
 </br>
 </div>
-  
 
-  <div class="actions">
-    <%= date_of_workout_fields.submit "Save Workout" %>
-  </div>
+<%= date_of_workout_fields.submit "Save Workout" %>
+
 <% end %>
 </br>
 
 <script type="text/javascript">
   jQuery(function() {
-	jQuery(".datepicker").datepicker();
+	jQuery(".datepicker").datepicker({ dateFormat: 'yy-mm-dd'});
 	return false;
   });
 </script>

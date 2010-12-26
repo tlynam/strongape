@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(:version => 20100913223728) do
   end
 
   create_table "date_of_workouts", :force => true do |t|
-    t.datetime "date_of_workouts"
+    t.datetime "date"
   end
 
   create_table "exercise_groups", :force => true do |t|
