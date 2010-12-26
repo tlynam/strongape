@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-  <%= @date_of_workout.date_of_workouts.strftime("%B %e %Y") %>
+  <%= @date_of_workout.date.strftime("%B %e %Y") %>
 
         <div class="fields">
           <% @exercises = Exercise.find_all_by_workout_id(@date_of_workout.id) %>
