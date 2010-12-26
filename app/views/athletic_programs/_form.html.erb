@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-<h1><%= athletic_program_fields.label :program_name, "Program Name" %><%= athletic_program_fields.text_field :program_name, :size => 23, :style=>"background-color : #94E470" %></h1>
+<h1><%= athletic_program_fields.label :program_name, "Program Name" %><%= athletic_program_fields.text_field :program_name, :size => 23, :style=>"background-color : #65B249" %></h1>
 
     <%= athletic_program_fields.fields_for :workouts do |builder| %>
       <%= render 'workout_fields', :f => builder %>

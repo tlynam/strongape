@@ -45647,3 +45647,144 @@ Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
 Rendered date_of_workouts/_form.html.erb (16.9ms)
 Rendered date_of_workouts/new.html.erb within layouts/application (19.7ms)
 Completed 200 OK in 75ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-25 23:54:50 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.2ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (41.8ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (44.9ms)
+Rendered date_of_workouts/_form.html.erb (58.3ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (63.6ms)
+Completed 200 OK in 92ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-25 23:55:05 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (2.7ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (12.0ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.2ms)
+Rendered date_of_workouts/_form.html.erb (20.3ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 99ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-25 23:55:53 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.1ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
+Rendered date_of_workouts/_form.html.erb (16.5ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 47ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-25 23:56:00 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.2ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (32.3ms)
+Rendered date_of_workouts/_form.html.erb (45.2ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (48.2ms)
+Completed 200 OK in 75ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-25 23:56:06 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.3ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
+Rendered date_of_workouts/_form.html.erb (16.9ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 75ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-25 23:56:22 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (10.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
+Rendered date_of_workouts/_form.html.erb (18.4ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 55ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-25 23:56:41 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (28.9ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (37.3ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.9ms)
+Rendered date_of_workouts/_form.html.erb (44.9ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 76ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2010-12-25 23:57:16 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.3ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (16.9ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 76ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-25 23:57:17 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-25 23:57:18 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.2ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+Rendered athletic_programs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2010-12-25 23:57:19 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.6ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (9.1ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (29.8ms)
+Rendered athletic_programs/_exercise_fields.html.erb (32.4ms)
+Rendered athletic_programs/_workout_fields.html.erb (44.6ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.5ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.8ms)
+Rendered athletic_programs/_workout_fields.html.erb (6.4ms)
+Rendered athletic_programs/_form.html.erb (55.3ms)
+Rendered athletic_programs/new.html.erb within layouts/application (58.3ms)
+Completed 200 OK in 96ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2010-12-25 23:57:39 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (2.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.6ms)
+Rendered athletic_programs/_exercise_fields.html.erb (11.8ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.8ms)
+Rendered athletic_programs/_workout_fields.html.erb (19.2ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.7ms)
+Rendered athletic_programs/_workout_fields.html.erb (6.1ms)
+Rendered athletic_programs/_form.html.erb (30.2ms)
+Rendered athletic_programs/new.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 113ms (Views: 35.8ms | ActiveRecord: 0.0ms)
