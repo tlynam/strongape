@@ -71,6 +71,51 @@ margin-bottom: 3px;
     line-height: 180%;
 }
 
+/* unvisited link */
+a:link{
+    text-decoration: none;
+    color: blue;
+    border-width: 1px;
+    border-color: black;
+    border-style: dashed;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 2px;
+}
+
+a:visited{
+    text-decoration: none;
+    color: blue;
+    border-width: 1px;
+    border-color: black;
+    border-style: dashed;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 2px;
+}
+
+a:hover{
+    text-decoration: none;
+    color: blue;
+    border-width: 1px;
+    border-color: black;
+    border-style: dashed;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 2px;
+}
+
+a:active{
+    text-decoration: none;
+    color: blue;
+    border-width: 1px;
+    border-color: black;
+    border-style: dashed;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 2px;
+}
+
 .add_workout_button{
     margin-left: 3em;
 }
@@ -81,18 +126,6 @@ margin-bottom: 3px;
 
 .add_exercise_group_button{
     margin-left: 15em;
-}
-
-/* unvisited link */
-a:link{
-    text-decoration: none;
-    color: black;
-    border-width: 1px;
-    border-color: black;
-    border-style: dashed;
-    padding-right: 4px;
-    padding-left: 4px;
-    padding-top: 2px;
 }
 
 #gorilla{
@@ -115,6 +148,26 @@ img.expand{
   margin-right: 30px;
   text-align: left;
   font-size: 20px;
+}
+
+#homepage a:link{
+  text-decoration: none;
+  border-style: none;
+}
+
+#homepage a:visited{
+  text-decoration: none;
+  border-style: none;
+}
+
+#homepage a:hover{
+  text-decoration: none;
+  border-style: none;
+}
+
+#homepage a:active{
+  text-decoration: none;
+  border-style: none;
 }
 
 /* Crap I don't understand */
