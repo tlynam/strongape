@@ -51575,3 +51575,78 @@ Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x00000002ef7200%3E=index&n
   [1m[36mDateOfWorkout Load (0.2ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
 Rendered date_of_workouts/index.html.erb within layouts/application (6.0ms)
 Completed 200 OK in 45ms (Views: 8.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-26 05:34:33 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+Rendered date_of_workouts/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 15ms (Views: 8.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x00000002ef7200%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2010-12-26 05:37:03 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x00000002ef7200>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+Rendered date_of_workouts/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-26 05:37:05 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-26 05:37:30 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-26 05:37:49 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-26 05:37:54 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-26 05:38:01 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-26 05:38:15 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-26 05:38:20 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-26 05:38:32 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-26 05:38:39 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-26 05:38:52 -0800
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
