@@ -1,13 +1,14 @@
 <div id="notebook">
 
-<h1>Workouts</h1>
-
 <table id ="journal">
-  <p id="workout_date_index_header">Date</p>
+  <tr>
+    <th>Workout Date</th>
+    <th>Description</th>
+  </tr>
 <% @date_of_workouts.each do |date_of_workout| %>
   <tr>
     <td id="workout_date_index_col" ><%= link_to date_of_workout.date.strftime("%m-%d-%y"), date_of_workout %></td>
-    <td><%= date_of_workout.description %></td>
+    <td><%= if !date_of_workout.description? then "Some kind of janky workout with no description" else date_of_workout.description end %></td>
     <td><%= link_to 'Edit', edit_date_of_workout_path(date_of_workout) %></td>
     <td><%= link_to 'Delete', date_of_workout, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

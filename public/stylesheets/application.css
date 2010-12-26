@@ -165,19 +165,22 @@ img.expand{
 #notebook{
     font-size: 18px;
 }
-#notebook h1{
-    font-size: 24px;
-    padding-bottom: 30px;
-}
 
 #journal{
-    padding-top: 40px;
     padding-bottom: 20px;
     font-size: 14px
 }
 
-#journal tr{
-    padding-bottom: 10px;
+#journal td{
+    padding-bottom: 30px;
+}
+
+#journal th{
+    color: darkgreen;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    margin-right: 40px;
 }
 
 #journal a:link{
@@ -222,14 +225,6 @@ img.expand{
     padding-right: 4px;
     padding-left: 4px;
     padding-top: 2px;
-}
-
-#workout_date_index_header{
-    color: darkgreen;
-    font-size: 16px;
-    font-weight: bold;
-    margin-left: 1em;
-    margin-bottom: -40px;
 }
 
 #workout_date_index_col{
