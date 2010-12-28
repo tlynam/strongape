@@ -264,7 +264,7 @@ img.expand{
     color: darkgreen;
     border-width: 1px;
     border-color: black;
-    border-style: dotted;
+    border-style: dashed;
     padding-right: 4px;
     padding-left: 4px;
     padding-top: 2px;
@@ -275,7 +275,7 @@ img.expand{
     color: darkgreen;
     border-width: 1px;
     border-color: black;
-    border-style: dotted;
+    border-style: dashed;
     padding-right: 4px;
     padding-left: 4px;
     padding-top: 2px;
@@ -286,7 +286,7 @@ img.expand{
     color: darkgreen;
     border-width: 1px;
     border-color: black;
-    border-style: dotted;
+    border-style: dashed;
     padding-right: 4px;
     padding-left: 4px;
     padding-top: 2px;
@@ -297,15 +297,20 @@ img.expand{
     color: darkgreen;
     border-width: 1px;
     border-color: black;
-    border-style: dotted;
+    border-style: dashed;
     padding-right: 4px;
     padding-left: 4px;
     padding-top: 2px;
 }
 
+span.show_definitions{
+    color:darkgreen;
+}
 
-
-
+.show_data{
+    margin-left: 5em;
+    line-height: 180%;
+}
 
 
 
