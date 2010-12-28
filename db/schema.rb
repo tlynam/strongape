@@ -13,7 +13,8 @@
 ActiveRecord::Schema.define(:version => 20100913223728) do
 
   create_table "athletic_programs", :force => true do |t|
-    t.string "program_name"
+    t.string "name"
+    t.text   "description"
   end
 
   create_table "date_of_workouts", :force => true do |t|

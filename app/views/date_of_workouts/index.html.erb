@@ -1,14 +1,17 @@
 <div id="notebook">
-
+  <h1 align="center">Journal</h1>
 <table id ="journal">
   <tr>
-    <th>Date</th>
-    <th>Description</th>
+    <%  if @date_of_workouts.count > 0 then %>
+    <th><%=  "Date" %></th>
+    <th><%=  "Description" %></th>
+    <% end %>
   </tr>
 <% @date_of_workouts.each do |date_of_workout| %>
   <tr>
-    <td id="workout_date_index_col" ><%= link_to date_of_workout.date.strftime("%m-%d-%y"), date_of_workout %></td>
+    <td id="workout_date_index_col" ><%= date_of_workout.date.strftime("%m-%d-%y") %></td>
     <td><%= if !date_of_workout.description? then "Some kind of janky workout with no description" else date_of_workout.description end %></td>
+    <td><%= link_to 'Show', date_of_workout %></td>
     <td><%= link_to 'Edit', edit_date_of_workout_path(date_of_workout) %></td>
     <td><%= link_to 'Delete', date_of_workout, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

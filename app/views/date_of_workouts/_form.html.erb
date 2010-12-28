@@ -35,7 +35,13 @@
 
 <script type="text/javascript">
   jQuery(function() {
-	jQuery(".datepicker").datepicker({ dateFormat: 'yy-mm-dd'});
+	jQuery(".datepicker").datepicker({
+                   showOn: "focus",
+		   buttonImage: "/images/icons/calendar.gif",
+		   buttonImageOnly: true,
+                   buttonText: 'Calendar',
+                   dateFormat: 'yy-mm-dd'                   
+                 });
 	return false;
   });
 </script>
