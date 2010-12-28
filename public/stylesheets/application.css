@@ -307,13 +307,24 @@ span.show_definitions{
     color:darkgreen;
 }
 
-.show_data{
+.show_data {
     margin-left: 5em;
     line-height: 180%;
 }
 
+.workout_day{
+    border-width: 1px;
+    border-style: solid;
+    border-top: none;
+}
 
-
+.top_border{
+    border-width: 1px;
+    border-style: solid;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+}
 
 
 

@@ -2,7 +2,7 @@
   <p>
     <%= f.label :name, "Exercise" %>
     <%= f.text_field :name, :style=>"background-color : #65B249", :size => 15 %>
-    <%= link_to_remove_fields "Delete", f %><br/>
+    <%= link_to_remove_fields "Delete", f %><br />
   </p>
   <%= f.fields_for :exercise_groups do |builder| %>
     <%= render 'exercise_group_fields', :f => builder %>

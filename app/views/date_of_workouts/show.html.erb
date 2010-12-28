@@ -11,10 +11,10 @@
               <%  @exercise_groups = ExerciseGroup.find_all_by_exercise_id(exercise.id) %>
               <% @exercise_groups.each do |exercise_group| %>
                 <%= exercise_group.sets %> Sets
-                <%= exercise_group.reps %> Reps<br/>
+                <%= exercise_group.reps %> Reps<br />
                 Wt or Dist: <%= exercise_group.weight %>
                 or <%= exercise_group.percentage_of_max %>% of Max<br/>
-                Desc <%= exercise_group.description %></br>
+                Desc <%= exercise_group.description %><br />
               <% end %>
             </div>
 
