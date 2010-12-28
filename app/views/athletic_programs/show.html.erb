@@ -7,7 +7,7 @@
     <div class="fields">
       <% @workouts = Workout.find_all_by_id(@athletic_program.id) %>
       <% @workouts.each do |workout| %>
-        <%= workout.workout_time.strftime("%B %e %Y") %>
+        <%= workout.day %>
 
         <div class="fields">
           <% @exercises = Exercise.find_all_by_workout_id(workout.id) %>
