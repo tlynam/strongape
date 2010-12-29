@@ -1,7 +1,7 @@
 <div id="notebook">
 <p id="notice"><%= notice %></p>
 
-<p align="center">
+<p style="margin-left:200px">
   <span class="show_definitions">Program Name:</span> <%= @athletic_program.name %><br>
   <span class="show_definitions">Descripton:</span> <%= @athletic_program.description %>
 </p>
@@ -32,6 +32,8 @@
 <% end %>
 
 <br />
-<%= link_to 'Edit', edit_athletic_program_path(@athletic_program) %> |
-<%= link_to 'Back', athletic_programs_path %>
+<div class="program_bottom_links">
+  <%= link_to 'Edit', edit_athletic_program_path(@athletic_program) %> |
+  <%= link_to 'Back to Index', athletic_programs_path %>
+</div>
 </div>

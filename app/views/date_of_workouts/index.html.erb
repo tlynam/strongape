@@ -9,7 +9,7 @@
   </tr>
 <% @date_of_workouts.each do |date_of_workout| %>
   <tr>
-    <td id="workout_date_index_col" ><%= date_of_workout.date.strftime("%m-%d-%y") %></td>
+    <td id="workout_date_index_col" ><%= date_of_workout.date.strftime("%B %d, %Y") %></td>
     <td><%= if !date_of_workout.description? then "Some kind of janky workout with no description" else date_of_workout.description end %></td>
     <td><%= link_to 'Show', date_of_workout %></td>
     <td><%= link_to 'Edit', edit_date_of_workout_path(date_of_workout) %></td>

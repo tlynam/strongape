@@ -1,26 +1,29 @@
+<div id="notebook">
 <p id="notice"><%= notice %></p>
 
-  <%= @date_of_workout.date.strftime("%B %e %Y") %>
+<p align="center">
+  <span class="show_definitions">Workout Date:</span> <%= @date_of_workout.date.strftime("%B %e %Y") %>
+</p>
 
-        <div class="fields">
-          <% @exercises = Exercise.find_all_by_workout_id(@date_of_workout.id) %>
-          <% @exercises.each do |exercise| %>
-            <%= exercise.name %>
-
-            <div class="fields">
-              <%  @exercise_groups = ExerciseGroup.find_all_by_exercise_id(exercise.id) %>
-              <% @exercise_groups.each do |exercise_group| %>
-                <%= exercise_group.sets %> Sets
-                <%= exercise_group.reps %> Reps<br />
-                Wt or Dist: <%= exercise_group.weight %>
-                or <%= exercise_group.percentage_of_max %>% of Max<br/>
-                Desc <%= exercise_group.description %><br />
-              <% end %>
-            </div>
-
+<div class="show_journal_data">
+      <% @exercises = Exercise.find_all_by_workout_id(@date_of_workout.id) %>
+      <% @exercises.each do |exercise| %>
+        <span class="show_definitions">Exercise:</span> <%= exercise.name %>
+        <div class="show_data">
+          <%  @exercise_groups = ExerciseGroup.find_all_by_exercise_id(exercise.id) %>
+          <% @exercise_groups.each do |exercise_group| %>
+            <%= exercise_group.sets %> <span class="show_definitions">Sets</span>
+            <%= exercise_group.reps %> <span class="show_definitions">Reps, </span>
+            <span class="show_definitions">Weight/Distance/Time:</span> <%= exercise_group.weight %>,
+            <%= exercise_group.percentage_of_max %><span class="show_definitions">% of Max</span><br />
+            <span class="show_definitions">Desccription:</span> <%= exercise_group.description %><br />
           <% end %>
         </div>
 
+      <% end %>
+</div>
 
+<br />
 <%= link_to 'Edit', edit_date_of_workout_path(@date_of_workout) %> |
-<%= link_to 'Back', date_of_workouts_path %>
+<%= link_to 'Back to Index', date_of_workouts_path %>
+</div>

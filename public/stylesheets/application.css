@@ -6,7 +6,7 @@ body {
 
 #container {
   width: 75%;
-  margin-left: 150px;
+  margin-left: 16%;
   font-size: 15px;
 }
 
@@ -196,13 +196,12 @@ img.expand{
 }
 
 #homepage {
-  width: 80%;
+  width: 93%;
   background-color: lightgreen;
   padding: 30px;
   text-align: left;
   font-size: 20px;
   margin: auto;
-  margin-right: 90px;
 }
 
 #homepage a:link{
@@ -312,10 +311,17 @@ span.show_definitions{
     line-height: 180%;
 }
 
+.show_journal_data {
+    margin-left: 1em;
+    line-height: 180%;
+}
+
 .workout_day{
     border-width: 1px;
     border-style: solid;
     border-top: none;
+    margin-left: -1em;
+    margin-right: 1em;
 }
 
 .top_border{
@@ -324,22 +330,15 @@ span.show_definitions{
     border-bottom: none;
     border-right: none;
     border-left: none;
+    margin-left: -1em;
+    margin-right: 1em;
 }
 
+.program_bottom_links{
+    margin-left: -1em;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Notices and Errors */
 #flash_notice, #flash_error {
   padding: 5px 8px;
   margin: 10px 0;
@@ -381,8 +380,8 @@ span.show_definitions{
   font-size: 12px;
   margin: -7px;
   margin-bottom: 0px;
-  background-color: #c00;
-  color: #fff;
+  background-color: lightgreen;
+  color: brown;
 }
 
 #error_explanation ul li {
