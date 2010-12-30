@@ -2,7 +2,7 @@
   <div class="workout">
   <p>
     <%= f.label :workout_time, "Day" %>
-    <%= f.text_field :day, :style=>"background-color : #65B249", :size => 12, :class => "datepicker" %>
+    <%= f.text_field :day, :size => 12 %>
     <%= link_to_remove_fields "Delete", f %><br />
   </p>
   <%= f.fields_for :exercises do |builder| %>
@@ -11,17 +11,3 @@
   <div class="add_exercise_button"><%= link_to_add_fields "Add Exercises", f, :exercises %></div>
   </div>
 </div>
-
-<script type="text/javascript">
-  jQuery(function() {
-	jQuery(".datepicker").datepicker({ 
-                   showOn: "button",
-		   buttonImage: "/images/icons/calendar.gif",
-		   buttonImageOnly: true,
-                   buttonText: 'Calendar',
-                   dateFormat: 'yy-mm-dd',
-                   constrainInput: false
-                 });
-	return false;
-  });
-</script>
