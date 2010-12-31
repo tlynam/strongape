@@ -8,27 +8,39 @@
   <%= stylesheet_link_tag :all, 'jquery-ui-1.8.4.custom' %>
   <%= javascript_include_tag 'jquery-1.4.2.min', 'jquery-ui-1.8.4.custom.min', 'rails' %>
   <%= csrf_meta_tag %>
-  <div id="gorilla">
+  
+<div id="gorilla">
     <%#= link_to image_tag("clear.gif", :alt => "Strong Ape", :border=>1 ), :controller=> 'home', :action => 'index' %>
     <a href="/home/index"><img src="/images/banner.png" alt="Strong Ape" class="expand" /></a>
   </div>
 </head>
-
 <div id="header">
   <br /><br />
 </div>
 
 <body>
+<% yield :selected_navigation %>
+  <div id="menu">
+    <ul>
+      <li class="<%= selected_navigation(:home)%>">
+        <%= link_to "Home", "/home/index" %></li>
+      <li class="<%= selected_navigation(:programs)%>">
+        <%= link_to "Programs", athletic_programs_path %></li>
+      <li class="<%= selected_navigation(:journal)%>">
+        <%= link_to "Journal", date_of_workouts_path %></li>
+    </ul>
+  </div>
+  <div id="main">
     <div id="binder">
       <div id="container">
         <br /><br />
         <%= yield %>
       </div>
     </div>
+  </div>
 </body>
 
 <div id="footer">
   <br /><br />
 </div>
-
 </html>

@@ -18,4 +18,8 @@ module ApplicationHelper
     end
     link_to_function(image_tag("icons/add.png")+ " " + name, "add_fields(this, \"#{association}\", \"#{escape_javascript(fields)}\")")
   end
+
+  def selected_navigation(element)
+    element == @selected_nav_element ? "current" : ""
+  end
 end

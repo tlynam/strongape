@@ -1,3 +1,6 @@
+<% content_for :selected_navigation do%>
+  <% @selected_navigation = :home %>
+<% end %>
 <table id="homepage">
     <tr>
         <th><%= link_to image_tag("Button.png", :border=>0), :controller => 'athletic_programs', :action => 'index' %></th>

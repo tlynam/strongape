@@ -1,7 +1,7 @@
 <div class ="fields">
   <p>
-    <%= f.label :name, "Exercise" %>
-    <%= f.text_field :name, :size => 15 %>
+      <%= f.label :name, "Exercise" %>
+      <%= f.text_field :name, :size => 15 %>
     <%= link_to_remove_fields "Delete", f %><br />
   </p>
   <%= f.fields_for :exercise_groups do |builder| %>
