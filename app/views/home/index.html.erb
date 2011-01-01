@@ -1,11 +1,12 @@
-<% content_for :header do %>
-  <%= image_tag "banner.png", :alt => 'StrongApe', :id => "gorilla" %>
-<% end %>
+<%# content_for :header do %>
+  <%#= image_tag "banner.png", :alt => 'StrongApe', :id => "gorilla" %>
+<%# end %>
 
 
 <% content_for :selected_navigation do%>
   <% @selected_navigation = :home %>
 <% end %>
+<%= image_tag "banner.png", :alt => 'StrongApe', :id => "gorilla2" %>
 <table id="homepage">
     <tr>
         <th><%= link_to image_tag("Button.png", :border=>0), :controller => 'athletic_programs', :action => 'index' %></th>
@@ -36,3 +37,13 @@
       </td>
     </tr>
 </table>
+
+<#script type="text/javascript">
+$(document).ready(function(){
+  
+  $("body").css({ "margin-top":"-30px" });
+  $("body").css({ "padding-top":"180px" });
+
+
+});
+<#/script>
