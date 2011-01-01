@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <%= yield :header %>
   <title>StrongApe</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults, :cache => true %>
@@ -8,10 +9,17 @@
   <%= stylesheet_link_tag :all, 'jquery-ui-1.8.4.custom' %>
   <%= javascript_include_tag 'jquery-1.4.2.min', 'jquery-ui-1.8.4.custom.min', 'rails' %>
   <%= csrf_meta_tag %>
-  
-<div id="gorilla">
-    <%#= link_to image_tag("clear.gif", :alt => "Strong Ape", :border=>1 ), :controller=> 'home', :action => 'index' %>
-    <a href="/home/index"><img src="/images/banner.png" alt="Strong Ape" class="expand" /></a>
+
+<% yield :selected_navigation %>
+  <div id="menu" z-index: 2;>
+    <ul z-index: 2;>
+      <li z-index: 2;>
+        <%= link_to "Home", "/home/index", :class => selected_navigation(:home) %></li>
+      <li z-index: 2;>
+        <%= link_to "Programs", athletic_programs_path, :class => selected_navigation(:athletic_programs) %></li>
+      <li z-index: 2;>
+        <%= link_to "Journal", date_of_workouts_path, :class => selected_navigation(:date_of_workouts) %></li>
+    </ul>
   </div>
 </head>
 <div id="header">
@@ -19,17 +27,8 @@
 </div>
 
 <body>
-<% yield :selected_navigation %>
-  <div id="menu">
-    <ul>
-      <li class="<%= selected_navigation(:home)%>">
-        <%= link_to "Home", "/home/index" %></li>
-      <li class="<%= selected_navigation(:programs)%>">
-        <%= link_to "Programs", athletic_programs_path %></li>
-      <li class="<%= selected_navigation(:journal)%>">
-        <%= link_to "Journal", date_of_workouts_path %></li>
-    </ul>
-  </div>
+
+
   <div id="main">
     <div id="binder">
       <div id="container">
@@ -38,9 +37,10 @@
       </div>
     </div>
   </div>
+
 </body>
 
 <div id="footer">
   <br /><br />
-</div>
+  </div>
 </html>

@@ -7490,3 +7490,3065 @@ ActionController::RoutingError (No route matches "/images/top.png"):
   
 
 Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-31 18:31:36 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_18642440__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 30ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:31:37 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-31 18:31:38 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_32178520__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:31:38 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:31:41 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (7.0ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_31021100__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 101ms (Views: 12.4ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:31:42 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:32:24 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_28966280__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:32:24 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:32:27 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_19421880__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:32:27 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 18:32:30 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.3ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_29213820__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 24ms (Views: 17.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:32:30 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:32:32 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_17516260__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 32ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:32:33 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:32:58 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30420440__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_layouts_application_html_erb___3969370706960756437_30414880__258332173669823911 at /home/todd/strongape/app/views/layouts/application.html.erb:22)
+Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:32:58 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:33:00 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_19075560__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_layouts_application_html_erb___3969370706960756437_19031060__258332173669823911 at /home/todd/strongape/app/views/layouts/application.html.erb:22)
+Rendered athletic_programs/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 12ms (Views: 6.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:33:00 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:33:11 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_30315500__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_layouts_application_html_erb___3969370706960756437_30313100__258332173669823911 at /home/todd/strongape/app/views/layouts/application.html.erb:47)
+Rendered athletic_programs/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 13ms (Views: 6.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:33:11 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:33:13 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_19096020__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_layouts_application_html_erb___3969370706960756437_19053860__258332173669823911 at /home/todd/strongape/app/views/layouts/application.html.erb:47)
+Rendered athletic_programs/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 13ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:33:13 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:33:14 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_31129220__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_layouts_application_html_erb___3969370706960756437_31125520__258332173669823911 at /home/todd/strongape/app/views/layouts/application.html.erb:47)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:33:14 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:33:22 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29238880__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_layouts_application_html_erb___3969370706960756437_29234020__258332173669823911 at /home/todd/strongape/app/views/layouts/application.html.erb:43)
+Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:33:22 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 18:33:23 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_31974920__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_layouts_application_html_erb___3969370706960756437_31966140__258332173669823911 at /home/todd/strongape/app/views/layouts/application.html.erb:43)
+Rendered date_of_workouts/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 22ms (Views: 14.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:33:24 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 18:33:25 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_28260320__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_layouts_application_html_erb___3969370706960756437_28255500__258332173669823911 at /home/todd/strongape/app/views/layouts/application.html.erb:43)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 20ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:33:26 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (51.9ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:33:27 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_30969840__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_layouts_application_html_erb___3969370706960756437_30966440__258332173669823911 at /home/todd/strongape/app/views/layouts/application.html.erb:43)
+Rendered athletic_programs/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 12ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:33:27 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.1ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:33:34 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29009100__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_layouts_application_html_erb___3969370706960756437_29004520__258332173669823911 at /home/todd/strongape/app/views/layouts/application.html.erb:43)
+Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:33:34 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:33:35 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_17527060__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_layouts_application_html_erb___3969370706960756437_17509880__258332173669823911 at /home/todd/strongape/app/views/layouts/application.html.erb:43)
+Rendered athletic_programs/index.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 41ms (Views: 34.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:33:36 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-31 18:40:01 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30394080__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:40:01 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:40:03 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_19468100__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:40:04 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:40:25 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30024000__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:40:26 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:42:39 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_33225880__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:42:40 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:42:42 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_28156600__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:42:42 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:43:13 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30989620__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:43:13 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:43:15 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_20882640__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (10.2ms)
+Completed   in 19ms
+
+ActionView::Template::Error (exception class/object expected):
+    2:   <% @selected_navigation = :athletic_programs %>
+    3: <% end %>
+    4: 
+    5: <% raise @selected_navigation %>
+    6: <div id="notebook">
+    7:   <h1 align="center">Programs</h1>
+    8: <table id ="journal">
+  app/views/athletic_programs/index.html.erb:5:in `raise'
+  app/views/athletic_programs/index.html.erb:5:in `_app_views_athletic_programs_index_html_erb___565051557960425582_20882640__258332173669823911'
+  app/controllers/athletic_programs_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:44:03 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_30058660__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (1.0ms)
+Completed   in 10ms
+
+ActionView::Template::Error (exception class/object expected):
+    2:   <% @selected_navigation = :athletic_programs %>
+    3: <% end %>
+    4: 
+    5: <% raise :athletic_programs %>
+    6: <div id="notebook">
+    7:   <h1 align="center">Programs</h1>
+    8: <table id ="journal">
+  app/views/athletic_programs/index.html.erb:5:in `raise'
+  app/views/athletic_programs/index.html.erb:5:in `_app_views_athletic_programs_index_html_erb___565051557960425582_30058660__258332173669823911'
+  app/controllers/athletic_programs_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.6ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:44:26 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_19849880__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (1.1ms)
+Completed   in 10ms
+
+ActionView::Template::Error (:athletic_programs):
+    2:   <% @selected_navigation = :athletic_programs %>
+    3: <% end %>
+    4: 
+    5: <% raise :athletic_programs.inspect %>
+    6: <div id="notebook">
+    7:   <h1 align="center">Programs</h1>
+    8: <table id ="journal">
+  app/views/athletic_programs/index.html.erb:5:in `_app_views_athletic_programs_index_html_erb___565051557960425582_19849880__258332173669823911'
+  app/controllers/athletic_programs_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:44:37 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_30147100__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (1.2ms)
+Completed   in 10ms
+
+ActionView::Template::Error (:athletic_programs):
+    2:   <% @selected_navigation = :athletic_programs %>
+    3: <% end %>
+    4: 
+    5: <% raise @selected_navigation.inspect %>
+    6: <div id="notebook">
+    7:   <h1 align="center">Programs</h1>
+    8: <table id ="journal">
+  app/views/athletic_programs/index.html.erb:5:in `_app_views_athletic_programs_index_html_erb___565051557960425582_30147100__258332173669823911'
+  app/controllers/athletic_programs_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:44:38 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_20686040__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (1.1ms)
+Completed   in 10ms
+
+ActionView::Template::Error (:athletic_programs):
+    2:   <% @selected_navigation = :athletic_programs %>
+    3: <% end %>
+    4: 
+    5: <% raise @selected_navigation.inspect %>
+    6: <div id="notebook">
+    7:   <h1 align="center">Programs</h1>
+    8: <table id ="journal">
+  app/views/athletic_programs/index.html.erb:5:in `_app_views_athletic_programs_index_html_erb___565051557960425582_20686040__258332173669823911'
+  app/controllers/athletic_programs_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:44:41 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30995800__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:44:42 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:44:43 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_21010260__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:44:44 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:44:44 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_29842220__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (1.0ms)
+Completed   in 10ms
+
+ActionView::Template::Error (:athletic_programs):
+    2:   <% @selected_navigation = :athletic_programs %>
+    3: <% end %>
+    4: 
+    5: <% raise @selected_navigation.inspect %>
+    6: <div id="notebook">
+    7:   <h1 align="center">Programs</h1>
+    8: <table id ="journal">
+  app/views/athletic_programs/index.html.erb:5:in `_app_views_athletic_programs_index_html_erb___565051557960425582_29842220__258332173669823911'
+  app/controllers/athletic_programs_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:44:57 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_19030120__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (1.2ms)
+Completed   in 10ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1)):
+    2:   <% @selected_navigation = :athletic_programs %>
+    3: <% end %>
+    4: 
+    5: <% raise content_for.inspect %>
+    6: <div id="notebook">
+    7:   <h1 align="center">Programs</h1>
+    8: <table id ="journal">
+  app/views/athletic_programs/index.html.erb:5:in `_app_views_athletic_programs_index_html_erb___565051557960425582_19030120__258332173669823911'
+  app/controllers/athletic_programs_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.4ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:45:39 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_29831820__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (1.1ms)
+Completed   in 10ms
+
+ActionView::Template::Error (:athletic_programs):
+    2:   <% @selected_navigation = :athletic_programs %>
+    3: <% end %>
+    4: 
+    5: <% raise @selected_navigation.inspect %>
+    6: <div id="notebook">
+    7:   <h1 align="center">Programs</h1>
+    8: <table id ="journal">
+  app/views/athletic_programs/index.html.erb:5:in `_app_views_athletic_programs_index_html_erb___565051557960425582_29831820__258332173669823911'
+  app/controllers/athletic_programs_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.2ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:46:42 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_18868720__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (1.1ms)
+Completed   in 10ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1)):
+    2:   <% @selected_navigation = :athletic_programs %>
+    3: <% end %>
+    4: 
+    5: <% raise selected_navigation.inspect %>
+    6: <div id="notebook">
+    7:   <h1 align="center">Programs</h1>
+    8: <table id ="journal">
+  app/helpers/application_helper.rb:22:in `selected_navigation'
+  app/views/athletic_programs/index.html.erb:5:in `_app_views_athletic_programs_index_html_erb___565051557960425582_18868720__258332173669823911'
+  app/controllers/athletic_programs_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.4ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:46:48 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_29900780__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (1.1ms)
+Completed   in 10ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1)):
+    2:   <% @selected_navigation = :athletic_programs %>
+    3: <% end %>
+    4: 
+    5: <% raise selected_navigation.element.inspect %>
+    6: <div id="notebook">
+    7:   <h1 align="center">Programs</h1>
+    8: <table id ="journal">
+  app/helpers/application_helper.rb:22:in `selected_navigation'
+  app/views/athletic_programs/index.html.erb:5:in `_app_views_athletic_programs_index_html_erb___565051557960425582_29900780__258332173669823911'
+  app/controllers/athletic_programs_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.2ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:47:01 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_19163160__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:47:01 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:47:26 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_28986980__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:47:26 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:49:21 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_29285380__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:49:21 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:50:43 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_29765180__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.5ms)
+Completed   in 13ms
+
+ActionView::Template::Error (""):
+    22:         <%= link_to "Programs", athletic_programs_path %></li>
+    23:       <li class="<%= selected_navigation(:date_of_workouts) %>">
+    24:         <%= link_to "Journal", date_of_workouts_path %></li>
+    25:       <%= raise selected_navigation(:date_of_workouts).inspect %>
+    26:     </ul>
+    27:   </div>
+    28: </head>
+  app/views/layouts/application.html.erb:25:in `_app_views_layouts_application_html_erb___3969370706960756437_29762880__258332173669823911'
+  app/controllers/athletic_programs_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.4ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 18:50:49 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_28106160__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (14.1ms)
+Completed   in 63ms
+
+ActionView::Template::Error (""):
+    22:         <%= link_to "Programs", athletic_programs_path %></li>
+    23:       <li class="<%= selected_navigation(:date_of_workouts) %>">
+    24:         <%= link_to "Journal", date_of_workouts_path %></li>
+    25:       <%= raise selected_navigation(:date_of_workouts).inspect %>
+    26:     </ul>
+    27:   </div>
+    28: </head>
+  app/views/layouts/application.html.erb:25:in `_app_views_layouts_application_html_erb___3969370706960756437_28640280__258332173669823911'
+  app/controllers/date_of_workouts_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 18:50:51 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_28423860__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.3ms)
+Completed   in 20ms
+
+ActionView::Template::Error (""):
+    22:         <%= link_to "Programs", athletic_programs_path %></li>
+    23:       <li class="<%= selected_navigation(:date_of_workouts) %>">
+    24:         <%= link_to "Journal", date_of_workouts_path %></li>
+    25:       <%= raise selected_navigation(:date_of_workouts).inspect %>
+    26:     </ul>
+    27:   </div>
+    28: </head>
+  app/views/layouts/application.html.erb:25:in `_app_views_layouts_application_html_erb___3969370706960756437_28394880__258332173669823911'
+  app/controllers/date_of_workouts_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 18:50:52 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_30185300__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.3ms)
+Completed   in 21ms
+
+ActionView::Template::Error (""):
+    22:         <%= link_to "Programs", athletic_programs_path %></li>
+    23:       <li class="<%= selected_navigation(:date_of_workouts) %>">
+    24:         <%= link_to "Journal", date_of_workouts_path %></li>
+    25:       <%= raise selected_navigation(:date_of_workouts).inspect %>
+    26:     </ul>
+    27:   </div>
+    28: </head>
+  app/views/layouts/application.html.erb:25:in `_app_views_layouts_application_html_erb___3969370706960756437_30162120__258332173669823911'
+  app/controllers/date_of_workouts_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.7ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 18:51:09 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_33187860__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 48ms (Views: 14.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:51:09 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:51:11 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_21225180__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 12ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:51:11 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 18:51:12 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_29801620__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 20ms (Views: 13.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:51:12 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 18:51:56 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_31313040__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 21ms (Views: 13.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:51:57 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:51:58 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_17548720__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 38ms (Views: 31.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:51:59 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:52:00 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29729420__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:52:01 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:53:18 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_17773240__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 36ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:53:19 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:53:21 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_28597960__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:53:22 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 18:53:22 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_31027540__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 20ms (Views: 13.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:53:23 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 18:56:31 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_16551160__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 48ms (Views: 40.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:56:31 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:56:47 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_27989580__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:56:48 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:56:55 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_30250660__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:56:56 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:57:03 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_18518340__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 39ms (Views: 32.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:57:04 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:57:05 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_28912460__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:57:06 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 18:58:44 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_31192900__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:58:45 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 18:58:46 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_20831140__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 46ms (Views: 39.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:58:47 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:58:48 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29637000__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:58:49 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:59:39 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_16563680__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:59:40 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 18:59:50 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29069520__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 18:59:50 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.3ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:00:09 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_31977680__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:00:10 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:00:39 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_28079120__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:00:39 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:00:45 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30271360__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:00:46 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:01:06 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_18534760__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:01:06 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:01:12 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29305920__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:01:13 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:01:24 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_32170820__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:01:25 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:01:30 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_28299080__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:01:31 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:01:37 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30861380__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:01:37 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 19:01:45 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_16622300__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 37ms (Views: 31.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:01:45 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 19:01:46 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_29004320__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 20ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:01:47 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:01:48 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_31176680__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:01:48 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:02:33 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_28230960__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:02:34 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:02:45 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30414480__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:02:46 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 19:03:56 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_32010080__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 38ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:03:56 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 19:03:57 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_28754420__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 20ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:03:58 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:03:58 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_31055240__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:03:59 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 19:06:05 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_21088620__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:06:05 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 19:06:07 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_29818000__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 20ms (Views: 13.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:06:07 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:07:24 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_33132000__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:07:24 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:07:26 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29069180__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:07:27 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:08:48 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_33121020__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:1)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:08:49 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:09:10 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_28425740__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:4)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:09:10 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 19:09:19 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_30124860__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:09:20 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 19:09:21 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_17587120__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 46ms (Views: 39.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:09:21 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:09:48 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_28882500__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:4)
+Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:09:48 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:10:59 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_32195180__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:4)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:11:00 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:11:26 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_28721500__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:4)
+Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:11:27 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:11:50 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_31107840__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:4)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:11:50 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 19:11:59 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_19169820__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 12ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:12:00 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 19:12:43 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_29259820__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 13ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:12:43 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:12:44 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_33138240__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:4)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:12:45 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:13:08 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29034880__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:4)
+Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:13:09 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:13:15 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_31312140__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:4)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:13:15 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:15:18 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_22864680__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:15:19 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 19:15:20 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_29710900__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:15:20 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:15:21 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_17707180__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 32ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:15:22 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:15:27 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29762440__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:15:27 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:15:41 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_33227820__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:15:41 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:16:17 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_28534640__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:16:18 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:16:27 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30991740__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:16:27 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:16:38 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_20800900__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:16:38 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:16:59 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29773860__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:17:00 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:17:05 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_33119900__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:17:06 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:17:14 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_28433740__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:17:15 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:18:23 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30427500__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:18:24 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 19:18:32 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_28106980__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 12ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:18:35 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_31979300__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:18:35 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:18:39 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29745620__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:18:40 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 19:18:44 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_32214140__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 16ms (Views: 8.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:18:44 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:18:45 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29996160__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:18:46 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:19:01 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_28246000__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:19:02 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:19:46 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_33121080__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:19:47 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 19:19:53 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_28248420__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:19:53 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:19:54 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_33204700__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:19:55 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:20:21 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29980160__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:3)
+Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:20:22 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 19:21:50 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_33151040__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 40ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:21:51 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 19:21:53 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_29535840__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 20ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:21:54 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2010-12-31 19:23:47 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_33201880__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 49ms (Views: 14.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:23:47 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:23:48 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_28466340__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:23:49 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:24:02 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_16650000__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 32ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:24:02 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 19:24:04 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_28719600__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:24:04 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:24:05 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_18871220__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 46ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:24:05 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:25:28 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30940440__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:7)
+Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:25:28 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:26:08 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_28828980__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:7)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:26:08 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:26:22 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_31965440__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:26:23 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 19:28:30 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_21645620__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 12ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:28:31 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2010-12-31 19:28:32 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.6ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.7ms)
+Rendered athletic_programs/_exercise_fields.html.erb (38.9ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.9ms)
+Rendered athletic_programs/_workout_fields.html.erb (46.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.7ms)
+Rendered athletic_programs/_workout_fields.html.erb (6.1ms)
+Rendered athletic_programs/_form.html.erb (57.0ms)
+Rendered athletic_programs/new.html.erb within layouts/application (60.6ms)
+Completed 200 OK in 109ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:28:32 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2010-12-31 19:28:41 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_27961800__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 12ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:28:41 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:28:42 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_32192840__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:28:43 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:29:47 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29915120__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:29:48 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 19:29:53 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_28596460__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 19:29:53 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2010-12-31 23:10:49 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_28940860__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2010-12-31 23:10:49 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:32:34 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_31190660__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:32:34 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-01 03:32:35 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_34072300__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:32:36 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:32:38 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_28181660__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:32:38 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:32:41 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_31989340__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:32:41 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:32:55 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_28248740__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:32:55 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:33:05 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_31162220__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:33:06 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:33:22 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_23950020__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:33:23 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:33:29 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_31069180__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:33:29 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:33:40 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_22358600__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:33:41 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:34:46 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30410300__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:34:47 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:35:06 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_19959140__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:35:06 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:35:40 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29863460__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:35:41 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:36:51 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38583180__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:36:51 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-01 03:36:53 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_30025620__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:36:53 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2011-01-01 03:36:54 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_22038400__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 21ms (Views: 14.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:36:55 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:36:56 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_39013040__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:36:56 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:39:31 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38810980__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:39:32 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:40:07 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_31191600__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:40:07 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:41:15 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38555120__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:41:15 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:41:29 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30430820__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:41:30 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:41:36 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38438160__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:41:36 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:41:41 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30273660__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:41:41 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:41:49 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38460080__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:41:50 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:41:57 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30306340__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:41:58 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:42:08 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38419320__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:42:08 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:42:13 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30262820__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:42:13 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:42:29 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38358960__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:42:30 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:42:40 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30097340__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:42:41 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:42:45 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38244500__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:42:45 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:42:50 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29837340__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:42:51 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:42:55 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38212260__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:42:56 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:42:59 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29778880__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:42:59 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:43:13 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_36310760__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:43:14 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:43:32 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38825160__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:43:33 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:44:02 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_31157560__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:44:02 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:44:12 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38412440__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:44:13 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-01 03:44:22 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_29415680__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:44:23 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2011-01-01 03:44:25 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_38064500__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 20ms (Views: 13.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:44:25 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:44:26 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38857900__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:44:27 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:44:37 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_37792060__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:44:37 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:44:50 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_39138580__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:44:50 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:45:43 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_32140060__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:45:44 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 03:46:00 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38621580__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 03:46:00 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 04:15:50 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 04:16:59 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29792160__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 04:16:59 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 04:17:13 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38345520__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 04:17:14 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 04:17:19 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_39235420__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 04:17:20 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 04:18:50 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_32182700__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 04:18:50 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 04:18:56 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38635080__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 18ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 04:18:57 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 04:19:01 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_30892300__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 04:19:02 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 04:19:26 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38409020__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 04:19:27 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 04:19:37 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_29936220__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 04:19:38 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 04:19:42 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38259760__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 04:19:42 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_32161600__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 04:19:43 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 04:19:47 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38702940__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 04:19:48 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 04:19:52 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_31026380__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 04:19:53 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-01 04:20:11 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___565051557960425582_39138560__258332173669823911 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 41ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 04:20:11 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2011-01-01 04:20:13 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___3193061374408154407_32224840__258332173669823911 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 20ms (Views: 13.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 04:20:13 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-01 04:20:14 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__252796012546014059_38910460__258332173669823911 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/top.png" for 127.0.0.1 at 2011-01-01 04:20:15 -0800
+
+ActionController::RoutingError (No route matches "/images/top.png"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)

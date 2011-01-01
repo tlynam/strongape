@@ -20,6 +20,6 @@ module ApplicationHelper
   end
 
   def selected_navigation(element)
-    element == @selected_nav_element ? "current" : ""
+    element == @selected_navigation ? "active" : ""
   end
 end
