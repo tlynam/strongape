@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100913223728) do
+ActiveRecord::Schema.define(:version => 20110101132126) do
 
   create_table "athletic_programs", :force => true do |t|
     t.string "name"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(:version => 20100913223728) do
   create_table "date_of_workouts", :force => true do |t|
     t.datetime "date"
     t.text     "description"
+  end
+
+  create_table "days_of_weeks", :force => true do |t|
+    t.boolean "sunday"
+    t.boolean "monday"
+    t.boolean "tuesday"
+    t.boolean "wednesday"
+    t.boolean "thursday"
+    t.boolean "friday"
+    t.boolean "saturday"
   end
 
   create_table "exercise_groups", :force => true do |t|
