@@ -13,11 +13,10 @@
 
         <%= f.check_box :tuesday, :class =>"childCheckBox" %>
         <%= f.label :tuesday, "Tuesday", :class =>"childCheckBox" %>
-
-        <%= f.check_box :wednesday, :class =>"childCheckBox" %>
-        <%= f.label :wednesday, "Wednesday", :class =>"childCheckBox" %>
       </p>
       <p>
+        <%= f.check_box :wednesday, :class =>"childCheckBox" %>
+        <%= f.label :wednesday, "Wednesday", :class =>"childCheckBox" %>
         
         <%= f.check_box :thursday, :class =>"childCheckBox" %>
         <%= f.label :thursday, "Thursday", :class =>"childCheckBox" %>
@@ -38,6 +37,10 @@
 </div>
 
 <script type="text/javascript">
+$(document).ready(function(){
+        $('.add_exercise_button').show();
+});
+
 $(document).ready(
     function() {
         //clicking the parent checkbox should check or uncheck all child checkboxes

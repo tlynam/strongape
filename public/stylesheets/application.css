@@ -192,6 +192,10 @@ img.expand{
     margin-bottom: -4px;
 }
 
+fieldset{
+    border-style: none;
+}
+
 #homepage {
   width: 93%;
   background-color: lightgreen;

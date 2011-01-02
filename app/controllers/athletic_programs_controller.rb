@@ -25,9 +25,9 @@ class AthleticProgramsController < ApplicationController
   # GET /athletic_programs/new.xml
   def new
     @athletic_program = AthleticProgram.new
-    #days_of_week = @athletic_program.days_of_weeks.build
-    #exercise = days_of_week.exercises.build
-    #exercise.exercise_groups.build
+    days_of_week = @athletic_program.days_of_weeks.build
+    exercise = days_of_week.exercises.build
+    exercise.exercise_groups.build
 
     respond_to do |format|
       format.html # new.html.erb
