@@ -14,11 +14,11 @@
 <h1><%= athletic_program_fields.label :program, "Goal" %> <%= athletic_program_fields.text_field :name, :size => 48 %></h1>
 <h1>Description <%= athletic_program_fields.text_area :description, :cols => 60, :rows => 3 %></h1>
 
-    <%= athletic_program_fields.fields_for :workouts do |builder| %>
-      <%= render 'workout_fields', :f => builder %>
+    <%= athletic_program_fields.fields_for :days_of_weeks do |builder| %>
+      <%= render 'days_of_week_fields', :f => builder %>
     <% end %>
 
-    <div class="add_workout_button"><%= link_to_add_workout "Workout", athletic_program_fields, :workouts %></div>
+    <div class="add_workout_button"><%= link_to_add_days_of_week "Days of week", athletic_program_fields, :days_of_weeks %></div>
 
   <br />
   <div class="actions">
