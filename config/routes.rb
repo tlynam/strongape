@@ -1,4 +1,6 @@
 Strongape::Application.routes.draw do
+  resources :metrics
+
   get "home/index"
 
   resources :date_of_workouts

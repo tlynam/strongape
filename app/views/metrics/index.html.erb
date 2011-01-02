@@ -1,0 +1,31 @@
+<% content_for :selected_navigation do%>
+  <% @selected_navigation = :metrics %>
+<% end %>
+
+<h1>Listing metrics</h1>
+
+<table>
+  <tr>
+    <th>Name of Metric</th>
+    <th>Value</th>
+    <th>Unit</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @metrics.each do |metric| %>
+  <tr>
+    <td><%= metric.name %></td>
+    <td><%= metric.value %></td>
+    <td><%= metric.unit %></td>
+    <td><%= metric.date %></td>
+    <td><%= link_to 'Edit', edit_metric_path(metric) %></td>
+    <td><%= link_to 'Destroy', metric, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Metric', new_metric_path %>
