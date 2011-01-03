@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  metric_id: 1
+  value: 1
+  date: 2011-01-03 04:17:56
+
+two:
+  metric_id: 1
+  value: 1
+  date: 2011-01-03 04:17:56

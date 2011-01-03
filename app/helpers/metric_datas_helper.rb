@@ -1,0 +1,2 @@
+module MetricDatasHelper
+end

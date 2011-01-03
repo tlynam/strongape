@@ -1,4 +1,6 @@
 Strongape::Application.routes.draw do
+  resources :metric_datas
+
   resources :metrics
 
   get "home/index"

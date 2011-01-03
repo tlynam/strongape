@@ -3,6 +3,7 @@ class MetricsController < ApplicationController
   # GET /metrics.xml
   def index
     @metrics = Metric.all
+    @metric_datas = MetricData.all
 
     respond_to do |format|
       format.html # index.html.erb

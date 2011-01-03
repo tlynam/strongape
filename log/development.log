@@ -23592,3 +23592,2280 @@ Started GET "/metrics" for 127.0.0.1 at 2011-01-02 07:06:30 -0800
 DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___3402613991110037384_30295920_3835430181849797311 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
 Rendered metrics/index.html.erb within layouts/application (3.5ms)
 Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-03 04:09:48 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__464166317959577429_29449100__112320388929058310 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-03 04:09:52 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__464166317959577429_28171120__112320388929058310 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 04:10:55 -0800
+  Processing by MetricsController#index as HTML
+  [1m[36mMetric Load (7.4ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_29447600__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 69ms (Views: 6.1ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 04:15:04 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_25107840__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 15ms (Views: 7.8ms | ActiveRecord: 0.1ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (50.4ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (1.1ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (11.4ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateAthleticPrograms (20100906093132)
+  [1m[35mSQL (2.4ms)[0m  CREATE TABLE `athletic_programs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text) ENGINE=InnoDB
+  [1m[36mSQL (11.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100906093132')[0m
+Migrating to CreateWorkouts (20100906093233)
+  [1m[35mSQL (2.0ms)[0m  CREATE TABLE `workouts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `athletic_program_id` int(11), `workout_time` datetime, `day` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100906093233')[0m
+Migrating to CreateExercises (20100906093248)
+  [1m[35mSQL (5.2ms)[0m  CREATE TABLE `exercises` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `days_of_week_id` int(11), `date_of_workout_id` int(11), `name` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100906093248')[0m
+Migrating to CreateExerciseGroups (20100908213001)
+  [1m[35mSQL (6.2ms)[0m  CREATE TABLE `exercise_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `exercise_id` int(11), `weight` int(11), `percentage_of_max` int(11), `sets` int(11), `reps` int(11), `description` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100908213001')[0m
+Migrating to CreateDateOfWorkouts (20100913223728)
+  [1m[35mSQL (1.7ms)[0m  CREATE TABLE `date_of_workouts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `date` datetime, `description` text) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100913223728')[0m
+Migrating to DaysOfWeeks (20110101132126)
+  [1m[35mSQL (3.1ms)[0m  CREATE TABLE `days_of_weeks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `athletic_program_id` int(11), `sunday` tinyint(1), `monday` tinyint(1), `tuesday` tinyint(1), `wednesday` tinyint(1), `thursday` tinyint(1), `friday` tinyint(1), `saturday` tinyint(1)) ENGINE=InnoDB
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110101132126')[0m
+Migrating to CreateMetrics (20110102143502)
+  [1m[35mSQL (1.6ms)[0m  CREATE TABLE `metrics` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `unit` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110102143502')[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `athletic_programs`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `athletic_programs`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `date_of_workouts`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `date_of_workouts`
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `days_of_weeks`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `days_of_weeks`
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `exercise_groups`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `exercise_groups`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercises`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `exercises`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `metrics`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `metrics`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `workouts`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `workouts`
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.3ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (4.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateAthleticPrograms (20100906093132)
+  [1m[35mSQL (10.6ms)[0m  CREATE TABLE `athletic_programs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text) ENGINE=InnoDB
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100906093132')[0m
+Migrating to CreateWorkouts (20100906093233)
+  [1m[35mSQL (6.8ms)[0m  CREATE TABLE `workouts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `athletic_program_id` int(11), `workout_time` datetime, `day` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100906093233')[0m
+Migrating to CreateExercises (20100906093248)
+  [1m[35mSQL (2.0ms)[0m  CREATE TABLE `exercises` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `days_of_week_id` int(11), `date_of_workout_id` int(11), `name` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100906093248')[0m
+Migrating to CreateExerciseGroups (20100908213001)
+  [1m[35mSQL (5.4ms)[0m  CREATE TABLE `exercise_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `exercise_id` int(11), `weight` int(11), `percentage_of_max` int(11), `sets` int(11), `reps` int(11), `description` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100908213001')[0m
+Migrating to CreateDateOfWorkouts (20100913223728)
+  [1m[35mSQL (1.8ms)[0m  CREATE TABLE `date_of_workouts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `date` datetime, `description` text) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100913223728')[0m
+Migrating to DaysOfWeeks (20110101132126)
+  [1m[35mSQL (2.1ms)[0m  CREATE TABLE `days_of_weeks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `athletic_program_id` int(11), `sunday` tinyint(1), `monday` tinyint(1), `tuesday` tinyint(1), `wednesday` tinyint(1), `thursday` tinyint(1), `friday` tinyint(1), `saturday` tinyint(1)) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110101132126')[0m
+Migrating to CreateMetrics (20110102143502)
+  [1m[35mSQL (1.8ms)[0m  CREATE TABLE `metrics` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `unit` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110102143502')[0m
+Migrating to CreateMetricDatas (20110103121756)
+  [1m[35mSQL (2.4ms)[0m  CREATE TABLE `metric_datas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `metric_id` int(11), `value` int(11), `date` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110103121756')[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `athletic_programs`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `athletic_programs`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `date_of_workouts`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `date_of_workouts`
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `days_of_weeks`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `days_of_weeks`
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `exercise_groups`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `exercise_groups`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercises`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `exercises`
+  [1m[36mSQL (0.4ms)[0m  [1mdescribe `metric_datas`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `metric_datas`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `metrics`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `metrics`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `workouts`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `workouts`
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 04:19:21 -0800
+  Processing by MetricsController#index as HTML
+  [1m[36mMetric Load (0.3ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_25940260__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 29ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/metrics/new" for 127.0.0.1 at 2011-01-03 04:19:34 -0800
+  Processing by MetricsController#new as HTML
+Rendered metrics/_form.html.erb (16.7ms)
+Rendered metrics/new.html.erb within layouts/application (18.3ms)
+Completed   in 27ms
+
+ActionView::Template::Error (undefined method `value' for #<Metric id: nil, name: nil, unit: nil>):
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :value %><br />
+    20:     <%= f.text_field :value %>
+    21:   </div>
+    22:   <div class="field">
+    23:     <%= f.label :unit %><br />
+  app/views/metrics/_form.html.erb:20:in `block in _app_views_metrics__form_html_erb__1688456332213715121_19005620_179706929407959637'
+  app/views/metrics/_form.html.erb:1:in `_app_views_metrics__form_html_erb__1688456332213715121_19005620_179706929407959637'
+  app/views/metrics/new.html.erb:3:in `_app_views_metrics_new_html_erb___3891484769961306652_23906640__112320388929058310'
+  app/controllers/metrics_controller.rb:29:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/metrics/new" for 127.0.0.1 at 2011-01-03 04:19:49 -0800
+  Processing by MetricsController#new as HTML
+Rendered metrics/_form.html.erb (3.5ms)
+Rendered metrics/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 16ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metrics" for 127.0.0.1 at 2011-01-03 04:19:56 -0800
+  Processing by MetricsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"500h13yz6PnB1f9cz+jmYI6sbqWC56ggrO/I1wcT9IQ=", "metric"=>{"name"=>"Weight", "unit"=>"Pounds"}, "commit"=>"Create Metric"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  describe `metrics`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `metrics` (`name`, `unit`) VALUES ('Weight', 'Pounds')[0m
+  [1m[35mSQL (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/metrics/1
+Completed 302 Found in 12ms
+
+
+Started GET "/metrics/1" for 127.0.0.1 at 2011-01-03 04:19:56 -0800
+  Processing by MetricsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMetric Load (1.4ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+Rendered metrics/show.html.erb within layouts/application (2.7ms)
+Completed   in 22ms
+
+ActionView::Template::Error (undefined method `value' for #<Metric id: 1, name: "Weight", unit: "Pounds">):
+    7: 
+    8: <p>
+    9:   <b>Value:</b>
+    10:   <%= @metric.value %>
+    11: </p>
+    12: 
+    13: <p>
+  app/views/metrics/show.html.erb:10:in `_app_views_metrics_show_html_erb___4399671860864637264_25675340__112320388929058310'
+  app/controllers/metrics_controller.rb:18:in `show'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/metrics/1" for 127.0.0.1 at 2011-01-03 04:20:08 -0800
+  Processing by MetricsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+Rendered metrics/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 42ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 04:20:10 -0800
+  Processing by MetricsController#index as HTML
+  [1m[36mMetric Load (0.3ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_24634220__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (3.4ms)
+Completed   in 13ms
+
+ActionView::Template::Error (undefined method `value' for #<Metric id: 1, name: "Weight", unit: "Pounds">):
+    17: <% @metrics.each do |metric| %>
+    18:   <tr>
+    19:     <td><%= metric.name %></td>
+    20:     <td><%= metric.value %></td>
+    21:     <td><%= metric.unit %></td>
+    22:     <td><%= metric.date %></td>
+    23:     <td><%= link_to 'Edit', edit_metric_path(metric) %></td>
+  app/views/metrics/index.html.erb:20:in `block in _app_views_metrics_index_html_erb___38978436279495818_24634220__112320388929058310'
+  app/views/metrics/index.html.erb:17:in `each'
+  app/views/metrics/index.html.erb:17:in `_app_views_metrics_index_html_erb___38978436279495818_24634220__112320388929058310'
+  app/controllers/metrics_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 04:20:24 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_27211760__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics_data" for 127.0.0.1 at 2011-01-03 04:21:42 -0800
+
+ActionController::RoutingError (No route matches "/metrics_data"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/metrics_datas" for 127.0.0.1 at 2011-01-03 04:21:44 -0800
+
+ActionController::RoutingError (No route matches "/metrics_datas"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-03 04:21:53 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__464166317959577429_15777920__112320388929058310 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 04:21:55 -0800
+  Processing by MetricsController#index as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_26593940__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 24ms (Views: 18.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas" for 127.0.0.1 at 2011-01-03 04:22:00 -0800
+  Processing by MetricDatasController#index as HTML
+  [1m[35mMetricData Load (0.3ms)[0m  SELECT `metric_datas`.* FROM `metric_datas`
+Rendered metric_datas/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 15ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:22:02 -0800
+  Processing by MetricDatasController#new as HTML
+Rendered metric_datas/_form.html.erb (9.6ms)
+Rendered metric_datas/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 51ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 04:26:22 -0800
+  Processing by MetricsController#index as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_24844860__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 15ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas" for 127.0.0.1 at 2011-01-03 04:26:45 -0800
+  Processing by MetricDatasController#index as HTML
+  [1m[35mMetricData Load (0.1ms)[0m  SELECT `metric_datas`.* FROM `metric_datas`
+Rendered metric_datas/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:26:47 -0800
+  Processing by MetricDatasController#new as HTML
+Rendered metric_datas/_form.html.erb (34.1ms)
+Rendered metric_datas/new.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 46ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:27:45 -0800
+  Processing by MetricDatasController#new as HTML
+Rendered metric_datas/_form.html.erb (6.6ms)
+Rendered metric_datas/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 18ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:34:16 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+ERROR: compiling _app_views_metric_datas__form_html_erb__4275140486640060934_25105140_179706929407959637 RAISED /home/todd/strongape/app/views/metric_datas/_form.html.erb:16: syntax error, unexpected ':', expecting ')'
+...pend= ( select(@metrics.name) :metric_id );@output_buffer.sa...
+...                               ^
+Function body:           def _app_views_metric_datas__form_html_erb__4275140486640060934_25105140_179706929407959637(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "metric_datas/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append=  form_for(@metric_data) do |f| @output_buffer.safe_concat('
+');   if @metric_data.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@metric_data.errors.count, "error") );@output_buffer.safe_concat(' prohibited this metric_data from being saved:</h2>
+
+      <ul>
+');@output_buffer.append_if_string=        @metric_data.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  <div class="field">
+    ');@output_buffer.append= ( f.label :metric_id, "Metric" );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( select(@metrics.name) :metric_id );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :value );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :value );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :date );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.datetime_select :date );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:333:in `render_partial'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:262:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:260:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:378:in `_render_partial'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:31:in `render'
+/home/todd/strongape/app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_25164020__112320388929058310'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:135:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/todd/strongape/app/controllers/metric_datas_controller.rb:31:in `new'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__4503951204634820413__process_action__640731370748828624__callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered metric_datas/_form.html.erb (0.8ms)
+Rendered metric_datas/new.html.erb within layouts/application (1.6ms)
+Completed   in 15ms
+
+ActionView::Template::Error (/home/todd/strongape/app/views/metric_datas/_form.html.erb:16: syntax error, unexpected ':', expecting ')'
+...pend= ( select(@metrics.name) :metric_id );@output_buffer.sa...
+...                               ^):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= select(@metrics.name) :metric_id %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :value %><br />
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_25164020__112320388929058310'
+  app/controllers/metric_datas_controller.rb:31:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:34:26 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+ERROR: compiling _app_views_metric_datas__form_html_erb__4275140486640060934_27347480_179706929407959637 RAISED /home/todd/strongape/app/views/metric_datas/_form.html.erb:16: syntax error, unexpected ',', expecting ')'
+...ppend= ( select(@metrics.name), :metric_id );@output_buffer....
+...                               ^
+Function body:           def _app_views_metric_datas__form_html_erb__4275140486640060934_27347480_179706929407959637(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "metric_datas/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append=  form_for(@metric_data) do |f| @output_buffer.safe_concat('
+');   if @metric_data.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@metric_data.errors.count, "error") );@output_buffer.safe_concat(' prohibited this metric_data from being saved:</h2>
+
+      <ul>
+');@output_buffer.append_if_string=        @metric_data.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  <div class="field">
+    ');@output_buffer.append= ( f.label :metric_id, "Metric" );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( select(@metrics.name), :metric_id );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :value );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :value );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :date );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.datetime_select :date );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:333:in `render_partial'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:262:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:260:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:378:in `_render_partial'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:31:in `render'
+/home/todd/strongape/app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_27367780__112320388929058310'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:135:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/todd/strongape/app/controllers/metric_datas_controller.rb:31:in `new'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__4503951204634820413__process_action__640731370748828624__callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered metric_datas/_form.html.erb (0.8ms)
+Rendered metric_datas/new.html.erb within layouts/application (1.6ms)
+Completed   in 16ms
+
+ActionView::Template::Error (/home/todd/strongape/app/views/metric_datas/_form.html.erb:16: syntax error, unexpected ',', expecting ')'
+...ppend= ( select(@metrics.name), :metric_id );@output_buffer....
+...                               ^):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= select(@metrics.name), :metric_id %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :value %><br />
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_27367780__112320388929058310'
+  app/controllers/metric_datas_controller.rb:31:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:37:09 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (4.1ms)
+Rendered metric_datas/new.html.erb within layouts/application (5.1ms)
+Completed   in 19ms
+
+ActionView::Template::Error (undefined method `name' for [#<Metric id: 1, name: "Weight", unit: "Pounds">]:Array):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= select_tag "Metric Name", (@metrics.name) %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :value %><br />
+  app/views/metric_datas/_form.html.erb:16:in `block in _app_views_metric_datas__form_html_erb__4275140486640060934_17778320_179706929407959637'
+  app/views/metric_datas/_form.html.erb:1:in `_app_views_metric_datas__form_html_erb__4275140486640060934_17778320_179706929407959637'
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_17899540__112320388929058310'
+  app/controllers/metric_datas_controller.rb:31:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.9ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:37:46 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics`
+ERROR: compiling _app_views_metric_datas__form_html_erb__4275140486640060934_25421960_179706929407959637 RAISED /home/todd/strongape/app/views/metric_datas/_form.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+...tion><option selected="selected">Work</option><option>Out</o...
+...                               ^
+Function body:           def _app_views_metric_datas__form_html_erb__4275140486640060934_25421960_179706929407959637(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "metric_datas/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append=  form_for(@metric_data) do |f| @output_buffer.safe_concat('
+');   if @metric_data.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@metric_data.errors.count, "error") );@output_buffer.safe_concat(' prohibited this metric_data from being saved:</h2>
+
+      <ul>
+');@output_buffer.append_if_string=        @metric_data.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  <div class="field">
+    ');@output_buffer.append= ( f.label :metric_id, "Metric" );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( select_tag "locations", "<option>Home</option><option selected="selected">Work</option><option>Out</option>" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :value );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :value );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :date );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.datetime_select :date );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:333:in `render_partial'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:262:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:260:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:378:in `_render_partial'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:31:in `render'
+/home/todd/strongape/app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_25483880__112320388929058310'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:135:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/todd/strongape/app/controllers/metric_datas_controller.rb:31:in `new'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__4503951204634820413__process_action__640731370748828624__callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered metric_datas/_form.html.erb (0.9ms)
+Rendered metric_datas/new.html.erb within layouts/application (1.9ms)
+Completed   in 15ms
+
+ActionView::Template::Error (/home/todd/strongape/app/views/metric_datas/_form.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+...tion><option selected="selected">Work</option><option>Out</o...
+...                               ^):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= select_tag "locations", "<option>Home</option><option selected="selected">Work</option><option>Out</option>" %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :value %><br />
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_25483880__112320388929058310'
+  app/controllers/metric_datas_controller.rb:31:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:38:10 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (6.8ms)
+Rendered metric_datas/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 52ms (Views: 12.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:38:34 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (6.7ms)
+Rendered metric_datas/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 52ms (Views: 12.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:38:48 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (4.1ms)
+Rendered metric_datas/new.html.erb within layouts/application (5.1ms)
+Completed   in 20ms
+
+ActionView::Template::Error (undefined method `name' for [#<Metric id: 1, name: "Weight", unit: "Pounds">]:Array):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= select_tag "locations", @metrics.name %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :value %><br />
+  app/views/metric_datas/_form.html.erb:16:in `block in _app_views_metric_datas__form_html_erb__4275140486640060934_15587260_179706929407959637'
+  app/views/metric_datas/_form.html.erb:1:in `_app_views_metric_datas__form_html_erb__4275140486640060934_15587260_179706929407959637'
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_15811960__112320388929058310'
+  app/controllers/metric_datas_controller.rb:31:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:39:51 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (9.1ms)
+Rendered metric_datas/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 27ms (Views: 15.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:40:17 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (4.2ms)
+Rendered metric_datas/new.html.erb within layouts/application (5.1ms)
+Completed   in 19ms
+
+ActionView::Template::Error (undefined method `name' for [#<Metric id: 1, name: "Weight", unit: "Pounds">]:Array):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= select_tag "metrics", options_from_collection_for_select(@metrics.name, "name", "id")
+    17:  %>
+    18:   </div>
+    19:   <div class="field">
+  app/views/metric_datas/_form.html.erb:16:in `block in _app_views_metric_datas__form_html_erb__4275140486640060934_25390640_179706929407959637'
+  app/views/metric_datas/_form.html.erb:1:in `_app_views_metric_datas__form_html_erb__4275140486640060934_25390640_179706929407959637'
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_25415160__112320388929058310'
+  app/controllers/metric_datas_controller.rb:31:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.6ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:40:25 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (3.4ms)
+Rendered metric_datas/new.html.erb within layouts/application (4.3ms)
+Completed   in 19ms
+
+ActionView::Template::Error (wrong number of arguments (2 for 3)):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= select_tag "metrics", options_from_collection_for_select(@metrics, "name")
+    17:  %>
+    18:   </div>
+    19:   <div class="field">
+  app/views/metric_datas/_form.html.erb:16:in `block in _app_views_metric_datas__form_html_erb__4275140486640060934_27220040_179706929407959637'
+  app/views/metric_datas/_form.html.erb:1:in `_app_views_metric_datas__form_html_erb__4275140486640060934_27220040_179706929407959637'
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_27245080__112320388929058310'
+  app/controllers/metric_datas_controller.rb:31:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:40:30 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (37.4ms)
+Rendered metric_datas/new.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 55ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:40:34 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (59.3ms)
+Rendered metric_datas/new.html.erb within layouts/application (68.7ms)
+Completed 200 OK in 83ms (Views: 71.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-03 04:40:43 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zg0LpHE5Bhv3UJeffxdmjYcS8LmN9FtwDFrHQS8OlWA=", "metrics"=>"Weight", "metric_data"=>{"value"=>"2", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"3", "date(4i)"=>"12", "date(5i)"=>"26"}, "commit"=>"Create Metric data"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `metric_datas`
+  [1m[36mAREL (1.5ms)[0m  [1mINSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (NULL, 2, '2011-01-03 12:26:00')[0m
+  [1m[35mSQL (1.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/metric_datas/1
+Completed 302 Found in 22ms
+
+
+Started GET "/metric_datas/1" for 127.0.0.1 at 2011-01-03 04:40:43 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 1) LIMIT 1[0m
+Rendered metric_datas/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/1" for 127.0.0.1 at 2011-01-03 04:41:05 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMetricData Load (0.0ms)[0m  SELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 1) LIMIT 1
+Rendered metric_datas/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 16ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:41:10 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (8.8ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 27ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-03 04:41:15 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zg0LpHE5Bhv3UJeffxdmjYcS8LmN9FtwDFrHQS8OlWA=", "metrics"=>"1", "metric_data"=>{"value"=>"3", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"3", "date(4i)"=>"12", "date(5i)"=>"26"}, "commit"=>"Create Metric data"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `metric_datas`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (NULL, 3, '2011-01-03 12:26:00')
+  [1m[36mSQL (14.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/metric_datas/2
+Completed 302 Found in 26ms
+
+
+Started GET "/metric_datas/2" for 127.0.0.1 at 2011-01-03 04:41:15 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMetricData Load (0.1ms)[0m  SELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 2) LIMIT 1
+Rendered metric_datas/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:41:39 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (3.3ms)
+Rendered metric_datas/new.html.erb within layouts/application (4.2ms)
+Completed   in 19ms
+
+ActionView::Template::Error (wrong number of arguments (2 for 3)):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= select_tag "metrics", options_from_collection_for_select(@metrics,  "name")
+    17:  %>
+    18:   </div>
+    19:   <div class="field">
+  app/views/metric_datas/_form.html.erb:16:in `block in _app_views_metric_datas__form_html_erb__4275140486640060934_25676160_179706929407959637'
+  app/views/metric_datas/_form.html.erb:1:in `_app_views_metric_datas__form_html_erb__4275140486640060934_25676160_179706929407959637'
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_25730420__112320388929058310'
+  app/controllers/metric_datas_controller.rb:31:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:41:47 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (8.8ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 27ms (Views: 14.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:43:56 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (6.1ms)
+Rendered metric_datas/new.html.erb within layouts/application (7.0ms)
+Completed   in 52ms
+
+ActionView::Template::Error (undefined method `metric_id' for #<Metric id: 1, name: "Weight", unit: "Pounds">):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= select_tag "metrics", options_from_collection_for_select(@metrics, "metric_id", "name")
+    17:  %>
+    18:   </div>
+    19:   <div class="field">
+  app/views/metric_datas/_form.html.erb:16:in `block in _app_views_metric_datas__form_html_erb__4275140486640060934_28302700_179706929407959637'
+  app/views/metric_datas/_form.html.erb:1:in `_app_views_metric_datas__form_html_erb__4275140486640060934_28302700_179706929407959637'
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_28329640__112320388929058310'
+  app/controllers/metric_datas_controller.rb:31:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.6ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:44:36 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (38.0ms)
+Rendered metric_datas/new.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 57ms (Views: 45.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:44:42 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (37.8ms)
+Rendered metric_datas/new.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 55ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-03 04:44:53 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zg0LpHE5Bhv3UJeffxdmjYcS8LmN9FtwDFrHQS8OlWA=", "metrics"=>"1", "metric_data"=>{"value"=>"3", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"3", "date(4i)"=>"12", "date(5i)"=>"26"}, "commit"=>"Create Metric data"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `metric_datas`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (NULL, 3, '2011-01-03 12:26:00')
+  [1m[36mSQL (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/metric_datas/3
+Completed 302 Found in 12ms
+
+
+Started GET "/metric_datas/3" for 127.0.0.1 at 2011-01-03 04:44:53 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMetricData Load (0.1ms)[0m  SELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 3) LIMIT 1
+Rendered metric_datas/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 42ms (Views: 35.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas" for 127.0.0.1 at 2011-01-03 04:48:42 -0800
+  Processing by MetricDatasController#index as HTML
+  [1m[36mMetricData Load (0.2ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+Rendered metric_datas/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 17ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:48:44 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (9.3ms)
+Rendered metric_datas/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 30ms (Views: 18.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:57:51 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (8.8ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 26ms (Views: 14.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:57:58 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.3ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (11.5ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.6ms)
+Completed   in 31ms
+
+ActionView::Template::Error (undefined local variable or method `id' for #<#<Class:0x000000033fa400>:0x000000033f5978>):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= select_tag "metrics", options_from_collection_for_select(@metrics, id, "name") %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :value %><br />
+  app/views/metric_datas/_form.html.erb:16:in `block in _app_views_metric_datas__form_html_erb__4275140486640060934_27209320_179706929407959637'
+  app/views/metric_datas/_form.html.erb:1:in `_app_views_metric_datas__form_html_erb__4275140486640060934_27209320_179706929407959637'
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_27233320__112320388929058310'
+  app/controllers/metric_datas_controller.rb:30:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:58:05 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (9.3ms)
+Rendered metric_datas/new.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 56ms (Views: 44.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:59:17 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+ERROR: compiling _app_views_metric_datas__form_html_erb__4275140486640060934_14717160_179706929407959637 RAISED /home/todd/strongape/app/views/metric_datas/_form.html.erb:16: syntax error, unexpected ':', expecting ')'
+...elect(@metrics, "id", "name") :metric_id = :value );@output_...
+...                               ^
+Function body:           def _app_views_metric_datas__form_html_erb__4275140486640060934_14717160_179706929407959637(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "metric_datas/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append=  form_for(@metric_data) do |f| @output_buffer.safe_concat('
+');   if @metric_data.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@metric_data.errors.count, "error") );@output_buffer.safe_concat(' prohibited this metric_data from being saved:</h2>
+
+      <ul>
+');@output_buffer.append_if_string=        @metric_data.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  <div class="field">
+    ');@output_buffer.append= ( f.label :metric_id, "Metric" );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( select_tag "metrics", options_from_collection_for_select(@metrics, "id", "name") :metric_id = :value );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :value );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :value );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :date );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.datetime_select :date );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:333:in `render_partial'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:262:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:260:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:378:in `_render_partial'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:31:in `render'
+/home/todd/strongape/app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_15086260__112320388929058310'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:135:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/todd/strongape/app/controllers/metric_datas_controller.rb:30:in `new'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__4503951204634820413__process_action__640731370748828624__callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered metric_datas/_form.html.erb (0.8ms)
+Rendered metric_datas/new.html.erb within layouts/application (1.6ms)
+Completed   in 16ms
+
+ActionView::Template::Error (/home/todd/strongape/app/views/metric_datas/_form.html.erb:16: syntax error, unexpected ':', expecting ')'
+...elect(@metrics, "id", "name") :metric_id = :value );@output_...
+...                               ^):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= select_tag "metrics", options_from_collection_for_select(@metrics, "id", "name") :metric_id = :value %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :value %><br />
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_15086260__112320388929058310'
+  app/controllers/metric_datas_controller.rb:30:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:59:26 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+ERROR: compiling _app_views_metric_datas__form_html_erb__4275140486640060934_25334140_179706929407959637 RAISED /home/todd/strongape/app/views/metric_datas/_form.html.erb:16: syntax error, unexpected '=', expecting ')'
+...ics, "id", "name", :metric_id = :value)  );@output_buffer.sa...
+...                               ^
+/home/todd/strongape/app/views/metric_datas/_form.html.erb:16: syntax error, unexpected ')', expecting keyword_end
+..."name", :metric_id = :value)  );@output_buffer.safe_concat('
+...                               ^
+Function body:           def _app_views_metric_datas__form_html_erb__4275140486640060934_25334140_179706929407959637(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "metric_datas/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append=  form_for(@metric_data) do |f| @output_buffer.safe_concat('
+');   if @metric_data.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@metric_data.errors.count, "error") );@output_buffer.safe_concat(' prohibited this metric_data from being saved:</h2>
+
+      <ul>
+');@output_buffer.append_if_string=        @metric_data.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  <div class="field">
+    ');@output_buffer.append= ( f.label :metric_id, "Metric" );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( select_tag "metrics", options_from_collection_for_select(@metrics, "id", "name", :metric_id = :value)  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :value );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :value );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :date );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.datetime_select :date );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:333:in `render_partial'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:262:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:260:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:378:in `_render_partial'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:31:in `render'
+/home/todd/strongape/app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_25387920__112320388929058310'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:135:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/todd/strongape/app/controllers/metric_datas_controller.rb:30:in `new'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__4503951204634820413__process_action__640731370748828624__callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/todd/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/todd/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered metric_datas/_form.html.erb (0.8ms)
+Rendered metric_datas/new.html.erb within layouts/application (1.7ms)
+Completed   in 16ms
+
+ActionView::Template::Error (/home/todd/strongape/app/views/metric_datas/_form.html.erb:16: syntax error, unexpected '=', expecting ')'
+...ics, "id", "name", :metric_id = :value)  );@output_buffer.sa...
+...                               ^
+/home/todd/strongape/app/views/metric_datas/_form.html.erb:16: syntax error, unexpected ')', expecting keyword_end
+..."name", :metric_id = :value)  );@output_buffer.safe_concat('
+...                               ^):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= select_tag "metrics", options_from_collection_for_select(@metrics, "id", "name", :metric_id = :value)  %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :value %><br />
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_25387920__112320388929058310'
+  app/controllers/metric_datas_controller.rb:30:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 04:59:33 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (8.9ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 28ms (Views: 14.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-03 04:59:40 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zg0LpHE5Bhv3UJeffxdmjYcS8LmN9FtwDFrHQS8OlWA=", "metrics"=>"1", "metric_data"=>{"value"=>"8", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"3", "date(4i)"=>"12", "date(5i)"=>"48"}, "commit"=>"Create Metric data"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `metric_datas`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (NULL, 8, '2011-01-03 12:48:00')[0m
+  [1m[35mSQL (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/metric_datas/4
+Completed 302 Found in 39ms
+
+
+Started GET "/metric_datas/4" for 127.0.0.1 at 2011-01-03 04:59:40 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 4) LIMIT 1[0m
+Rendered metric_datas/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/4" for 127.0.0.1 at 2011-01-03 04:59:59 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMetricData Load (0.0ms)[0m  SELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 4) LIMIT 1
+Rendered metric_datas/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 43ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metric_datas" for 127.0.0.1 at 2011-01-03 05:00:00 -0800
+  Processing by MetricDatasController#index as HTML
+  [1m[36mMetricData Load (0.2ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+Rendered metric_datas/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 17ms (Views: 11.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 05:00:02 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (8.8ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 26ms (Views: 14.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-03 05:00:06 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zg0LpHE5Bhv3UJeffxdmjYcS8LmN9FtwDFrHQS8OlWA=", "metrics"=>"1", "metric_data"=>{"value"=>"4", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"3", "date(4i)"=>"13", "date(5i)"=>"00"}, "commit"=>"Create Metric data"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `metric_datas`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (NULL, 4, '2011-01-03 13:00:00')[0m
+  [1m[35mSQL (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/metric_datas/5
+Completed 302 Found in 12ms
+
+
+Started GET "/metric_datas/5" for 127.0.0.1 at 2011-01-03 05:00:06 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 5) LIMIT 1[0m
+Rendered metric_datas/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas" for 127.0.0.1 at 2011-01-03 05:00:33 -0800
+  Processing by MetricDatasController#index as HTML
+  [1m[35mMetricData Load (0.2ms)[0m  SELECT `metric_datas`.* FROM `metric_datas`
+Rendered metric_datas/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 18ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 05:00:35 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (9.1ms)
+Rendered metric_datas/new.html.erb within layouts/application (10.1ms)
+Completed   in 52ms
+
+ActionView::Template::Error (undefined method `metric_id=' for #<ActionView::Helpers::FormBuilder:0x000000035cf550>):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= select_tag "metrics", options_from_collection_for_select(@metrics, "id", "name", f.metric_id = :value)  %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :value %><br />
+  app/views/metric_datas/_form.html.erb:16:in `block in _app_views_metric_datas__form_html_erb__4275140486640060934_28444980_179706929407959637'
+  app/views/metric_datas/_form.html.erb:1:in `_app_views_metric_datas__form_html_erb__4275140486640060934_28444980_179706929407959637'
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_29345880__112320388929058310'
+  app/controllers/metric_datas_controller.rb:30:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.8ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 05:00:43 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (9.4ms)
+Rendered metric_datas/new.html.erb within layouts/application (10.4ms)
+Completed   in 24ms
+
+ActionView::Template::Error (undefined method `metric_id' for #<ActionView::Helpers::FormBuilder:0x00000001edac78>):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= select_tag "metrics", options_from_collection_for_select(@metrics, "id", "name", f.metric_id == :value)  %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :value %><br />
+  app/views/metric_datas/_form.html.erb:16:in `block in _app_views_metric_datas__form_html_erb__4275140486640060934_17895360_179706929407959637'
+  app/views/metric_datas/_form.html.erb:1:in `_app_views_metric_datas__form_html_erb__4275140486640060934_17895360_179706929407959637'
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_18248940__112320388929058310'
+  app/controllers/metric_datas_controller.rb:30:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.7ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 05:00:44 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (9.5ms)
+Rendered metric_datas/new.html.erb within layouts/application (10.5ms)
+Completed   in 25ms
+
+ActionView::Template::Error (undefined method `metric_id' for #<ActionView::Helpers::FormBuilder:0x00000002f92f98>):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= select_tag "metrics", options_from_collection_for_select(@metrics, "id", "name", f.metric_id == :value)  %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :value %><br />
+  app/views/metric_datas/_form.html.erb:16:in `block in _app_views_metric_datas__form_html_erb__4275140486640060934_25316540_179706929407959637'
+  app/views/metric_datas/_form.html.erb:1:in `_app_views_metric_datas__form_html_erb__4275140486640060934_25316540_179706929407959637'
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_25375060__112320388929058310'
+  app/controllers/metric_datas_controller.rb:30:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.8ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 05:02:33 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (8.6ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 27ms (Views: 14.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 05:03:25 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (9.1ms)
+Rendered metric_datas/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 28ms (Views: 15.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 05:04:48 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (8.8ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 26ms (Views: 14.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 05:10:07 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (5.6ms)
+Rendered metric_datas/new.html.erb within layouts/application (6.5ms)
+Completed   in 47ms
+
+ActionView::Template::Error (undefined method `metrics' for #<MetricData id: nil, metric_id: nil, value: nil, date: nil>):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= f.select "metrics", options_from_collection_for_select(@metrics, "id", "name") %>
+    17: 
+    18:   </div>
+    19:   <div class="field">
+  app/views/metric_datas/_form.html.erb:16:in `block in _app_views_metric_datas__form_html_erb__4275140486640060934_28328980_179706929407959637'
+  app/views/metric_datas/_form.html.erb:1:in `_app_views_metric_datas__form_html_erb__4275140486640060934_28328980_179706929407959637'
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_28354020__112320388929058310'
+  app/controllers/metric_datas_controller.rb:30:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.8ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 05:10:14 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (38.2ms)
+Rendered metric_datas/new.html.erb within layouts/application (39.2ms)
+Completed   in 53ms
+
+ActionView::Template::Error (undefined method `select_tag' for #<ActionView::Helpers::FormBuilder:0x00000001cb9c78>):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :metric_id, "Metric" %><br />
+    16:     <%= f.select_tag "metrics", options_from_collection_for_select(@metrics, "id", "name") %>
+    17: 
+    18:   </div>
+    19:   <div class="field">
+  app/views/metric_datas/_form.html.erb:16:in `block in _app_views_metric_datas__form_html_erb__4275140486640060934_16908960_179706929407959637'
+  app/views/metric_datas/_form.html.erb:1:in `_app_views_metric_datas__form_html_erb__4275140486640060934_16908960_179706929407959637'
+  app/views/metric_datas/new.html.erb:3:in `_app_views_metric_datas_new_html_erb__203237443656703602_17026360__112320388929058310'
+  app/controllers/metric_datas_controller.rb:30:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.7ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 05:10:21 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (9.2ms)
+Rendered metric_datas/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 27ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 05:11:20 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (8.8ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 27ms (Views: 15.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-03 05:11:26 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zg0LpHE5Bhv3UJeffxdmjYcS8LmN9FtwDFrHQS8OlWA=", "metrics"=>"1", "metric_data"=>{"metric_id"=>"1", "value"=>"3", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"3", "date(4i)"=>"13", "date(5i)"=>"11"}, "commit"=>"Create Metric data"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `metric_datas`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (1, 3, '2011-01-03 13:11:00')[0m
+  [1m[35mSQL (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/metric_datas/6
+Completed 302 Found in 12ms
+
+
+Started GET "/metric_datas/6" for 127.0.0.1 at 2011-01-03 05:11:26 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 6) LIMIT 1[0m
+Rendered metric_datas/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas" for 127.0.0.1 at 2011-01-03 05:11:34 -0800
+  Processing by MetricDatasController#index as HTML
+  [1m[35mMetricData Load (0.2ms)[0m  SELECT `metric_datas`.* FROM `metric_datas`
+Rendered metric_datas/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 19ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 05:11:39 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (9.1ms)
+Rendered metric_datas/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 28ms (Views: 15.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-03 05:11:48 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zg0LpHE5Bhv3UJeffxdmjYcS8LmN9FtwDFrHQS8OlWA=", "metric_data"=>{"metric_id"=>"1", "value"=>"23", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"3", "date(4i)"=>"13", "date(5i)"=>"11"}, "commit"=>"Create Metric data"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `metric_datas`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (1, 23, '2011-01-03 13:11:00')
+  [1m[36mSQL (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/metric_datas/7
+Completed 302 Found in 39ms
+
+
+Started GET "/metric_datas/7" for 127.0.0.1 at 2011-01-03 05:11:48 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMetricData Load (0.1ms)[0m  SELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 7) LIMIT 1
+Rendered metric_datas/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 05:56:26 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (8.9ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 26ms (Views: 14.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 05:56:48 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_28424280__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 50ms (Views: 8.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 05:57:27 -0800
+  Processing by MetricsController#index as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_25431620__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (4.0ms)
+Completed   in 12ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    39:     <th></th>
+    40:   </tr>
+    41: 
+    42: <% @metric_datas.each do |metric_data| %>
+    43:   <tr>
+    44:     <td><%= metric_data.metric_id %></td>
+    45:     <td><%= metric_data.value %></td>
+  app/views/metrics/index.html.erb:42:in `_app_views_metrics_index_html_erb___38978436279495818_25431620__112320388929058310'
+  app/controllers/metrics_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.6ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 05:57:46 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.3ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_27362300__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 36ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 05:58:33 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_29344800__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 56ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 05:58:41 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_15357400__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 56ms (Views: 45.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 05:58:52 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_24188420__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 57ms (Views: 46.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 05:58:58 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_24892820__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 28ms (Views: 17.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 05:59:03 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_25728340__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 29ms (Views: 17.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 05:59:52 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_25334840__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 44ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 06:00:28 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_25718260__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (1.9ms)
+Completed   in 16ms
+
+ActionView::Template::Error (undefined method `metric_id' for [#<Metric id: 1, name: "Weight", unit: "Pounds">]:Array):
+    16: 
+    17: <% @metric_datas.each do |metric_data| %>
+    18:   <tr>
+    19:     <td><%= @metrics.metric_id %></td>
+    20:     <td><%= metric_data.value %></td>
+    21:     <td><%= metric_data.date %></td>
+    22:     <td><%= link_to 'Show', metric_data %></td>
+  app/views/metrics/index.html.erb:19:in `block in _app_views_metrics_index_html_erb___38978436279495818_25718260__112320388929058310'
+  app/views/metrics/index.html.erb:17:in `each'
+  app/views/metrics/index.html.erb:17:in `_app_views_metrics_index_html_erb___38978436279495818_25718260__112320388929058310'
+  app/controllers/metrics_controller.rb:8:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 06:01:03 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_28267120__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (3.8ms)
+Completed   in 44ms
+
+ActionView::Template::Error (Couldn't find Metric without an ID):
+    16: 
+    17: <% @metric_datas.each do |metric_data| %>
+    18:   <tr>
+    19:     <td><%= Metric.find(metric_data.metric_id).name %></td>
+    20:     <td><%= metric_data.value %></td>
+    21:     <td><%= metric_data.date %></td>
+    22:     <td><%= link_to 'Show', metric_data %></td>
+  app/views/metrics/index.html.erb:19:in `block in _app_views_metrics_index_html_erb___38978436279495818_28267120__112320388929058310'
+  app/views/metrics/index.html.erb:17:in `each'
+  app/views/metrics/index.html.erb:17:in `_app_views_metrics_index_html_erb___38978436279495818_28267120__112320388929058310'
+  app/controllers/metrics_controller.rb:8:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 06:01:20 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_18713960__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (3.9ms)
+Completed   in 17ms
+
+ActionView::Template::Error (Couldn't find Metric without an ID):
+    16: 
+    17: <% @metric_datas.each do |metric_data| %>
+    18:   <tr>
+    19:     <td><%= Metric.find(metric_data.metric_id) %></td>
+    20:     <td><%= metric_data.value %></td>
+    21:     <td><%= metric_data.date %></td>
+    22:     <td><%= link_to 'Show', metric_data %></td>
+  app/views/metrics/index.html.erb:19:in `block in _app_views_metrics_index_html_erb___38978436279495818_18713960__112320388929058310'
+  app/views/metrics/index.html.erb:17:in `each'
+  app/views/metrics/index.html.erb:17:in `_app_views_metrics_index_html_erb___38978436279495818_18713960__112320388929058310'
+  app/controllers/metrics_controller.rb:8:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.9ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (4.6ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (4.4ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateAthleticPrograms (20100906093132)
+  [1m[35mSQL (5.7ms)[0m  CREATE TABLE `athletic_programs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100906093132')[0m
+Migrating to CreateWorkouts (20100906093233)
+  [1m[35mSQL (13.6ms)[0m  CREATE TABLE `workouts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `athletic_program_id` int(11), `workout_time` datetime, `day` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100906093233')[0m
+Migrating to CreateExercises (20100906093248)
+  [1m[35mSQL (1.7ms)[0m  CREATE TABLE `exercises` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `days_of_week_id` int(11), `date_of_workout_id` int(11), `name` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100906093248')[0m
+Migrating to CreateExerciseGroups (20100908213001)
+  [1m[35mSQL (19.0ms)[0m  CREATE TABLE `exercise_groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `exercise_id` int(11), `weight` int(11), `percentage_of_max` int(11), `sets` int(11), `reps` int(11), `description` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100908213001')[0m
+Migrating to CreateDateOfWorkouts (20100913223728)
+  [1m[35mSQL (1.7ms)[0m  CREATE TABLE `date_of_workouts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `date` datetime, `description` text) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100913223728')[0m
+Migrating to DaysOfWeeks (20110101132126)
+  [1m[35mSQL (2.9ms)[0m  CREATE TABLE `days_of_weeks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `athletic_program_id` int(11), `sunday` tinyint(1), `monday` tinyint(1), `tuesday` tinyint(1), `wednesday` tinyint(1), `thursday` tinyint(1), `friday` tinyint(1), `saturday` tinyint(1)) ENGINE=InnoDB
+  [1m[36mSQL (18.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110101132126')[0m
+Migrating to CreateMetrics (20110102143502)
+  [1m[35mSQL (2.1ms)[0m  CREATE TABLE `metrics` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `unit` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110102143502')[0m
+Migrating to CreateMetricDatas (20110103121756)
+  [1m[35mSQL (5.3ms)[0m  CREATE TABLE `metric_datas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `metric_id` int(11), `value` int(11), `date` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110103121756')[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `athletic_programs`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `athletic_programs`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `date_of_workouts`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `date_of_workouts`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `days_of_weeks`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `days_of_weeks`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercise_groups`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `exercise_groups`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercises`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `exercises`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `metric_datas`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `metric_datas`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `metrics`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `metrics`
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `workouts`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `workouts`
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 06:01:31 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.3ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_25710980__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 18ms (Views: 6.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 06:01:37 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_27242940__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 17ms (Views: 6.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 06:01:46 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_13722140__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 67ms (Views: 44.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/metrics/new" for 127.0.0.1 at 2011-01-03 06:01:49 -0800
+  Processing by MetricsController#new as HTML
+Rendered metrics/_form.html.erb (3.4ms)
+Rendered metrics/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 16ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metrics" for 127.0.0.1 at 2011-01-03 06:01:56 -0800
+  Processing by MetricsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zg0LpHE5Bhv3UJeffxdmjYcS8LmN9FtwDFrHQS8OlWA=", "metric"=>{"name"=>"Weight", "unit"=>"Pounds"}, "commit"=>"Create Metric"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `metrics`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `metrics` (`name`, `unit`) VALUES ('Weight', 'Pounds')
+  [1m[36mSQL (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/metrics/1
+Completed 302 Found in 12ms
+
+
+Started GET "/metrics/1" for 127.0.0.1 at 2011-01-03 06:01:56 -0800
+  Processing by MetricsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+Rendered metrics/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 14ms (Views: 7.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 06:01:58 -0800
+  Processing by MetricsController#index as HTML
+  [1m[36mMetric Load (0.2ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+  [1m[35mMetricData Load (0.0ms)[0m  SELECT `metric_datas`.* FROM `metric_datas`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_26146020__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+Rendered metrics/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 20ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 06:02:01 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (8.9ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 53ms (Views: 14.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-03 06:02:16 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zg0LpHE5Bhv3UJeffxdmjYcS8LmN9FtwDFrHQS8OlWA=", "metric_data"=>{"metric_id"=>"1", "value"=>"215", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"3", "date(4i)"=>"14", "date(5i)"=>"02"}, "commit"=>"Create Metric data"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `metric_datas`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (1, 215, '2011-01-03 14:02:00')
+  [1m[36mSQL (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/metric_datas/1
+Completed 302 Found in 13ms
+
+
+Started GET "/metric_datas/1" for 127.0.0.1 at 2011-01-03 06:02:16 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMetricData Load (0.1ms)[0m  SELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 1) LIMIT 1
+Rendered metric_datas/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/metric_datas" for 127.0.0.1 at 2011-01-03 06:02:18 -0800
+  Processing by MetricDatasController#index as HTML
+  [1m[36mMetricData Load (0.2ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+Rendered metric_datas/index.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 43ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/metric_datas" for 127.0.0.1 at 2011-01-03 06:02:36 -0800
+  Processing by MetricDatasController#index as HTML
+  [1m[35mMetricData Load (0.1ms)[0m  SELECT `metric_datas`.* FROM `metric_datas`
+Rendered metric_datas/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas" for 127.0.0.1 at 2011-01-03 06:03:20 -0800
+  Processing by MetricDatasController#index as HTML
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+Rendered metric_datas/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 15ms (Views: 9.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 06:04:18 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.4ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_29327980__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+Rendered metrics/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 53ms (Views: 13.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/metric_datas" for 127.0.0.1 at 2011-01-03 06:04:22 -0800
+  Processing by MetricDatasController#index as HTML
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+Rendered metric_datas/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 06:04:25 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_25331300__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+Rendered metrics/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 24ms (Views: 12.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 06:04:42 -0800
+  Processing by MetricsController#index as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+  [1m[35mMetricData Load (0.0ms)[0m  SELECT `metric_datas`.* FROM `metric_datas`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_25498260__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+Rendered metrics/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 24ms (Views: 13.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 06:04:53 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_26139880__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+Rendered metrics/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 25ms (Views: 13.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 06:08:06 -0800
+  Processing by MetricsController#index as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+  [1m[35mMetricData Load (0.0ms)[0m  SELECT `metric_datas`.* FROM `metric_datas`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_27123880__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+Rendered metrics/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 24ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 06:09:09 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_17677820__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+Rendered metrics/index.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 52ms (Views: 41.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics/new" for 127.0.0.1 at 2011-01-03 06:09:17 -0800
+  Processing by MetricsController#new as HTML
+Rendered metrics/_form.html.erb (3.5ms)
+Rendered metrics/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metrics" for 127.0.0.1 at 2011-01-03 06:09:53 -0800
+  Processing by MetricsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"500h13yz6PnB1f9cz+jmYI6sbqWC56ggrO/I1wcT9IQ=", "metric"=>{"name"=>"Waist Line", "unit"=>"Inches"}, "commit"=>"Create Metric"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `metrics`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `metrics` (`name`, `unit`) VALUES ('Waist Line', 'Inches')[0m
+  [1m[35mSQL (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/metrics/2
+Completed 302 Found in 40ms
+
+
+Started GET "/metrics/2" for 127.0.0.1 at 2011-01-03 06:09:53 -0800
+  Processing by MetricsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
+Rendered metrics/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 14ms (Views: 7.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 06:09:55 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.4ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_28400400__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.2ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+Rendered metrics/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 53ms (Views: 13.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-03 06:09:59 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (9.2ms)
+Rendered metric_datas/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 26ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-03 06:10:03 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"500h13yz6PnB1f9cz+jmYI6sbqWC56ggrO/I1wcT9IQ=", "metric_data"=>{"metric_id"=>"2", "value"=>"34", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"3", "date(4i)"=>"14", "date(5i)"=>"09"}, "commit"=>"Create Metric data"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `metric_datas`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (2, 34, '2011-01-03 14:09:00')
+  [1m[36mSQL (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/metric_datas/2
+Completed 302 Found in 12ms
+
+
+Started GET "/metric_datas/2" for 127.0.0.1 at 2011-01-03 06:10:03 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMetricData Load (0.1ms)[0m  SELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 2) LIMIT 1
+Rendered metric_datas/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/metric_datas" for 127.0.0.1 at 2011-01-03 06:10:05 -0800
+  Processing by MetricDatasController#index as HTML
+  [1m[36mMetricData Load (0.4ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+Rendered metric_datas/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 16ms (Views: 10.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-03 06:10:07 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___38978436279495818_24316880__112320388929058310 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
+Rendered metrics/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 25ms (Views: 14.6ms | ActiveRecord: 0.2ms)

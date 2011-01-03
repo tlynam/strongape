@@ -2,14 +2,40 @@
   <% @selected_navigation = :metrics %>
 <% end %>
 
-<h1>Listing metrics</h1>
+<h1>Keep Track and Enter New Data!</h1>
+
+<table>
+  <tr>
+    <th>Metric</th>
+    <th>Value</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @metric_datas.each do |metric_data| %>
+  <tr>
+    <td><% var = Metric.find(metric_data.metric_id) %><%= var.name %></td>
+    <td><%= metric_data.value %></td>
+    <td><%= metric_data.date %></td>
+    <td><%= link_to 'Show', metric_data %></td>
+    <td><%= link_to 'Edit', edit_metric_data_path(metric_data) %></td>
+    <td><%= link_to 'Destroy', metric_data, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to 'New Metric data', new_metric_data_path %>
+<br /><br />
+
+<h1>Customize the Metrics you wish to Track</h1>
 
 <table>
   <tr>
     <th>Name of Metric</th>
-    <th>Value</th>
     <th>Unit</th>
-    <th>Date</th>
     <th></th>
     <th></th>
   </tr>
@@ -17,9 +43,7 @@
 <% @metrics.each do |metric| %>
   <tr>
     <td><%= metric.name %></td>
-    <td><%= metric.value %></td>
     <td><%= metric.unit %></td>
-    <td><%= metric.date %></td>
     <td><%= link_to 'Edit', edit_metric_path(metric) %></td>
     <td><%= link_to 'Destroy', metric, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
@@ -27,5 +51,4 @@
 </table>
 
 <br />
-
 <%= link_to 'New Metric', new_metric_path %>
