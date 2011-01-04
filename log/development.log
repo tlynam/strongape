@@ -25869,3 +25869,47 @@ DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>
   [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
 Rendered metrics/index.html.erb within layouts/application (12.5ms)
 Completed 200 OK in 25ms (Views: 14.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-03 23:01:00 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb___1367211502179830648_24024740_1865342036208411937 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-04 03:37:56 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb___1367211502179830648_21951680_1865342036208411937 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-04 03:38:00 -0800
+  Processing by MetricsController#index as HTML
+  [1m[36mMetric Load (13.2ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+  [1m[35mMetricData Load (0.2ms)[0m  SELECT `metric_datas`.* FROM `metric_datas`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___1750410506949776699_23160460_1865342036208411937 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[36mSQL (3.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mMetric Load (3.6ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mMetric Load (0.2ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
+Rendered metrics/index.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 137ms (Views: 19.1ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-04 03:39:02 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb___1367211502179830648_14586840_1865342036208411937 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-04 03:39:04 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___1750410506949776699_22156520_1865342036208411937 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
+Rendered metrics/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 50ms (Views: 39.2ms | ActiveRecord: 0.2ms)
