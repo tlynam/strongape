@@ -25913,3 +25913,617 @@ DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>
   [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
 Rendered metrics/index.html.erb within layouts/application (37.1ms)
 Completed 200 OK in 50ms (Views: 39.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-15 10:12:37 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__286351056_81265010__519361717 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-15 10:27:26 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (18.6ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__365483819_85853600__519361717 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 691ms (Views: 61.5ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:28:12 -0800
+  Processing by AthleticProgramsController#new as HTML
+Completed   in 316ms
+
+Mysql::Error (Table 'strong_ape_development.days_of_weeks' doesn't exist):
+  app/controllers/athletic_programs_controller.rb:28:in `new'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.7ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (24.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (61.3ms)
+  [1m[36mSQL (1.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateAthleticPrograms (20100906093132)
+Migrating to CreateWorkouts (20100906093233)
+Migrating to CreateExercises (20100906093248)
+Migrating to CreateExerciseGroups (20100908213001)
+Migrating to CreateDateOfWorkouts (20100913223728)
+Migrating to DaysOfWeeks (20110101132126)
+  [1m[35mSQL (203.6ms)[0m  CREATE TABLE `days_of_weeks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `athletic_program_id` int(11), `sunday` tinyint(1), `monday` tinyint(1), `tuesday` tinyint(1), `wednesday` tinyint(1), `thursday` tinyint(1), `friday` tinyint(1), `saturday` tinyint(1)) ENGINE=InnoDB
+  [1m[36mSQL (73.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110101132126')[0m
+Migrating to CreateMetrics (20110102143502)
+  [1m[35mSQL (186.2ms)[0m  CREATE TABLE `metrics` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `unit` varchar(255)) ENGINE=InnoDB
+  [1m[36mSQL (87.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110102143502')[0m
+Migrating to CreateMetricDatas (20110103121756)
+  [1m[35mSQL (168.1ms)[0m  CREATE TABLE `metric_datas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `metric_id` int(11), `value` int(11), `date` datetime) ENGINE=InnoDB
+  [1m[36mSQL (73.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110103121756')[0m
+  [1m[35mSQL (1.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `athletic_programs`[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW KEYS FROM `athletic_programs`
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `date_of_workouts`[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW KEYS FROM `date_of_workouts`
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `days_of_weeks`[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW KEYS FROM `days_of_weeks`
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `exercise_groups`[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW KEYS FROM `exercise_groups`
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `exercises`[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW KEYS FROM `exercises`
+  [1m[36mSQL (2.3ms)[0m  [1mdescribe `metric_datas`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `metric_datas`
+  [1m[36mSQL (2.2ms)[0m  [1mdescribe `metrics`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `metrics`
+  [1m[36mSQL (2.8ms)[0m  [1mdescribe `workouts`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `workouts`
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:29:29 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.5ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.9ms)
+Rendered athletic_programs/_exercise_fields.html.erb (62.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.5ms)
+Rendered athletic_programs/_exercise_fields.html.erb (25.4ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (117.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (26.0ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (52.4ms)
+Rendered athletic_programs/_form.html.erb (203.0ms)
+Rendered athletic_programs/new.html.erb within layouts/application (228.5ms)
+Completed 200 OK in 853ms (Views: 253.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-15 10:29:32 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.4ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__603881363_82064970__359253668 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (61.2ms)
+Completed 200 OK in 562ms (Views: 80.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:37:24 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.3ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.7ms)
+Rendered athletic_programs/_exercise_fields.html.erb (57.3ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (25.5ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (118.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.9ms)
+Rendered athletic_programs/_exercise_fields.html.erb (24.8ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (53.9ms)
+Rendered athletic_programs/_form.html.erb (207.3ms)
+Rendered athletic_programs/new.html.erb within layouts/application (297.6ms)
+Completed 200 OK in 560ms (Views: 314.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:37:33 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (12.5ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (14.0ms)
+Rendered athletic_programs/_exercise_fields.html.erb (71.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (12.2ms)
+Rendered athletic_programs/_exercise_fields.html.erb (34.7ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (140.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (11.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (32.5ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (68.4ms)
+Rendered athletic_programs/_form.html.erb (248.3ms)
+Rendered athletic_programs/new.html.erb within layouts/application (340.5ms)
+Completed 200 OK in 628ms (Views: 352.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-15 10:37:57 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb___533613598_85907820__359253668 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-15 10:38:00 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.3ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__603881363_86345430__359253668 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 76ms (Views: 36.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:38:02 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.1ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.2ms)
+Rendered athletic_programs/_exercise_fields.html.erb (67.2ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.6ms)
+Rendered athletic_programs/_exercise_fields.html.erb (25.7ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (130.5ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.9ms)
+Rendered athletic_programs/_exercise_fields.html.erb (29.5ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (108.0ms)
+Rendered athletic_programs/_form.html.erb (274.9ms)
+Rendered athletic_programs/new.html.erb within layouts/application (295.8ms)
+Completed 200 OK in 609ms (Views: 310.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:42:46 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (54.0ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.0ms)
+Rendered athletic_programs/_exercise_fields.html.erb (24.8ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (112.1ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.7ms)
+Rendered athletic_programs/_exercise_fields.html.erb (26.0ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (105.9ms)
+Rendered athletic_programs/_form.html.erb (250.1ms)
+Rendered athletic_programs/new.html.erb within layouts/application (272.3ms)
+Completed 200 OK in 568ms (Views: 284.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:43:45 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.2ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (54.0ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.9ms)
+Rendered athletic_programs/_exercise_fields.html.erb (25.8ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (112.9ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.5ms)
+Rendered athletic_programs/_exercise_fields.html.erb (24.9ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (109.3ms)
+Rendered athletic_programs/_form.html.erb (253.4ms)
+Rendered athletic_programs/new.html.erb within layouts/application (274.7ms)
+Completed 200 OK in 607ms (Views: 287.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:44:22 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.1ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.2ms)
+Rendered athletic_programs/_exercise_fields.html.erb (56.6ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.9ms)
+Rendered athletic_programs/_exercise_fields.html.erb (80.6ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (169.0ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.0ms)
+Rendered athletic_programs/_exercise_fields.html.erb (26.0ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (55.0ms)
+Rendered athletic_programs/_form.html.erb (254.3ms)
+Rendered athletic_programs/new.html.erb within layouts/application (276.8ms)
+Completed 200 OK in 675ms (Views: 290.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:45:03 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (74.9ms)
+Rendered athletic_programs/_exercise_fields.html.erb (130.3ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.8ms)
+Rendered athletic_programs/_exercise_fields.html.erb (30.1ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (200.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (15.6ms)
+Rendered athletic_programs/_exercise_fields.html.erb (39.7ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (88.2ms)
+Rendered athletic_programs/_form.html.erb (335.9ms)
+Rendered athletic_programs/new.html.erb within layouts/application (368.2ms)
+Completed 200 OK in 717ms (Views: 382.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:45:17 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.0ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (114.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.6ms)
+Rendered athletic_programs/_exercise_fields.html.erb (25.4ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (172.3ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.5ms)
+Rendered athletic_programs/_exercise_fields.html.erb (24.5ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (53.1ms)
+Rendered athletic_programs/_form.html.erb (256.3ms)
+Rendered athletic_programs/new.html.erb within layouts/application (278.3ms)
+Completed 200 OK in 524ms (Views: 291.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:46:15 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (11.0ms)
+Rendered athletic_programs/_exercise_fields.html.erb (69.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (11.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (30.1ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (137.5ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (11.6ms)
+Rendered athletic_programs/_exercise_fields.html.erb (32.1ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (66.0ms)
+Rendered athletic_programs/_form.html.erb (244.0ms)
+Rendered athletic_programs/new.html.erb within layouts/application (337.3ms)
+Completed 200 OK in 644ms (Views: 354.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:47:59 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (11.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (11.8ms)
+Rendered athletic_programs/_exercise_fields.html.erb (75.6ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.8ms)
+Rendered athletic_programs/_exercise_fields.html.erb (32.8ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (153.2ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (15.5ms)
+Rendered athletic_programs/_exercise_fields.html.erb (35.8ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (71.2ms)
+Rendered athletic_programs/_form.html.erb (268.4ms)
+Rendered athletic_programs/new.html.erb within layouts/application (303.3ms)
+Completed 200 OK in 686ms (Views: 319.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:48:35 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (15.3ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (11.1ms)
+Rendered athletic_programs/_exercise_fields.html.erb (80.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (15.6ms)
+Rendered athletic_programs/_exercise_fields.html.erb (43.2ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (174.1ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (13.0ms)
+Rendered athletic_programs/_exercise_fields.html.erb (38.7ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (90.6ms)
+Rendered athletic_programs/_form.html.erb (354.3ms)
+Rendered athletic_programs/new.html.erb within layouts/application (382.3ms)
+Completed 200 OK in 836ms (Views: 397.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:49:49 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.8ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.2ms)
+Rendered athletic_programs/_exercise_fields.html.erb (55.6ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.7ms)
+Rendered athletic_programs/_exercise_fields.html.erb (24.7ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (111.2ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (63.1ms)
+Rendered athletic_programs/_exercise_fields.html.erb (79.2ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (107.8ms)
+Rendered athletic_programs/_form.html.erb (251.4ms)
+Rendered athletic_programs/new.html.erb within layouts/application (273.6ms)
+Completed 200 OK in 609ms (Views: 285.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:55:25 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (12.3ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.5ms)
+Rendered athletic_programs/_exercise_fields.html.erb (95.6ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.8ms)
+Rendered athletic_programs/_exercise_fields.html.erb (81.6ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (230.9ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.1ms)
+Rendered athletic_programs/_exercise_fields.html.erb (26.4ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (56.8ms)
+Rendered athletic_programs/_form.html.erb (324.7ms)
+Rendered athletic_programs/new.html.erb within layouts/application (349.2ms)
+Completed 200 OK in 717ms (Views: 364.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:56:20 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.2ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.8ms)
+Rendered athletic_programs/_exercise_fields.html.erb (112.9ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.7ms)
+Rendered athletic_programs/_exercise_fields.html.erb (25.3ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (170.3ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.0ms)
+Rendered athletic_programs/_exercise_fields.html.erb (26.1ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (52.2ms)
+Rendered athletic_programs/_form.html.erb (254.5ms)
+Rendered athletic_programs/new.html.erb within layouts/application (276.5ms)
+Completed 200 OK in 512ms (Views: 287.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:56:52 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (13.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (74.6ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (12.2ms)
+Rendered athletic_programs/_exercise_fields.html.erb (31.3ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (214.9ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.7ms)
+Rendered athletic_programs/_exercise_fields.html.erb (27.5ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (67.4ms)
+Rendered athletic_programs/_form.html.erb (317.7ms)
+Rendered athletic_programs/new.html.erb within layouts/application (342.6ms)
+Completed 200 OK in 695ms (Views: 358.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:57:37 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (66.8ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (12.1ms)
+Rendered athletic_programs/_exercise_fields.html.erb (32.1ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (136.6ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.5ms)
+Rendered athletic_programs/_exercise_fields.html.erb (31.7ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (66.1ms)
+Rendered athletic_programs/_form.html.erb (241.2ms)
+Rendered athletic_programs/new.html.erb within layouts/application (277.8ms)
+Completed 200 OK in 750ms (Views: 292.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:58:20 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.8ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (55.6ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (25.1ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (112.3ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (23.7ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (53.7ms)
+Rendered athletic_programs/_form.html.erb (196.7ms)
+Rendered athletic_programs/new.html.erb within layouts/application (270.0ms)
+Completed 200 OK in 568ms (Views: 283.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 10:58:35 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (13.5ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.5ms)
+Rendered athletic_programs/_exercise_fields.html.erb (70.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (11.1ms)
+Rendered athletic_programs/_exercise_fields.html.erb (30.7ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (140.9ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.6ms)
+Rendered athletic_programs/_exercise_fields.html.erb (93.0ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (126.9ms)
+Rendered athletic_programs/_form.html.erb (308.4ms)
+Rendered athletic_programs/new.html.erb within layouts/application (338.1ms)
+Completed 200 OK in 700ms (Views: 354.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 11:00:55 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (12.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.9ms)
+Rendered athletic_programs/_exercise_fields.html.erb (69.0ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (11.5ms)
+Rendered athletic_programs/_exercise_fields.html.erb (32.7ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (211.6ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (12.6ms)
+Rendered athletic_programs/_exercise_fields.html.erb (33.0ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (67.7ms)
+Rendered athletic_programs/_form.html.erb (319.6ms)
+Rendered athletic_programs/new.html.erb within layouts/application (362.8ms)
+Completed 200 OK in 732ms (Views: 380.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 11:08:18 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (11.0ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (66.0ms)
+Rendered athletic_programs/_exercise_fields.html.erb (112.5ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.7ms)
+Rendered athletic_programs/_exercise_fields.html.erb (26.1ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (170.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (25.8ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (53.2ms)
+Rendered athletic_programs/_form.html.erb (256.4ms)
+Rendered athletic_programs/new.html.erb within layouts/application (279.6ms)
+Completed 200 OK in 576ms (Views: 291.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 11:09:42 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.0ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.5ms)
+Rendered athletic_programs/_exercise_fields.html.erb (55.5ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.6ms)
+Rendered athletic_programs/_exercise_fields.html.erb (24.1ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (173.1ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.1ms)
+Rendered athletic_programs/_exercise_fields.html.erb (25.3ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (53.9ms)
+Rendered athletic_programs/_form.html.erb (257.0ms)
+Rendered athletic_programs/new.html.erb within layouts/application (280.0ms)
+Completed 200 OK in 514ms (Views: 292.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 11:10:15 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.2ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.0ms)
+Rendered athletic_programs/_exercise_fields.html.erb (57.5ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.7ms)
+Rendered athletic_programs/_exercise_fields.html.erb (25.1ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (113.5ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.9ms)
+Rendered athletic_programs/_exercise_fields.html.erb (25.5ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (53.9ms)
+Rendered athletic_programs/_form.html.erb (200.9ms)
+Rendered athletic_programs/new.html.erb within layouts/application (226.3ms)
+Completed 200 OK in 535ms (Views: 239.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 11:11:04 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (57.2ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.5ms)
+Rendered athletic_programs/_exercise_fields.html.erb (24.8ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (112.1ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.1ms)
+Rendered athletic_programs/_exercise_fields.html.erb (25.1ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (53.5ms)
+Rendered athletic_programs/_form.html.erb (199.5ms)
+Rendered athletic_programs/new.html.erb within layouts/application (273.7ms)
+Completed 200 OK in 569ms (Views: 285.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 11:18:11 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.3ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (12.1ms)
+Rendered athletic_programs/_exercise_fields.html.erb (67.9ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.6ms)
+Rendered athletic_programs/_exercise_fields.html.erb (30.4ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (136.2ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (12.0ms)
+Rendered athletic_programs/_exercise_fields.html.erb (103.5ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (135.3ms)
+Rendered athletic_programs/_form.html.erb (313.3ms)
+Rendered athletic_programs/new.html.erb within layouts/application (354.5ms)
+Completed 200 OK in 738ms (Views: 370.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/day_of_week.js" for 127.0.0.1 at 2011-01-15 11:18:12 -0800
+
+ActionController::RoutingError (No route matches "/javascripts/day_of_week.js"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.7ms)
+
+
+Started GET "/javascripts/athletic_prgram.js" for 127.0.0.1 at 2011-01-15 11:18:12 -0800
+
+ActionController::RoutingError (No route matches "/javascripts/athletic_prgram.js"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (7.4ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 11:18:48 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (112.8ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.9ms)
+Rendered athletic_programs/_exercise_fields.html.erb (24.0ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (170.9ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (23.8ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (52.5ms)
+Rendered athletic_programs/_form.html.erb (252.5ms)
+Rendered athletic_programs/new.html.erb within layouts/application (275.9ms)
+Completed 200 OK in 522ms (Views: 288.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/day_of_week.js" for 127.0.0.1 at 2011-01-15 11:18:50 -0800
+
+ActionController::RoutingError (No route matches "/javascripts/day_of_week.js"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.3ms)
+
+
+Started GET "/javascripts/athletic_prgram.js" for 127.0.0.1 at 2011-01-15 11:18:50 -0800
+
+ActionController::RoutingError (No route matches "/javascripts/athletic_prgram.js"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 11:19:22 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (12.3ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (13.2ms)
+Rendered athletic_programs/_exercise_fields.html.erb (78.2ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.1ms)
+Rendered athletic_programs/_exercise_fields.html.erb (28.4ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (146.8ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.1ms)
+Rendered athletic_programs/_exercise_fields.html.erb (28.7ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (58.8ms)
+Rendered athletic_programs/_form.html.erb (245.4ms)
+Rendered athletic_programs/new.html.erb within layouts/application (274.7ms)
+Completed 200 OK in 587ms (Views: 288.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 11:19:28 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (10.8ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (11.6ms)
+Rendered athletic_programs/_exercise_fields.html.erb (68.3ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (11.2ms)
+Rendered athletic_programs/_exercise_fields.html.erb (31.9ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (213.6ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (18.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (41.7ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (76.5ms)
+Rendered athletic_programs/_form.html.erb (326.6ms)
+Rendered athletic_programs/new.html.erb within layouts/application (353.2ms)
+Completed 200 OK in 709ms (Views: 370.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/day_of_week.js" for 127.0.0.1 at 2011-01-15 11:19:30 -0800
+
+ActionController::RoutingError (No route matches "/javascripts/day_of_week.js"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (18.3ms)
+
+
+Started GET "/javascripts/day_of_week.js" for 127.0.0.1 at 2011-01-15 11:24:54 -0800
+
+ActionController::RoutingError (No route matches "/javascripts/day_of_week.js"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.7ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-15 11:29:08 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (9.0ms)
+Rendered athletic_programs/_exercise_fields.html.erb (54.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (24.3ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (109.6ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (8.8ms)
+Rendered athletic_programs/_exercise_fields.html.erb (24.8ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (52.7ms)
+Rendered athletic_programs/_form.html.erb (248.1ms)
+Rendered athletic_programs/new.html.erb within layouts/application (271.1ms)
+Completed 200 OK in 582ms (Views: 283.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/day_of_week.js" for 127.0.0.1 at 2011-01-15 11:29:09 -0800
+
+ActionController::RoutingError (No route matches "/javascripts/day_of_week.js"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (7.9ms)
+
+
+Started GET "/javascripts/day_of_week.js" for 127.0.0.1 at 2011-01-15 11:29:15 -0800
+
+ActionController::RoutingError (No route matches "/javascripts/day_of_week.js"):
+  
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.9ms)
