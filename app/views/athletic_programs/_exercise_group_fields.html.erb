@@ -19,26 +19,3 @@
   <%= link_to_remove_fields "Delete", f %><br />
   
 </p>
-
-<script type="text/javascript">
-$(document).ready(function(){
-        $('input[name="workout_type"]:eq(0)').attr('checked', true);
-        $('.strength_workout_fields').show();
-        $('.cardio_workout_fields').hide();
-});
-
-$(document).ready(
-  $("input:radio[name=workout_type]").click(function() {
-    if ( $(this).val() == 'strength_workout' ){
-        $('.strength_workout_fields').show();
-        $('.cardio_workout_fields').hide();
-    }
-    else
-    {
-        $('.strength_workout_fields').hide();
-        $('.cardio_workout_fields').show();
-    }
-  })
-)
-;
-</script>

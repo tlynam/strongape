@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(:version => 20110103121756) do
   end
 
   create_table "exercises", :force => true do |t|
-    t.integer "days_of_week_id"
+    t.integer "workout_id"
     t.integer "date_of_workout_id"
     t.string  "name"
   end
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(:version => 20110103121756) do
   end
 
   create_table "workouts", :force => true do |t|
+    t.integer  "program_week_id"
     t.integer  "athletic_program_id"
     t.datetime "workout_time"
     t.string   "day"
