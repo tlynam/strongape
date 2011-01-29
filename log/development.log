@@ -28335,3 +28335,117 @@ Started GET "/" for 127.0.0.1 at 2011-01-28 22:55:55 -0800
 DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__4219085425732489928_21233380_1678103610492846567 at /home/todd/strongape/app/views/home/index.html.erb:6)
 Rendered home/index.html.erb within layouts/application (3.8ms)
 Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-28 22:59:28 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__948123447492779097_7811800_1678103610492846567 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 44ms (Views: 38.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-28 22:59:30 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.5ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (9.0ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.2ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.5ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (16.9ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.6ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (7.5ms)
+Rendered athletic_programs/_form.html.erb (28.8ms)
+Rendered athletic_programs/new.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 101ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-28 23:00:59 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__948123447492779097_19943100_1678103610492846567 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 18ms (Views: 12.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-28 23:01:00 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.6ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (9.6ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (4.0ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (19.3ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.7ms)
+Rendered athletic_programs/_exercise_fields.html.erb (35.5ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (40.2ms)
+Rendered athletic_programs/_form.html.erb (64.2ms)
+Rendered athletic_programs/new.html.erb within layouts/application (68.3ms)
+Completed 200 OK in 144ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-28 23:01:40 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__4219085425732489928_20244100_1678103610492846567 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2011-01-28 23:01:42 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___2186917864983933101_11656300_1678103610492846567 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 47ms (Views: 40.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2011-01-28 23:01:44 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.8ms)
+Rendered date_of_workouts/_form.html.erb (17.7ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (48.4ms)
+Completed 200 OK in 77ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2011-01-28 23:01:48 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb___2186917864983933101_20225140_1678103610492846567 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 20ms (Views: 13.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-28 23:01:49 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__4219085425732489928_12012020_1678103610492846567 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-28 23:01:50 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__948123447492779097_21482700_1678103610492846567 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 18ms (Views: 12.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-28 23:01:51 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.5ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (8.8ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.2ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.4ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (16.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.5ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (7.5ms)
+Rendered athletic_programs/_form.html.erb (28.8ms)
+Rendered athletic_programs/new.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 101ms (Views: 34.9ms | ActiveRecord: 0.0ms)
