@@ -25913,3 +25913,1404 @@ DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>
   [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
 Rendered metrics/index.html.erb within layouts/application (37.1ms)
 Completed 200 OK in 50ms (Views: 39.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-04 05:52:17 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb___1367211502179830648_21190680_1865342036208411937 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (14.4ms)
+Completed   in 43ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+    23:         <%= link_to "Health Metrics", metrics_path, :class => selected_navigation(:metrics) %></li>
+    24:     </ul>
+    25:   </div>
+    26: <%= @flash[:notice] %>
+    27: </head>
+    28: <div id="header">
+    29:   <br /><br />
+  app/views/layouts/application.html.erb:26:in `_app_views_layouts_application_html_erb___4391799858667007036_21195160_1865342036208411937'
+  app/controllers/home_controller.rb:6:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-04 05:52:24 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb___1367211502179830648_23803520_1865342036208411937 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2011-01-04 05:52:28 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (7.7ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_31749540_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 53ms (Views: 12.3ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2011-01-04 05:52:30 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.6ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (4.7ms)
+Rendered date_of_workouts/_form.html.erb (18.6ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 95ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/date_of_workouts" for 127.0.0.1 at 2011-01-04 05:52:32 -0800
+  Processing by DateOfWorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "date_of_workout"=>{"date"=>"2011-01-04 13:52:30 UTC", "description"=>"", "exercises_attributes"=>{"0"=>{"name"=>"", "_destroy"=>"false", "exercise_groups_attributes"=>{"0"=>{"sets"=>"1", "reps"=>"1", "weight"=>"", "percentage_of_max"=>"0", "description"=>"", "_destroy"=>"false"}}}}}, "commit"=>"Save Workout"}
+  [1m[36mSQL (2.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  describe `date_of_workouts`
+  [1m[36mAREL (18.8ms)[0m  [1mINSERT INTO `date_of_workouts` (`date`, `description`) VALUES ('2011-01-04 13:52:30', '')[0m
+  [1m[35mSQL (0.2ms)[0m  describe `exercises`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `exercises` (`days_of_week_id`, `date_of_workout_id`, `name`) VALUES (NULL, 1, '')[0m
+  [1m[35mSQL (0.3ms)[0m  describe `exercise_groups`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `exercise_groups` (`exercise_id`, `weight`, `percentage_of_max`, `sets`, `reps`, `description`) VALUES (1, NULL, 0, 1, 1, '')[0m
+  [1m[35mSQL (8.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/date_of_workouts?%23%3CDateOfWorkout%3A0x0000000171b0a0%3E=index&notice=Date+of+workout+was+successfully+created.
+Completed 302 Found in 97ms
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x0000000171b0a0%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2011-01-04 05:52:32 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x0000000171b0a0>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[36mDateOfWorkout Load (0.3ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_22580000_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x0000000171b0a0%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2011-01-04 05:54:46 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x0000000171b0a0>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_30668820_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2011-01-04 05:55:00 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_21021200_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 16ms (Views: 9.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2011-01-04 05:55:04 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.4ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (27.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (29.9ms)
+Rendered date_of_workouts/_form.html.erb (43.2ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 77ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/date_of_workouts" for 127.0.0.1 at 2011-01-04 05:55:06 -0800
+  Processing by DateOfWorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "date_of_workout"=>{"date"=>"2011-01-04 13:55:04 UTC", "description"=>"", "exercises_attributes"=>{"0"=>{"name"=>"", "_destroy"=>"false", "exercise_groups_attributes"=>{"0"=>{"sets"=>"1", "reps"=>"1", "weight"=>"", "percentage_of_max"=>"0", "description"=>"", "_destroy"=>"false"}}}}}, "commit"=>"Save Workout"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `date_of_workouts`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `date_of_workouts` (`date`, `description`) VALUES ('2011-01-04 13:55:04', '')
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercises`[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `exercises` (`days_of_week_id`, `date_of_workout_id`, `name`) VALUES (NULL, 2, '')
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercise_groups`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `exercise_groups` (`exercise_id`, `weight`, `percentage_of_max`, `sets`, `reps`, `description`) VALUES (2, NULL, 0, 1, 1, '')
+  [1m[36mSQL (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/date_of_workouts?%23%3CDateOfWorkout%3A0x00000002aa2ec0%3E=index&notice=Date+of+workout+was+successfully+created.
+Completed 302 Found in 64ms
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x00000002aa2ec0%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2011-01-04 05:55:06 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x00000002aa2ec0>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[35mDateOfWorkout Load (0.3ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_23934220_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 17ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x00000002aa2ec0%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2011-01-04 05:55:16 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x00000002aa2ec0>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_11995440_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 44ms (Views: 37.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-04 05:55:29 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (5.7ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_22391300_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 26ms (Views: 13.6ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-04 05:55:31 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.5ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.5ms)
+Rendered athletic_programs/_exercise_fields.html.erb (9.3ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.6ms)
+Rendered athletic_programs/_exercise_fields.html.erb (4.1ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (18.5ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.5ms)
+Rendered athletic_programs/_exercise_fields.html.erb (4.0ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (36.4ms)
+Rendered athletic_programs/_form.html.erb (60.1ms)
+Rendered athletic_programs/new.html.erb within layouts/application (64.4ms)
+Completed 200 OK in 105ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/athletic_programs" for 127.0.0.1 at 2011-01-04 05:55:33 -0800
+  Processing by AthleticProgramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "athletic_program"=>{"name"=>"", "description"=>"", "days_of_weeks_attributes"=>{"0"=>{"sunday"=>"0", "monday"=>"0", "tuesday"=>"0", "wednesday"=>"0", "thursday"=>"0", "friday"=>"0", "saturday"=>"0", "_destroy"=>"false", "exercises_attributes"=>{"0"=>{"name"=>"", "_destroy"=>"false", "exercise_groups_attributes"=>{"0"=>{"sets"=>"1", "reps"=>"1", "weight"=>"", "description"=>"", "_destroy"=>"false"}}}}}}}, "workout_type"=>"strength_workout", "commit"=>"Save Program"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `athletic_programs`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `athletic_programs` (`name`, `description`) VALUES ('', '')[0m
+  [1m[35mSQL (0.3ms)[0m  describe `days_of_weeks`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `days_of_weeks` (`athletic_program_id`, `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`) VALUES (1, 0, 0, 0, 0, 0, 0, 0)[0m
+  [1m[35mSQL (0.2ms)[0m  describe `exercises`
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO `exercises` (`days_of_week_id`, `date_of_workout_id`, `name`) VALUES (1, NULL, '')[0m
+  [1m[35mSQL (0.2ms)[0m  describe `exercise_groups`
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO `exercise_groups` (`exercise_id`, `weight`, `percentage_of_max`, `sets`, `reps`, `description`) VALUES (3, NULL, NULL, 1, 1, '')[0m
+  [1m[35mSQL (1.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/athletic_programs?%23%3CAthleticProgram%3A0x000000028f5c08%3E=index&notice=Athletic+program+was+successfully+created.
+Completed 302 Found in 80ms
+
+
+Started GET "/athletic_programs?%23%3CAthleticProgram%3A0x000000028f5c08%3E=index&notice=Athletic+program+was+successfully+created." for 127.0.0.1 at 2011-01-04 05:55:33 -0800
+  Processing by AthleticProgramsController#index as HTML
+  Parameters: {"#<AthleticProgram:0x000000028f5c08>"=>"index", "notice"=>"Athletic program was successfully created."}
+  [1m[36mAthleticProgram Load (0.2ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_21890220_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 17ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/athletic_programs?%23%3CAthleticProgram%3A0x000000028f5c08%3E=index&notice=Athletic+program+was+successfully+created." for 127.0.0.1 at 2011-01-04 05:55:45 -0800
+  Processing by AthleticProgramsController#index as HTML
+  Parameters: {"#<AthleticProgram:0x000000028f5c08>"=>"index", "notice"=>"Athletic program was successfully created."}
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_25057200_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 18ms (Views: 10.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/athletic_programs?%23%3CAthleticProgram%3A0x000000028f5c08%3E=index&notice=Athletic+program+was+successfully+created." for 127.0.0.1 at 2011-01-04 05:55:52 -0800
+  Processing by AthleticProgramsController#index as HTML
+  Parameters: {"#<AthleticProgram:0x000000028f5c08>"=>"index", "notice"=>"Athletic program was successfully created."}
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_13929280_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 43ms (Views: 36.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-04 05:55:55 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (8.9ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.6ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (17.1ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.8ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (7.7ms)
+Rendered athletic_programs/_form.html.erb (29.4ms)
+Rendered athletic_programs/new.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 101ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/athletic_programs" for 127.0.0.1 at 2011-01-04 05:55:57 -0800
+  Processing by AthleticProgramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "athletic_program"=>{"name"=>"", "description"=>"", "days_of_weeks_attributes"=>{"0"=>{"sunday"=>"0", "monday"=>"0", "tuesday"=>"0", "wednesday"=>"0", "thursday"=>"0", "friday"=>"0", "saturday"=>"0", "_destroy"=>"false", "exercises_attributes"=>{"0"=>{"name"=>"", "_destroy"=>"false", "exercise_groups_attributes"=>{"0"=>{"sets"=>"1", "reps"=>"1", "weight"=>"", "description"=>"", "_destroy"=>"false"}}}}}}}, "workout_type"=>"strength_workout", "commit"=>"Save Program"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `athletic_programs`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `athletic_programs` (`name`, `description`) VALUES ('', '')
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `days_of_weeks`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `days_of_weeks` (`athletic_program_id`, `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`) VALUES (2, 0, 0, 0, 0, 0, 0, 0)
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercises`[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `exercises` (`days_of_week_id`, `date_of_workout_id`, `name`) VALUES (2, NULL, '')
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercise_groups`[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `exercise_groups` (`exercise_id`, `weight`, `percentage_of_max`, `sets`, `reps`, `description`) VALUES (4, NULL, NULL, 1, 1, '')
+  [1m[36mSQL (14.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/athletic_programs?%23%3CAthleticProgram%3A0x00000003caef88%3E=index&notice=Athletic+program+was+successfully+created.
+Completed 302 Found in 66ms
+
+
+Started GET "/athletic_programs?%23%3CAthleticProgram%3A0x00000003caef88%3E=index&notice=Athletic+program+was+successfully+created." for 127.0.0.1 at 2011-01-04 05:55:57 -0800
+  Processing by AthleticProgramsController#index as HTML
+  Parameters: {"#<AthleticProgram:0x00000003caef88>"=>"index", "notice"=>"Athletic program was successfully created."}
+  [1m[35mAthleticProgram Load (0.2ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_32153680_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 49ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/athletic_programs?%23%3CAthleticProgram%3A0x00000003caef88%3E=index&notice=Athletic+program+was+successfully+created." for 127.0.0.1 at 2011-01-04 05:56:34 -0800
+  Processing by AthleticProgramsController#index as HTML
+  Parameters: {"#<AthleticProgram:0x00000003caef88>"=>"index", "notice"=>"Athletic program was successfully created."}
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_22335460_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 16ms (Views: 10.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/athletic_programs?%23%3CAthleticProgram%3A0x00000003caef88%3E=index&notice=Athletic+program+was+successfully+created." for 127.0.0.1 at 2011-01-04 05:56:48 -0800
+  Processing by AthleticProgramsController#index as HTML
+  Parameters: {"#<AthleticProgram:0x00000003caef88>"=>"index", "notice"=>"Athletic program was successfully created."}
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_26048260_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 17ms (Views: 10.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-04 05:57:01 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (8.9ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.6ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (17.1ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.9ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (8.0ms)
+Rendered athletic_programs/_form.html.erb (29.7ms)
+Rendered athletic_programs/new.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 100ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/athletic_programs" for 127.0.0.1 at 2011-01-04 05:57:03 -0800
+  Processing by AthleticProgramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "athletic_program"=>{"name"=>"", "description"=>"", "days_of_weeks_attributes"=>{"0"=>{"sunday"=>"0", "monday"=>"0", "tuesday"=>"0", "wednesday"=>"0", "thursday"=>"0", "friday"=>"0", "saturday"=>"0", "_destroy"=>"false", "exercises_attributes"=>{"0"=>{"name"=>"", "_destroy"=>"false", "exercise_groups_attributes"=>{"0"=>{"sets"=>"1", "reps"=>"1", "weight"=>"", "description"=>"", "_destroy"=>"false"}}}}}}}, "workout_type"=>"strength_workout", "commit"=>"Save Program"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `athletic_programs`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `athletic_programs` (`name`, `description`) VALUES ('', '')[0m
+  [1m[35mSQL (0.3ms)[0m  describe `days_of_weeks`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `days_of_weeks` (`athletic_program_id`, `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`) VALUES (3, 0, 0, 0, 0, 0, 0, 0)[0m
+  [1m[35mSQL (0.2ms)[0m  describe `exercises`
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO `exercises` (`days_of_week_id`, `date_of_workout_id`, `name`) VALUES (3, NULL, '')[0m
+  [1m[35mSQL (0.2ms)[0m  describe `exercise_groups`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `exercise_groups` (`exercise_id`, `weight`, `percentage_of_max`, `sets`, `reps`, `description`) VALUES (5, NULL, NULL, 1, 1, '')[0m
+  [1m[35mSQL (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/athletic_programs?%23%3CAthleticProgram%3A0x00000002d6f388%3E=index&notice=Athletic+program+was+successfully+created.
+Completed 302 Found in 80ms
+
+
+Started GET "/athletic_programs?%23%3CAthleticProgram%3A0x00000002d6f388%3E=index&notice=Athletic+program+was+successfully+created." for 127.0.0.1 at 2011-01-04 05:57:03 -0800
+  Processing by AthleticProgramsController#index as HTML
+  Parameters: {"#<AthleticProgram:0x00000002d6f388>"=>"index", "notice"=>"Athletic program was successfully created."}
+  [1m[36mAthleticProgram Load (0.2ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_23251280_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 17ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-04 05:58:37 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.5ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (9.1ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.6ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (17.2ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.6ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (7.7ms)
+Rendered athletic_programs/_form.html.erb (58.8ms)
+Rendered athletic_programs/new.html.erb within layouts/application (62.8ms)
+Completed 200 OK in 103ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/athletic_programs" for 127.0.0.1 at 2011-01-04 05:58:38 -0800
+  Processing by AthleticProgramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "athletic_program"=>{"name"=>"", "description"=>"", "days_of_weeks_attributes"=>{"0"=>{"sunday"=>"0", "monday"=>"0", "tuesday"=>"0", "wednesday"=>"0", "thursday"=>"0", "friday"=>"0", "saturday"=>"0", "_destroy"=>"false", "exercises_attributes"=>{"0"=>{"name"=>"", "_destroy"=>"false", "exercise_groups_attributes"=>{"0"=>{"sets"=>"1", "reps"=>"1", "weight"=>"", "description"=>"", "_destroy"=>"false"}}}}}}}, "workout_type"=>"strength_workout", "commit"=>"Save Program"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `athletic_programs`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `athletic_programs` (`name`, `description`) VALUES ('', '')
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `days_of_weeks`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `days_of_weeks` (`athletic_program_id`, `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`) VALUES (4, 0, 0, 0, 0, 0, 0, 0)
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercises`[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `exercises` (`days_of_week_id`, `date_of_workout_id`, `name`) VALUES (4, NULL, '')
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercise_groups`[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `exercise_groups` (`exercise_id`, `weight`, `percentage_of_max`, `sets`, `reps`, `description`) VALUES (6, NULL, NULL, 1, 1, '')
+  [1m[36mSQL (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/athletic_programs?%23%3CAthleticProgram%3A0x00000002bf4fd0%3E=index&notice=Athletic+program+was+successfully+created.
+Completed 302 Found in 81ms
+
+
+Started GET "/athletic_programs?%23%3CAthleticProgram%3A0x00000002bf4fd0%3E=index&notice=Athletic+program+was+successfully+created." for 127.0.0.1 at 2011-01-04 05:58:38 -0800
+  Processing by AthleticProgramsController#index as HTML
+  Parameters: {"#<AthleticProgram:0x00000002bf4fd0>"=>"index", "notice"=>"Athletic program was successfully created."}
+  [1m[35mAthleticProgram Load (0.2ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_22924480_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 18ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/athletic_programs?%23%3CAthleticProgram%3A0x00000002bf4fd0%3E=index&notice=Athletic+program+was+successfully+created." for 127.0.0.1 at 2011-01-04 05:59:17 -0800
+  Processing by AthleticProgramsController#index as HTML
+  Parameters: {"#<AthleticProgram:0x00000002bf4fd0>"=>"index", "notice"=>"Athletic program was successfully created."}
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_31691800_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 18ms (Views: 11.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2011-01-04 05:59:36 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_21606540_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 16ms (Views: 9.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2011-01-04 05:59:38 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.3ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (8.9ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.7ms)
+Rendered date_of_workouts/_form.html.erb (16.4ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 49ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/date_of_workouts" for 127.0.0.1 at 2011-01-04 05:59:40 -0800
+  Processing by DateOfWorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "date_of_workout"=>{"date"=>"2011-01-04 13:59:38 UTC", "description"=>"", "exercises_attributes"=>{"0"=>{"name"=>"", "_destroy"=>"false", "exercise_groups_attributes"=>{"0"=>{"sets"=>"1", "reps"=>"1", "weight"=>"", "percentage_of_max"=>"0", "description"=>"", "_destroy"=>"false"}}}}}, "commit"=>"Save Workout"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `date_of_workouts`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `date_of_workouts` (`date`, `description`) VALUES ('2011-01-04 13:59:38', '')[0m
+  [1m[35mSQL (0.2ms)[0m  describe `exercises`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `exercises` (`days_of_week_id`, `date_of_workout_id`, `name`) VALUES (NULL, 3, '')[0m
+  [1m[35mSQL (0.2ms)[0m  describe `exercise_groups`
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO `exercise_groups` (`exercise_id`, `weight`, `percentage_of_max`, `sets`, `reps`, `description`) VALUES (7, NULL, 0, 1, 1, '')[0m
+  [1m[35mSQL (1.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/date_of_workouts?%23%3CDateOfWorkout%3A0x00000002d6d308%3E=index&notice=Date+of+workout+was+successfully+created.
+Completed 302 Found in 38ms
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x00000002d6d308%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2011-01-04 05:59:40 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x00000002d6d308>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[36mDateOfWorkout Load (0.2ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_31343440_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 18ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x00000002d6d308%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2011-01-04 06:00:08 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x00000002d6d308>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_21363940_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 17ms (Views: 10.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x00000002d6d308%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2011-01-04 06:00:29 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x00000002d6d308>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_24043740_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 17ms (Views: 10.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2011-01-04 06:00:36 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.5ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.3ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.2ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.3ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.6ms)
+Rendered date_of_workouts/_form.html.erb (16.6ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 48ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/date_of_workouts" for 127.0.0.1 at 2011-01-04 06:00:37 -0800
+  Processing by DateOfWorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "date_of_workout"=>{"date"=>"2011-01-04 14:00:36 UTC", "description"=>"", "exercises_attributes"=>{"0"=>{"name"=>"", "_destroy"=>"false", "exercise_groups_attributes"=>{"0"=>{"sets"=>"1", "reps"=>"1", "weight"=>"", "percentage_of_max"=>"0", "description"=>"", "_destroy"=>"false"}}}}}, "commit"=>"Save Workout"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `date_of_workouts`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `date_of_workouts` (`date`, `description`) VALUES ('2011-01-04 14:00:36', '')
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercises`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `exercises` (`days_of_week_id`, `date_of_workout_id`, `name`) VALUES (NULL, 4, '')
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercise_groups`[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `exercise_groups` (`exercise_id`, `weight`, `percentage_of_max`, `sets`, `reps`, `description`) VALUES (8, NULL, 0, 1, 1, '')
+  [1m[36mSQL (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/date_of_workouts?%23%3CDateOfWorkout%3A0x000000031cbdf0%3E=index&notice=Date+of+workout+was+successfully+created.
+Completed 302 Found in 38ms
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x000000031cbdf0%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2011-01-04 06:00:37 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x000000031cbdf0>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[35mDateOfWorkout Load (0.2ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_13801220_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 46ms (Views: 39.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2011-01-04 06:00:47 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.7ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.3ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (36.9ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.3ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.6ms)
+Rendered date_of_workouts/_form.html.erb (44.3ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (48.1ms)
+Completed 200 OK in 76ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/date_of_workouts" for 127.0.0.1 at 2011-01-04 06:00:49 -0800
+  Processing by DateOfWorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "date_of_workout"=>{"date"=>"2011-01-04 14:00:47 UTC", "description"=>"", "exercises_attributes"=>{"0"=>{"name"=>"", "_destroy"=>"false", "exercise_groups_attributes"=>{"0"=>{"sets"=>"1", "reps"=>"1", "weight"=>"", "percentage_of_max"=>"0", "description"=>"", "_destroy"=>"false"}}}}}, "commit"=>"Save Workout"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `date_of_workouts`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `date_of_workouts` (`date`, `description`) VALUES ('2011-01-04 14:00:47', '')[0m
+  [1m[35mSQL (0.2ms)[0m  describe `exercises`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `exercises` (`days_of_week_id`, `date_of_workout_id`, `name`) VALUES (NULL, 5, '')[0m
+  [1m[35mSQL (0.2ms)[0m  describe `exercise_groups`
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO `exercise_groups` (`exercise_id`, `weight`, `percentage_of_max`, `sets`, `reps`, `description`) VALUES (9, NULL, 0, 1, 1, '')[0m
+  [1m[35mSQL (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/date_of_workouts?%23%3CDateOfWorkout%3A0x00000002a11bc8%3E=index&notice=Date+of+workout+was+successfully+created.
+Completed 302 Found in 66ms
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x00000002a11bc8%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2011-01-04 06:00:49 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x00000002a11bc8>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[36mDateOfWorkout Load (0.3ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_24153620_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 19ms (Views: 12.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x00000002a11bc8%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2011-01-04 06:01:12 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x00000002a11bc8>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_12093440_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 48ms (Views: 41.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-04 06:01:14 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_22561520_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 17ms (Views: 11.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-04 06:01:15 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (8.8ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.6ms)
+Rendered athletic_programs/_exercise_fields.html.erb (32.2ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (45.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.7ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (8.1ms)
+Rendered athletic_programs/_form.html.erb (58.9ms)
+Rendered athletic_programs/new.html.erb within layouts/application (62.6ms)
+Completed 200 OK in 102ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/athletic_programs" for 127.0.0.1 at 2011-01-04 06:01:17 -0800
+  Processing by AthleticProgramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "athletic_program"=>{"name"=>"", "description"=>"", "days_of_weeks_attributes"=>{"0"=>{"sunday"=>"0", "monday"=>"0", "tuesday"=>"0", "wednesday"=>"0", "thursday"=>"0", "friday"=>"0", "saturday"=>"0", "_destroy"=>"false", "exercises_attributes"=>{"0"=>{"name"=>"", "_destroy"=>"false", "exercise_groups_attributes"=>{"0"=>{"sets"=>"1", "reps"=>"1", "weight"=>"", "description"=>"", "_destroy"=>"false"}}}}}}}, "workout_type"=>"strength_workout", "commit"=>"Save Program"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `athletic_programs`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `athletic_programs` (`name`, `description`) VALUES ('', '')
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `days_of_weeks`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `days_of_weeks` (`athletic_program_id`, `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`) VALUES (5, 0, 0, 0, 0, 0, 0, 0)
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercises`[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `exercises` (`days_of_week_id`, `date_of_workout_id`, `name`) VALUES (5, NULL, '')
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `exercise_groups`[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `exercise_groups` (`exercise_id`, `weight`, `percentage_of_max`, `sets`, `reps`, `description`) VALUES (10, NULL, NULL, 1, 1, '')
+  [1m[36mSQL (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/athletic_programs?%23%3CAthleticProgram%3A0x00000002951e68%3E=index&notice=Athletic+program+was+successfully+created.
+Completed 302 Found in 79ms
+
+
+Started GET "/athletic_programs?%23%3CAthleticProgram%3A0x00000002951e68%3E=index&notice=Athletic+program+was+successfully+created." for 127.0.0.1 at 2011-01-04 06:01:17 -0800
+  Processing by AthleticProgramsController#index as HTML
+  Parameters: {"#<AthleticProgram:0x00000002951e68>"=>"index", "notice"=>"Athletic program was successfully created."}
+  [1m[35mAthleticProgram Load (0.3ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_22354780_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 19ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/athletic_programs?%23%3CAthleticProgram%3A0x00000002951e68%3E=index&notice=Athletic+program+was+successfully+created." for 127.0.0.1 at 2011-01-04 06:01:33 -0800
+  Processing by AthleticProgramsController#index as HTML
+  Parameters: {"#<AthleticProgram:0x00000002951e68>"=>"index", "notice"=>"Athletic program was successfully created."}
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_26157160_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 18ms (Views: 12.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/athletic_programs?%23%3CAthleticProgram%3A0x00000002951e68%3E=index&notice=Athletic+program+was+successfully+created." for 127.0.0.1 at 2011-01-04 06:01:36 -0800
+  Processing by AthleticProgramsController#index as HTML
+  Parameters: {"#<AthleticProgram:0x00000002951e68>"=>"index", "notice"=>"Athletic program was successfully created."}
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_15097360_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 45ms (Views: 39.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/athletic_programs?%23%3CAthleticProgram%3A0x00000002951e68%3E=index&notice=Athletic+program+was+successfully+created." for 127.0.0.1 at 2011-01-04 06:01:45 -0800
+  Processing by AthleticProgramsController#index as HTML
+  Parameters: {"#<AthleticProgram:0x00000002951e68>"=>"index", "notice"=>"Athletic program was successfully created."}
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_22969620_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 18ms (Views: 11.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2011-01-04 06:01:51 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_30674380_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 19ms (Views: 12.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-04 06:01:53 -0800
+  Processing by MetricsController#index as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+  [1m[35mMetricData Load (0.0ms)[0m  SELECT `metric_datas`.* FROM `metric_datas`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___1750410506949776699_15642180_1865342036208411937 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mMetric Load (0.4ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1
+Rendered metrics/index.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 53ms (Views: 42.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-04 06:01:55 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (11.9ms)
+Rendered metric_datas/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 30ms (Views: 18.5ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-04 06:02:04 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "metric_data"=>{"metric_id"=>"1", "value"=>"210", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"4", "date(4i)"=>"14", "date(5i)"=>"01"}, "commit"=>"Create Metric data"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `metric_datas`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (1, 210, '2011-01-04 14:01:00')
+  [1m[36mSQL (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/metric_datas/3
+Completed 302 Found in 12ms
+
+
+Started GET "/metric_datas/3" for 127.0.0.1 at 2011-01-04 06:02:04 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMetricData Load (0.2ms)[0m  SELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 3) LIMIT 1
+Rendered metric_datas/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 14ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/metric_datas/3" for 127.0.0.1 at 2011-01-04 06:02:43 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 3) LIMIT 1[0m
+Rendered metric_datas/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metric_datas/3" for 127.0.0.1 at 2011-01-04 06:02:45 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMetricData Load (0.0ms)[0m  SELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 3) LIMIT 1
+Rendered metric_datas/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 14ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-04 06:02:56 -0800
+  Processing by MetricsController#index as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+  [1m[35mMetricData Load (0.2ms)[0m  SELECT `metric_datas`.* FROM `metric_datas`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___1750410506949776699_24887060_1865342036208411937 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+Rendered metrics/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 26ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/metrics/new" for 127.0.0.1 at 2011-01-04 06:02:58 -0800
+  Processing by MetricsController#new as HTML
+Rendered metrics/_form.html.erb (4.5ms)
+Rendered metrics/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 51ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2011-01-04 06:03:02 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[35mDateOfWorkout Load (0.1ms)[0m  SELECT `date_of_workouts`.* FROM `date_of_workouts`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_22502260_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 19ms (Views: 12.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2011-01-04 06:03:08 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.3ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (8.8ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.3ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.6ms)
+Rendered date_of_workouts/_form.html.erb (16.1ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 47ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/date_of_workouts" for 127.0.0.1 at 2011-01-04 06:03:10 -0800
+  Processing by DateOfWorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "date_of_workout"=>{"date"=>"2011-01-04 14:03:08 UTC", "description"=>"", "exercises_attributes"=>{"0"=>{"name"=>"", "_destroy"=>"false", "exercise_groups_attributes"=>{"0"=>{"sets"=>"1", "reps"=>"1", "weight"=>"", "percentage_of_max"=>"0", "description"=>"", "_destroy"=>"false"}}}}}, "commit"=>"Save Workout"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `date_of_workouts`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `date_of_workouts` (`date`, `description`) VALUES ('2011-01-04 14:03:08', '')[0m
+  [1m[35mSQL (0.3ms)[0m  describe `exercises`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `exercises` (`days_of_week_id`, `date_of_workout_id`, `name`) VALUES (NULL, 6, '')[0m
+  [1m[35mSQL (0.3ms)[0m  describe `exercise_groups`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `exercise_groups` (`exercise_id`, `weight`, `percentage_of_max`, `sets`, `reps`, `description`) VALUES (11, NULL, 0, 1, 1, '')[0m
+  [1m[35mSQL (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/date_of_workouts?%23%3CDateOfWorkout%3A0x000000031cbe90%3E=index&notice=Date+of+workout+was+successfully+created.
+Completed 302 Found in 47ms
+
+
+Started GET "/date_of_workouts?%23%3CDateOfWorkout%3A0x000000031cbe90%3E=index&notice=Date+of+workout+was+successfully+created." for 127.0.0.1 at 2011-01-04 06:03:11 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  Parameters: {"#<DateOfWorkout:0x000000031cbe90>"=>"index", "notice"=>"Date of workout was successfully created."}
+  [1m[36mDateOfWorkout Load (0.3ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_13752000_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (52.2ms)
+Completed 200 OK in 62ms (Views: 54.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-04 06:03:13 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___1750410506949776699_22577580_1865342036208411937 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+Rendered metrics/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 26ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-04 06:03:40 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (8.8ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 26ms (Views: 14.8ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-04 06:03:45 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "metric_data"=>{"metric_id"=>"1", "value"=>"205", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"4", "date(4i)"=>"14", "date(5i)"=>"03"}, "commit"=>"Create Metric data"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `metric_datas`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (1, 205, '2011-01-04 14:03:00')
+  [1m[36mSQL (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/metric_datas/4
+Completed 302 Found in 42ms
+
+
+Started GET "/metric_datas/4" for 127.0.0.1 at 2011-01-04 06:03:45 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMetricData Load (0.2ms)[0m  SELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 4) LIMIT 1
+Rendered metric_datas/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/metric_datas/4" for 127.0.0.1 at 2011-01-04 06:04:23 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 4) LIMIT 1[0m
+Rendered metric_datas/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 14ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-04 06:04:39 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.2ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___1750410506949776699_24098680_1865342036208411937 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+Rendered metrics/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 27ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-04 06:04:41 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (8.7ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 26ms (Views: 14.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-04 06:04:46 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "metric_data"=>{"metric_id"=>"1", "value"=>"207", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"4", "date(4i)"=>"14", "date(5i)"=>"04"}, "commit"=>"Create Metric data"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `metric_datas`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (1, 207, '2011-01-04 14:04:00')[0m
+  [1m[35mSQL (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/metric_datas/5
+Completed 302 Found in 12ms
+
+
+Started GET "/metric_datas/5" for 127.0.0.1 at 2011-01-04 06:04:46 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 5) LIMIT 1[0m
+Rendered metric_datas/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 14ms (Views: 7.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/5" for 127.0.0.1 at 2011-01-04 06:05:19 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mMetricData Load (0.0ms)[0m  SELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 5) LIMIT 1
+Rendered metric_datas/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 15ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-04 06:05:20 -0800
+  Processing by MetricsController#index as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+  [1m[35mMetricData Load (0.2ms)[0m  SELECT `metric_datas`.* FROM `metric_datas`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___1750410506949776699_26038700_1865342036208411937 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+Rendered metrics/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 28ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-04 06:05:23 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (9.5ms)
+Rendered metric_datas/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 55ms (Views: 15.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-04 06:05:27 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "metric_data"=>{"metric_id"=>"1", "value"=>"204", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"4", "date(4i)"=>"14", "date(5i)"=>"05"}, "commit"=>"Create Metric data"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `metric_datas`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (1, 204, '2011-01-04 14:05:00')[0m
+  [1m[35mSQL (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/metric_datas/6
+Completed 302 Found in 12ms
+
+
+Started GET "/metric_datas/6" for 127.0.0.1 at 2011-01-04 06:05:27 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 6) LIMIT 1[0m
+Rendered metric_datas/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 14ms (Views: 7.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-04 06:07:42 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (8.9ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 27ms (Views: 14.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-04 06:07:46 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nIRf/ars/wwR8ls/BNhP3UA9PBeNjFjOdcOGP2YZAU4=", "metric_data"=>{"metric_id"=>"1", "value"=>"203", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"4", "date(4i)"=>"14", "date(5i)"=>"07"}, "commit"=>"Create Metric data"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `metric_datas`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (1, 203, '2011-01-04 14:07:00')[0m
+  [1m[35mSQL (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/metric_datas/7
+Completed 302 Found in 40ms
+
+
+Started GET "/metric_datas/7" for 127.0.0.1 at 2011-01-04 06:07:46 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 7) LIMIT 1[0m
+Rendered metric_datas/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-04 06:08:06 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.3ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___1750410506949776699_21374620_1865342036208411937 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+Rendered metrics/index.html.erb within layouts/application (46.1ms)
+Completed 200 OK in 60ms (Views: 48.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-04 06:08:08 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (9.5ms)
+Rendered metric_datas/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 27ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-04 06:08:11 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nIRf/ars/wwR8ls/BNhP3UA9PBeNjFjOdcOGP2YZAU4=", "metric_data"=>{"metric_id"=>"1", "value"=>"206", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"4", "date(4i)"=>"14", "date(5i)"=>"08"}, "commit"=>"Create Metric data"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `metric_datas`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (1, 206, '2011-01-04 14:08:00')
+  [1m[36mSQL (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/metric_datas/8
+Completed 302 Found in 13ms
+
+
+Started GET "/metric_datas/8" for 127.0.0.1 at 2011-01-04 06:08:11 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mMetricData Load (0.1ms)[0m  SELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 8) LIMIT 1
+Rendered metric_datas/show.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 46ms (Views: 39.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/metric_datas" for 127.0.0.1 at 2011-01-04 06:08:17 -0800
+  Processing by MetricDatasController#index as HTML
+  [1m[36mMetricData Load (0.2ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+Rendered metric_datas/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 20ms (Views: 14.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-04 06:08:18 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (38.6ms)
+Rendered metric_datas/new.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 56ms (Views: 44.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-04 06:08:21 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nIRf/ars/wwR8ls/BNhP3UA9PBeNjFjOdcOGP2YZAU4=", "metric_data"=>{"metric_id"=>"1", "value"=>"206", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"4", "date(4i)"=>"14", "date(5i)"=>"08"}, "commit"=>"Create Metric data"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `metric_datas`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (1, 206, '2011-01-04 14:08:00')[0m
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/metric_datas/9
+Completed 302 Found in 12ms
+
+
+Started GET "/metric_datas/9" for 127.0.0.1 at 2011-01-04 06:08:21 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 9) LIMIT 1[0m
+Rendered metric_datas/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-04 06:08:34 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.2ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___1750410506949776699_31856440_1865342036208411937 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+Rendered metrics/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 31ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-04 06:09:16 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb___1367211502179830648_22889540_1865342036208411937 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-04 06:09:16 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_32591620_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 20ms (Views: 12.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-04 06:09:18 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_22858780_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 18ms (Views: 11.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-04 06:09:19 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (8.6ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.5ms)
+Rendered athletic_programs/_exercise_fields.html.erb (4.0ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (17.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.8ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (40.2ms)
+Rendered athletic_programs/_form.html.erb (62.2ms)
+Rendered athletic_programs/new.html.erb within layouts/application (66.1ms)
+Completed 200 OK in 107ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/date_of_workouts" for 127.0.0.1 at 2011-01-04 06:09:22 -0800
+  Processing by DateOfWorkoutsController#index as HTML
+  [1m[36mDateOfWorkout Load (0.1ms)[0m  [1mSELECT `date_of_workouts`.* FROM `date_of_workouts`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_date_of_workouts_index_html_erb__2903745452652921221_22756100_1865342036208411937 at /home/todd/strongape/app/views/date_of_workouts/index.html.erb:1)
+Rendered date_of_workouts/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 20ms (Views: 13.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/date_of_workouts/new" for 127.0.0.1 at 2011-01-04 06:09:24 -0800
+  Processing by DateOfWorkoutsController#new as HTML
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (9.0ms)
+Rendered date_of_workouts/_exercise_group_fields.html.erb (1.4ms)
+Rendered date_of_workouts/_exercise_fields.html.erb (3.9ms)
+Rendered date_of_workouts/_form.html.erb (17.6ms)
+Rendered date_of_workouts/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 49ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-04 06:09:26 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___1750410506949776699_30788900_1865342036208411937 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+Rendered metrics/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 31ms (Views: 20.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-04 06:10:11 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (8.8ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 55ms (Views: 14.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-04 06:10:15 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "metric_data"=>{"metric_id"=>"1", "value"=>"202", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"4", "date(4i)"=>"14", "date(5i)"=>"10"}, "commit"=>"Create Metric data"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `metric_datas`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (1, 202, '2011-01-04 14:10:00')
+  [1m[36mSQL (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/metric_datas/10
+Completed 302 Found in 12ms
+
+
+Started GET "/metric_datas/10" for 127.0.0.1 at 2011-01-04 06:10:15 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mMetricData Load (0.1ms)[0m  SELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 10) LIMIT 1
+Rendered metric_datas/show.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 44ms (Views: 37.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas" for 127.0.0.1 at 2011-01-04 06:11:35 -0800
+  Processing by MetricDatasController#index as HTML
+  [1m[36mMetricData Load (0.2ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+Rendered metric_datas/index.html.erb within layouts/application (21.6ms)
+Completed   in 30ms
+
+ActionView::Template::Error (undefined local variable or method `target' for #<#<Class:0x00000002fc77e8>:0x00000002fbe9b8>):
+    33:   <div id="main">
+    34:     <div id="binder">
+    35:       <div id="container">
+    36:         <% if target.errors.any? %>
+    37: <div id="error_explanation">
+    38:   <ul>
+    39:   <% target.errors.full_messages.each do |msg| %>
+  app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb___4391799858667007036_24997320_1865342036208411937'
+  app/controllers/metric_datas_controller.rb:7:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-04 06:11:39 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___1750410506949776699_32181960_1865342036208411937 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+Rendered metrics/index.html.erb within layouts/application (28.4ms)
+Completed   in 71ms
+
+ActionView::Template::Error (undefined local variable or method `target' for #<#<Class:0x00000003d66408>:0x00000003d63028>):
+    33:   <div id="main">
+    34:     <div id="binder">
+    35:       <div id="container">
+    36:         <% if target.errors.any? %>
+    37: <div id="error_explanation">
+    38:   <ul>
+    39:   <% target.errors.full_messages.each do |msg| %>
+  app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb___4391799858667007036_32179660_1865342036208411937'
+  app/controllers/metrics_controller.rb:8:in `index'
+
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /home/todd/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-04 06:11:49 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___1750410506949776699_13832880_1865342036208411937 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+Rendered metrics/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 64ms (Views: 52.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-04 06:11:51 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (8.7ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 26ms (Views: 14.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-04 06:11:57 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "metric_data"=>{"metric_id"=>"1", "value"=>"201", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"4", "date(4i)"=>"14", "date(5i)"=>"11"}, "commit"=>"Create Metric data"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `metric_datas`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (1, 201, '2011-01-04 14:11:00')[0m
+  [1m[35mSQL (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/metric_datas/11
+Completed 302 Found in 12ms
+
+
+Started GET "/metric_datas/11" for 127.0.0.1 at 2011-01-04 06:11:57 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 11) LIMIT 1[0m
+Rendered metric_datas/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-04 06:13:06 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.2ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___1750410506949776699_33260180_1865342036208411937 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+Rendered metrics/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 65ms (Views: 24.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-04 06:13:08 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[36mMetric Load (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics`[0m
+Rendered metric_datas/_form.html.erb (8.8ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 26ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-04 06:13:12 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "metric_data"=>{"metric_id"=>"1", "value"=>"202", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"4", "date(4i)"=>"14", "date(5i)"=>"13"}, "commit"=>"Create Metric data"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mdescribe `metric_datas`[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (1, 202, '2011-01-04 14:13:00')
+  [1m[36mSQL (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/metric_datas/12
+Completed 302 Found in 13ms
+
+
+Started GET "/metric_datas/12" for 127.0.0.1 at 2011-01-04 06:13:12 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mMetricData Load (0.1ms)[0m  SELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 12) LIMIT 1
+Rendered metric_datas/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metric_datas/12" for 127.0.0.1 at 2011-01-04 06:14:01 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMetricData Load (0.0ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 12) LIMIT 1[0m
+Rendered metric_datas/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 15ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-04 06:14:03 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.2ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___1750410506949776699_22127440_1865342036208411937 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+Rendered metrics/index.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 63ms (Views: 51.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/metric_datas/new" for 127.0.0.1 at 2011-01-04 06:14:24 -0800
+  Processing by MetricDatasController#new as HTML
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics`
+Rendered metric_datas/_form.html.erb (8.6ms)
+Rendered metric_datas/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 26ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metric_datas" for 127.0.0.1 at 2011-01-04 06:14:27 -0800
+  Processing by MetricDatasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uXL/aU6IIXoUn4yNwaKz8cA6Guk+olzOu67ZcFFlGQ=", "metric_data"=>{"metric_id"=>"1", "value"=>"202", "date(1i)"=>"2011", "date(2i)"=>"1", "date(3i)"=>"4", "date(4i)"=>"14", "date(5i)"=>"14"}, "commit"=>"Create Metric data"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  describe `metric_datas`
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO `metric_datas` (`metric_id`, `value`, `date`) VALUES (1, 202, '2011-01-04 14:14:00')[0m
+  [1m[35mSQL (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/metric_datas/13
+Completed 302 Found in 13ms
+
+
+Started GET "/metric_datas/13" for 127.0.0.1 at 2011-01-04 06:14:27 -0800
+  Processing by MetricDatasController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mMetricData Load (0.1ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas` WHERE (`metric_datas`.`id` = 13) LIMIT 1[0m
+Rendered metric_datas/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 14ms (Views: 8.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/metrics" for 127.0.0.1 at 2011-01-04 06:14:42 -0800
+  Processing by MetricsController#index as HTML
+  [1m[35mMetric Load (0.1ms)[0m  SELECT `metrics`.* FROM `metrics`
+  [1m[36mMetricData Load (0.2ms)[0m  [1mSELECT `metric_datas`.* FROM `metric_datas`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_metrics_index_html_erb___1750410506949776699_33151760_1865342036208411937 at /home/todd/strongape/app/views/metrics/index.html.erb:1)
+  [1m[35mMetric Load (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mMetric Load (0.1ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `metrics`.* FROM `metrics` WHERE (`metrics`.`id` = 1) LIMIT 1
+Rendered metrics/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 66ms (Views: 24.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-04 06:55:04 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb___1367211502179830648_22152500_1865342036208411937 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-04 06:55:06 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.1ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_32455460_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 18ms (Views: 11.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-04 06:55:08 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.5ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (9.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.8ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (18.9ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.8ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (7.8ms)
+Rendered athletic_programs/_form.html.erb (31.6ms)
+Rendered athletic_programs/new.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 105ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-01-04 06:55:20 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb___1367211502179830648_32720960_1865342036208411937 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-04 06:55:21 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__4383646620428388036_25121960_1865342036208411937 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 23ms (Views: 16.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-04 06:55:23 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (8.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.6ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (16.9ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.9ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (7.8ms)
+Rendered athletic_programs/_form.html.erb (29.3ms)
+Rendered athletic_programs/new.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 105ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-04 07:09:58 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.5ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (8.8ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.6ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (16.9ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.6ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (7.7ms)
+Rendered athletic_programs/_form.html.erb (29.2ms)
+Rendered athletic_programs/new.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 112ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-08 19:09:56 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__938438944294690949_22397400_1205191415347764260 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-01-08 19:09:59 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[36mAthleticProgram Load (0.6ms)[0m  [1mSELECT `athletic_programs`.* FROM `athletic_programs`[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb__1574891163285241233_10942580_1205191415347764260 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 89ms (Views: 37.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/athletic_programs/new" for 127.0.0.1 at 2011-01-08 19:10:02 -0800
+  Processing by AthleticProgramsController#new as HTML
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.4ms)
+Rendered athletic_programs/_exercise_fields.html.erb (9.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.6ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (19.7ms)
+Rendered athletic_programs/_exercise_group_fields.html.erb (1.3ms)
+Rendered athletic_programs/_exercise_fields.html.erb (3.5ms)
+Rendered athletic_programs/_days_of_week_fields.html.erb (7.4ms)
+Rendered athletic_programs/_form.html.erb (32.1ms)
+Rendered athletic_programs/new.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 114ms (Views: 38.6ms | ActiveRecord: 0.0ms)
