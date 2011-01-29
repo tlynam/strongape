@@ -1,7 +1,17 @@
 body {
-  font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
-  background: white;
+    padding-top: 5%;
+    padding-bottom: 30%;
+    border: 0;
+    font-family: Verdana, Helvetica, Arial;
+    font-size: 14px;
+    /* For WebKit (Safari, Google Chrome etc) */
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#808000));
+    /* For Mozilla/Gecko (Firefox etc) */
+    background: -moz-linear-gradient(top, #fff, #808000);
+    /* For Internet Explorer 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF, endColorstr=#808000);
+    /* For Internet Explorer 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF, endColorstr=#808000)";
 }
 
 #container {
