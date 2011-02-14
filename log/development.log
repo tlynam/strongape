@@ -29099,3 +29099,18 @@ Started GET "/athletic_programs" for 127.0.0.1 at 2011-02-14 03:28:58 -0800
 DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___3055017428262104777_25602120_3463296064581042794 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
 Rendered athletic_programs/index.html.erb within layouts/application (25.0ms)
 Completed 200 OK in 122ms (Views: 28.1ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/athletic_programs" for 127.0.0.1 at 2011-02-14 03:44:13 -0800
+  Processing by AthleticProgramsController#index as HTML
+  [1m[35mAthleticProgram Load (0.1ms)[0m  SELECT `athletic_programs`.* FROM `athletic_programs`
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_athletic_programs_index_html_erb___3055017428262104777_14112640_3463296064581042794 at /home/todd/strongape/app/views/athletic_programs/index.html.erb:1)
+Rendered athletic_programs/index.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 44ms (Views: 38.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2011-02-14 03:44:18 -0800
+  Processing by HomeController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__3054686240650943715_25371620_3463296064581042794 at /home/todd/strongape/app/views/home/index.html.erb:6)
+Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
