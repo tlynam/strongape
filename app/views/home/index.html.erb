@@ -9,12 +9,12 @@
 <%= image_tag "banner.png", :alt => 'StrongApe', :id => "gorilla2" %>
 <table id="homepage">
     <tr>
-      <th>
-        Create or find a workout program
+      <th align="center">
+        <%= link_to "Design Your Workouts", athletic_programs_path, :class => "button orange" %>
       </th>
       <td></td>
-      <th>
-        Keep a journal of your workouts
+      <th align="center">
+        <%= link_to "Log in Your Journal", date_of_workouts_path, :class => "button orange" %>
       </th>
     </tr>
 
@@ -33,11 +33,6 @@
     </tr>
     <tr>
       <td></ br></td>
-    </tr>
-    <tr>
-        <th><%= link_to image_tag("Button.png", :border=>0), :controller => 'athletic_programs', :action => 'index' %></th>
-        <th></th>
-        <th><%= link_to image_tag("Keep_Track!.png", :border=>0), :controller => 'date_of_workouts', :action => 'index' %></th>
     </tr>
 </table>
 
