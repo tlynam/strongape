@@ -3,7 +3,7 @@ class WorkoutLogsController < ApplicationController
   # GET /workout_logs
   # GET /workout_logs.json
   def index
-    @workout_logs = WorkoutLog.order(:date)
+    @workout_logs = WorkoutLog.order("date desc").page(params[:page])
 
 
     respond_to do |format|

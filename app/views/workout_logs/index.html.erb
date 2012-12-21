@@ -2,23 +2,6 @@
 <div class="page-header">
   <h1>Workouts</h1>
 </div>
-  <table align="center">
-    <td><%= link_to t('.new', :default => t("helpers.links.new")),
-                new_workout_log_path,
-                :class => 'btn btn-primary' %></td>
-    <td><%= link_to t('.new', :default => t("Import")),
-                importlifts_workout_log_path,
-                :class => 'btn btn-primary' %></td>
-    <td><%= link_to t('.new', :default => t("Show Notes")),
-                showallnotes_workout_log_path,
-                :class => 'btn btn-success' %></td>
-    <td><%= link_to t('.new', :default => t("Show All Workouts")),
-                showall_workout_log_path,
-                :class => 'btn btn-success' %></td>
-    <td><%= link_to t('.new', :default => t("Show Charts")),
-                showcharts_workout_log_path,
-                :class => 'btn btn-success' %></td>
-  </table>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -47,4 +30,21 @@
     <% end %>
   </tbody>
 </table>
-
+<table align="center">
+<td><%= paginate @workout_logs %></td>
+</table>
+  <td><%= link_to t('.new', :default => t("helpers.links.new")),
+              new_workout_log_path,
+              :class => 'btn btn-primary' %></td>
+  <td><%= link_to t('.new', :default => t("Import")),
+              importlifts_workout_log_path,
+              :class => 'btn btn-primary' %></td>
+  <td><%= link_to t('.new', :default => t("Show Notes")),
+              showallnotes_workout_log_path,
+              :class => 'btn btn-success' %></td>
+  <td><%= link_to t('.new', :default => t("Show All Workouts")),
+              showall_workout_log_path,
+              :class => 'btn btn-success' %></td>
+  <td><%= link_to t('.new', :default => t("Show Charts")),
+              showcharts_workout_log_path,
+              :class => 'btn btn-success' %></td>

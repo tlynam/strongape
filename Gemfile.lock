@@ -86,6 +86,9 @@ GEM
     json_spec (1.0.3)
       multi_json (~> 1.0)
       rspec (~> 2.0)
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     less (2.2.2)
       commonjs (~> 0.2.6)
     less-rails (2.2.4)
@@ -209,6 +212,7 @@ DEPENDENCIES
   jquery-rails
   json
   json_spec
+  kaminari
   nested_form!
   pg
   rails (= 3.2.5)
