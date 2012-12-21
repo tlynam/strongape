@@ -1,0 +1,4 @@
+class WorkoutLog < ActiveRecord::Base
+  set_primary_key :id
+  attr_accessible :imported_data
+end

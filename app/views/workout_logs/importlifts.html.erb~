@@ -1,0 +1,19 @@
+<%- model_class = @workout_log.class -%>
+<div class="page-header">
+</div>
+
+<%= simple_form_for @workout_log, :html => { :class => 'form-horizontal' } do |workoutlog_form| %>	
+
+  <%#= workoutlog_form.input :import_data, :placeholder => 'Import', :input_html => { :class => "span4", :rows => 3, :maxlength => 1000 } %>
+
+  <%#= workoutlog_form.importdata nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                workout_logs_path, :class => 'btn' %>
+
+<% end %>
+
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              workout_logs_path, :class => 'btn'  %>
+</div>

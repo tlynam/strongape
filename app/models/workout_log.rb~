@@ -1,0 +1,7 @@
+class WorkoutLog < ActiveRecord::Base
+  set_primary_key :id
+  attr_accessor :import_data => Text
+  attr_accessible :date, :notes, :exercises_attributes, :import_data
+	has_many :exercises, :dependent => :destroy
+	accepts_nested_attributes_for :exercises, :allow_destroy => true
+end

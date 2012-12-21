@@ -1,0 +1,134 @@
+<%- model_class = @workout_log.class -%>
+<div class="page-header">
+  <h1>All Charts by Exercise</h1>
+</div>
+
+<table>
+  <tr>
+      <td>
+        <div id="placeholder" style="width:600px;height:300px;"></div>
+      </td>
+  </tr>
+  <tr>
+      <td>
+        <div id="graph_selection"></div>
+        <p id="choices">Show:</p>
+      </td>
+  </tr>
+</table>
+
+
+<%#= @maximum_ruby_hash.to_json.html_safe %>
+
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              workout_logs_path, :class => 'btn'  %>
+
+<script type="text/javascript">
+    $(function () {
+       /*
+        var datasets = {
+            "Jerk Maximum": {
+                "label": "Jerk Maximum",
+                "data": [[1345248000000.0,45],[1346457600000.0,40],[1344643200000.0,25]]
+            },
+            "C&J Maximum": {
+                "label": "C&J Maximum",
+                "data": [[1344643200000.0,65],[1344988800000.0,65]]
+            }
+
+        };
+        */
+
+
+     //replacing datasets with datasets
+        var datasets = <%= @maximum_ruby_hash.to_json.html_safe %>;
+        //var total_force_dataset = <%#= @total_force_ruby_hash.to_json.html_safe %>;
+
+        // hard-code color indices to prevent them from shifting as
+        // countries are turned on/off
+        var i = 0;
+        $.each(datasets, function(key, val) {
+            val.color = i;
+            ++i;
+        });
+
+        // insert checkboxes
+        var choiceContainer = $("#graph_selection");
+        choiceContainer.append("Maximums");
+        $.each(datasets, function(key, val) {
+            choiceContainer.append('<ul><input type="checkbox" name="' + key +
+                    '"checked="Checked"  id="id' + key + '">' +
+                    '<label for="id' + key + '">'
+                    + val.label + '</label></ul>');
+        });
+        //choiceContainer.append("Volume");
+        //$.each(total_force_dataset, function(key, val) {
+            //choiceContainer.append('<ul><input type="checkbox" name="' + key +
+                    //'" checked="checked" id="id' + key + '">' +
+                    //'<label for="id' + key + '">'
+                    //+ val.label + '</label></ul>');
+        //});
+
+        choiceContainer.find("input").click(plotAccordingToChoices);
+        function plotAccordingToChoices() {
+            var max_data = [];
+            //var total_force_data = [];
+
+            //choiceContainer.find("input:checked").each(function () {
+                //var key = $(this).attr("name");
+                //if (key && total_force_dataset[key])
+                    //total_force_data.push(total_force_dataset[key]);
+            //});
+
+            choiceContainer.find("input:checked").each(function () {
+                var key = $(this).attr("name");
+                if (key && datasets[key])
+                    max_data.push(datasets[key]);
+
+            });
+
+            //Merge Max and Volume date into one array
+            //$.merge( max_data, total_force_data );
+
+            //Can add lbs or kg
+            function euroFormatter(v, axis) {
+                return v.toFixed(axis.tickDecimals) +"";
+            }
+
+            function doPlot(position) {
+                $.plot($("#placeholder"), max_data,
+                        {   xaxes: [ { mode: 'time',
+                                       show: true,
+                                       reserveSpace: true
+                                       } ],
+                            yaxes: [ {
+                                // align if we are to the right
+                                alignTicksWithAxis: position == "right" ? 1 : null,
+                                show: true,
+                                position: position,
+                                tickFormatter: euroFormatter,
+                                reserveSpace: true
+                            }],
+                            legend: { position: 'sw' },
+                            grid: {
+                              aboveData:true,
+                              show: true,
+                              clickable: true,
+                              hoverable: true,
+                              autoHighlight:true,
+
+                            }
+                        });
+            }
+
+            doPlot("right");
+
+            $("button").click(function () {
+                doPlot($(this).text());
+            });
+
+        }
+        plotAccordingToChoices();
+    });
+</script>

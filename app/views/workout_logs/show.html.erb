@@ -1,0 +1,49 @@
+<%- model_class = @workout_log.class -%>
+<div class="page-header">
+  <h1>Workout</h1>
+</div>
+
+<table class="showtable1">
+  <tr>
+    <td class="showtd1"><strong><%= model_class.human_attribute_name(:date) %>:</strong></td>
+	  <td class="showtd1"><%= @workout_log.date %></td>
+  </tr>
+  <tr>
+    <td class="showtd1"><strong><%= model_class.human_attribute_name(:notes) %>:</strong></td>
+    <td class="showtd1"><%= @workout_log.notes %></td>
+  </tr>
+</table>
+
+<% @exercises.each do |f| %>
+<table class="showtable1">
+  <tr>
+    <td><strong>Exercise: </strong></td>
+    <td><%= f.name %></td>
+  </tr>
+</table>
+<table class="showtable2">
+    <% @exercise_sets = ExerciseSet.find_all_by_exercise_id(f.id) %>
+    <% count = 1 %>
+    <% @exercise_sets.each do |ff| %>
+      <tr>
+      <td class="showtd2">Set: <%= count %></td>
+      <td class="showtd2">Reps: <%= ff.reps %></td>
+      <td class="showtd2">Weight: <%= if not ff.weight % 1 == 0 then ff.weight else ff.weight.to_i end %></td>
+      <td class="showtd2"><%= if not ff.failedreps == 0 then "Failed: " + ff.failedreps.to_s end %></td>
+      </tr>
+    <% count = count + 1 %>
+    <% end %>
+</table>
+<% end %>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              workout_logs_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_workout_log_path(@workout_log), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              workout_log_path(@workout_log),
+              :method => 'delete',
+              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+              :class => 'btn btn-danger' %>
+</div>

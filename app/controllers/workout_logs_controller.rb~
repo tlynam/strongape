@@ -1,0 +1,111 @@
+
+class WorkoutLogsController < ApplicationController
+  # GET /workout_logs
+  # GET /workout_logs.json
+  def index
+    @workout_logs = WorkoutLog.order(:date)
+
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @workout_logs }
+    end
+  end
+
+  def showall
+    @workout_logs = WorkoutLog.order(:date)
+  end
+
+  def showallnotes
+    @workout_logs = WorkoutLog.order(:date)
+  end
+
+  def showallprint
+    @workout_logs = WorkoutLog.order(:date)
+  end
+
+  # GET /workout_logs/1
+  # GET /workout_logs/1.json
+  def show
+    @workout_log = WorkoutLog.find(params[:id])
+    @exercises = Exercise.find_all_by_workout_log_id(@workout_log.id)
+  end
+
+  def importlifts
+    @workout_log = WorkoutLog.new
+    #@workout_log = WorkoutLog.new(JSON.parse(jsondata)) 
+    #@workout_log.save
+  end
+
+  def importdata
+    @workout_log = WorkoutLog.new(JSON.parse(jsondata)) 
+    #@workout_log.save
+  end
+
+  # GET /workout_logs/new
+  # GET /workout_logs/new.json
+  def new
+    @workout_log = WorkoutLog.new
+    exercise = @workout_log.exercises.build
+    exercise.exercise_sets.build
+    @workout_log.date = Date.today.strftime('%Y-%m-%d')
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @workout_log }
+    end
+  end
+
+  # GET /workout_logs/1/edit
+  def edit
+    @workout_log = WorkoutLog.find(params[:id])
+  end
+
+  # POST /workout_logs
+  # POST /workout_logs.json
+  def create
+    @workout_log = WorkoutLog.new(params[:workout_log])
+
+    respond_to do |format|
+      if @workout_log.save
+        format.html { redirect_to @workout_log, notice: 'Workout log was successfully created.' }
+        format.json { render json: @workout_log, status: :created, location: @workout_log }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @workout_log.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /workout_logs/1
+  # PUT /workout_logs/1.json
+  def update
+    @workout_log = WorkoutLog.find(params[:id])
+
+    respond_to do |format|
+      if @workout_log.update_attributes(params[:workout_log])
+        format.html { redirect_to @workout_log, notice: 'Workout log was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @workout_log.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def logimport
+    
+  end
+
+  # DELETE /workout_logs/1
+  # DELETE /workout_logs/1.json
+  def destroy
+    @workout_log = WorkoutLog.find(params[:id])
+    @workout_log.destroy
+
+    respond_to do |format|
+      format.html { redirect_to workout_logs_url }
+      format.json { head :no_content }
+    end
+  end
+end

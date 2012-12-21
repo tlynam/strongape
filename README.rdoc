@@ -1,0 +1,1 @@
+Strongape is an app to track workout data.  It works on mobile browsers.  You can see notes across all workouts.  It's possible to export all data to JSON or in a format that will import to a spreadsheet.

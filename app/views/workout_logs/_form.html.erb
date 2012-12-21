@@ -1,0 +1,33 @@
+<%= simple_nested_form_for @workout_log, :html => { :class => 'form-horizontal' } do |workoutlog_form| %>	
+
+<%= workoutlog_form.input :date, :as => :string, :input_html => { :id => 'datepicker', :class => "input-small" } %>
+
+	<%= workoutlog_form.input :notes, :placeholder => 'notes about the workout', :input_html => { :class => "span8", :rows => 7 } %>
+		<%= workoutlog_form.fields_for :exercises do |exercise_form| %>
+				<table>
+				<td><%= exercise_form.input :name, :placeholder => 'exercise name', :label => 'Exercise', :input_html => { :class => "span4"} %></td>
+				<td><%= exercise_form.link_to_remove "Remove" %></td>
+				</table>
+					<%= exercise_form.fields_for :exercise_sets do |exercise_set_form| %>
+						<table>					
+						  <td><%= exercise_set_form.input :weight, :placeholder => '0', :input_html => { :class => "input-mini" } %></td>
+						  <td><%= exercise_set_form.input :reps, :placeholder => '0', :input_html => { :class => "input-mini" } %></td>
+						  <td><%= exercise_set_form.input :failedreps, :placeholder => '0', :label => 'Failed', :input_html => { :class => "input-mini" } %></td>
+						  <td><%= exercise_set_form.link_to_remove "Remove" %></td>
+						</table>
+					<% end %>
+					<p><%= exercise_form.link_to_add "Add a Set", :exercise_sets %></p>
+		<% end %>
+			<p><%= workoutlog_form.link_to_add "Add an Exercise", :exercises %></p>
+  <%= workoutlog_form.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                workout_logs_path, :class => 'btn' %>
+<% end %>
+<script>
+	$(function(){
+    window.prettyPrint && prettyPrint();
+			$('#datepicker').datepicker({
+				format: 'yyyy-mm-dd'
+		});
+	});
+</script>

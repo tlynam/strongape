@@ -1,0 +1,55 @@
+<%= nested_form_for @workout_log, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :date, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :date, :id => 'datepicker', :value => Date.today.strftime('%m-%d-%Y') %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :notes, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :notes, :class => 'text_area' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+			<%= f.fields_for :exercises do |exercise_form| %>
+			<div class="control-group">
+				<%= exercise_form.label :exercise, :class => 'control-label' %>
+				<div class="controls">
+					<%= exercise_form.text_field :name %>
+					<%= exercise_form.link_to_remove "Remove this Exercise" %>
+				</div>
+
+						<%= exercise_form.fields_for :exercise_groups do |exercise_group_form| %>
+							<div class="control-group">
+								<%= exercise_group_form.label :sets, :class => 'control-label' %>
+									<div class="controls">
+										<%= exercise_group_form.text_field :sets %>
+										<%= exercise_group_form.link_to_remove "Remove this Exercise Group" %>
+									</div>
+							</div>
+						<% end %>
+						<p><%= exercise_form.link_to_add "Add an Exercise Group", :exercise_groups %></p>
+			</div>
+			<% end %>
+			<p><%= f.link_to_add "Add an Exercise", :exercises %></p>
+	</div>
+
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                workout_logs_path, :class => 'btn' %>
+  </div>
+<% end %>
+
+<script>
+	$(function(){
+    window.prettyPrint && prettyPrint();
+			$('#datepicker').datepicker({
+				format: 'mm-dd-yyyy'
+		});
+	});
+</script>
+

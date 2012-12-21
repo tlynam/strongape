@@ -1,0 +1,49 @@
+<%- model_class = @workout_log.class -%>
+<div class="page-header">
+  <h1>All Workouts by Date</h1>
+</div>
+
+
+
+
+<% @workout_logs.each do |workout_log| %>
+  <table>
+  <tr>
+    <td><%= link_to workout_log.date, workout_log_path(workout_log) %></td>
+  </tr>
+	<tr>
+    <td>
+      <%= if not workout_log.notes == "" then "Notes: " end %>
+      <%= if not workout_log.notes == "" then workout_log.notes end %>
+    </td>
+	</tr>
+  </table>
+	<% @exercises = Exercise.find_all_by_workout_log_id(workout_log.id) %>
+
+	<% @exercises.each do |f| %>
+	<table class="showtable1">
+		<tr>
+		  <td><strong>Exercise: </strong><%= f.name %></td>
+		</tr>
+	</table>
+	<table class="showtable2">
+		  <% @exercise_sets = ExerciseSet.find_all_by_exercise_id(f.id) %>
+		  <% count = 1 %>
+		  <% @exercise_sets.each do |ff| %>
+		    <tr>
+		    <td class="showtd2">Set: <%= count %></td>
+		    <td class="showtd2">Reps: <%= ff.reps %></td>
+		    <td class="showtd2">Weight: <%= ff.weight %></td>
+		    <td class="showtd2"><%= if not ff.failedreps == 0 then "Failed: " + ff.failedreps.to_s end %></td>
+		    </tr>
+		  <% count = count + 1 %>
+		  <% end %>
+	</table>
+	<% end %>
+<% end %>
+
+ 
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              workout_logs_path, :class => 'btn'  %>
+<%= link_to " Spreadsheet Format", showallprint_workout_log_path, :class => 'btn icon-print' %>
+<%= link_to " JSON Format", showall_workout_log_path(:format=>:json), :class => 'btn icon-list-alt' %>

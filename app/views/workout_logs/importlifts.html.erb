@@ -1,0 +1,25 @@
+<%- model_class = @workout_log.class -%>
+<div class="page-header">
+  <h1>Import Workouts</h1>
+</div>
+
+<table class="table table-striped">
+
+<%=  form_tag("/from_file", :multipart  => true) do %>
+    <%= label_tag :import_workouts_from_json_file %>
+    <%= file_field_tag 'file' %>    <br/>
+    <%= submit_tag("Import Workouts") %>
+<% end %>
+
+<%= form_tag("/from_text") do %>
+    <%= label_tag :import_workouts_from_json_text %>
+    <%= text_area_tag 'text', nil, :rows => 20, :cols => 30 %>  <br/>
+    <%= submit_tag("Import Workouts") %>
+<% end %>
+
+</table>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              workout_logs_path, :class => 'btn'  %>
+</div>

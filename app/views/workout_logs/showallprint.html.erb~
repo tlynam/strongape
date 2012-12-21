@@ -1,0 +1,41 @@
+<% content_for :head do %>
+   <%= stylesheet_link_tag :bootstrap_and_overrides_viewall  -%>
+<% end %>
+
+
+<% @workout_logs.each do |workout_log| %>
+  <table>
+  <tr>
+    <td><%= link_to workout_log.date, workout_log_path(workout_log) %></td>
+  </tr>
+	<tr>
+    <td>
+      <strong><%= if not workout_log.notes == "" then "Notes: " end %></strong>
+      <%= if not workout_log.notes == "" then workout_log.notes end %>
+    </td>
+	</tr>
+  </table>
+<% @exercises = Exercise.find_all_by_workout_log_id(workout_log.id) %>
+
+<% @exercises.each do |f| %>
+<table class="showtable1">
+  <tr>
+    <td><strong>Exercise: </strong><%= f.name %></td>
+  </tr>
+</table>
+<table class="showtable2">
+    <% @exercise_sets = ExerciseSet.find_all_by_exercise_id(f.id) %>
+    <% count = 1 %>
+    <% @exercise_sets.each do |ff| %>
+      <tr>
+      <td class="showtd2">Set: <%= count %></td>
+      <td class="showtd2">Reps: <%= ff.reps %></td>
+      <td class="showtd2">Weight: <%= ff.weight %></td>
+      <td class="showtd2"><%= if not ff.failedreps == 0 then "Failed: " + ff.failedreps.to_s end %></td>
+      </tr>
+    <% count = count + 1 %>
+    <% end %>
+</table>
+<% end %>
+<% end %>
+<

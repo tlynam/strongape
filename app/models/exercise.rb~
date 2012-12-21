@@ -1,0 +1,6 @@
+class Exercise < ActiveRecord::Base
+  belongs_to :workout_log
+  has_many :exercise_sets, :dependent => :destroy
+  accepts_nested_attributes_for :exercise_sets, :allow_destroy => true
+  attr_accessible :name, :exercise_sets_attributes
+end

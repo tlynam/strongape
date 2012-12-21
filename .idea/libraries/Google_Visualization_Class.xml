@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Google Visualization Class" type="javaScript">
+    <CLASSES />
+    <DOCUMENTATION>
+      <root url="http://www.google.com/uds/modules/gviz/gviz-api.js" />
+    </DOCUMENTATION>
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/gviz-api.js" />
+    </SOURCES>
+  </library>
+</component>
