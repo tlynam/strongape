@@ -27,5 +27,5 @@ production:
   host:localhost
   database:strongape_production
   pool:5
-  username:user
+  username:postgres
   password:password

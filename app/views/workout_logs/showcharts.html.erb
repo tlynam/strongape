@@ -54,11 +54,12 @@
         });
 
         // insert checkboxes
+        // for everything to be checked, '"checked="Checked"  id="id' + key + '">' +
         var choiceContainer = $("#graph_selection");
         choiceContainer.append("Maximums");
         $.each(datasets, function(key, val) {
             choiceContainer.append('<ul><input type="checkbox" name="' + key +
-                    '"checked="Checked"  id="id' + key + '">' +
+                    '"id="id' + key + '">' +
                     '<label for="id' + key + '">'
                     + val.label + '</label></ul>');
         });
