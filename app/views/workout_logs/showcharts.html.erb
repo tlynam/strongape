@@ -12,14 +12,25 @@
   <tr>
       <td>
         <div id="graph_selection"></div>
-        <p id="choices">Show:</p>
+        <p id="choices"></p>
       </td>
   </tr>
 </table>
 
+<!--
+<% @exercise_names.each do |exercise| %>
+  <% key = exercise.name + " Maximum" %>
+  <% if @maximum_ruby_hash[key] != nil then %>
+   <% max_push = ExerciseSet.where("exercise_id = ? AND reps > '0'", exercise.id).maximum('weight') %>
+   <br>
+   <%= exercise.name %>
+   <%= max_push %>
 
+  <% end %>
+<% end %>
+<br>
 <%#= @maximum_ruby_hash.to_json.html_safe %>
-
+-->
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               workout_logs_path, :class => 'btn'  %>

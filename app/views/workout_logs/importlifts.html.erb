@@ -5,11 +5,11 @@
 
 <table class="table table-striped">
 
-<%=  form_tag("/from_file", :multipart  => true) do %>
-    <%= label_tag :import_workouts_from_json_file %>
-    <%= file_field_tag 'file' %>    <br/>
-    <%= submit_tag("Import Workouts") %>
-<% end %>
+<%#=  form_tag("/from_file", :multipart  => true) do %>
+    <%#= label_tag :import_workouts_from_json_file %>
+    <%#= file_field_tag 'file' %>    <br/>
+    <%#= submit_tag("Import Workouts") %>
+<%# end %>
 
 <%= form_tag("/from_text") do %>
     <%= label_tag :import_workouts_from_json_text %>

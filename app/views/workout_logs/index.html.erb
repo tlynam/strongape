@@ -16,7 +16,7 @@
     <% @workout_logs.each do |workout_log| %>
       <tr>
         <td class="span2"><%= link_to workout_log.date, workout_log_path(workout_log) %></td>
-        <td><%= if workout_log.notes[0..90] == "" then "" else workout_log.notes[0..90] + "..." end %></td>
+        <td><%= if workout_log.notes == "" then "" else workout_log.notes[0..90] + "..." end %></td>
         <td class="span2">
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_workout_log_path(workout_log), :class => 'btn btn-mini' %>

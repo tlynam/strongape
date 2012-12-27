@@ -19,39 +19,42 @@ class WorkoutLogsController < ApplicationController
   def showcharts
     @workout_logs = WorkoutLog.order(:date)
     @maximum_ruby_hash = Hash.new()
-    @maximum_ruby_array = Array.new()
-    @total_force_ruby_hash = Hash.new()
 
     @exercises = Exercise.find_all_by_workout_log_id(
-        @workout_logs.each do |workout|
-          workout.id
-        end
+      @workout_logs.each do |workout|
+        workout.id
+      end
     )
-    @exercise_names = @exercises
-    @exercise_names = @exercise_names.uniq{|x| x.name}
-    @exercise_names.sort!{|a,b| a.name <=> b.name}
-    @exercise_names.each do |exercise_name|
-      @exercises.each do |exercise|
-        max_temp = exercise.name + " Maximum"
-        @maximum_ruby_hash[max_temp] = Hash.new()
-        @maximum_ruby_hash[max_temp].store("label", max_temp)
-        @maximum_ruby_hash[max_temp].store("data", Array.new())
 
-        total_force_temp = exercise.name + " Volume"
-        @total_force_ruby_hash[total_force_temp] = Hash.new()
-        @total_force_ruby_hash[total_force_temp].store("label", total_force_temp)
-        @total_force_ruby_hash[total_force_temp].store("yaxis", 2)
-        @total_force_ruby_hash[total_force_temp].store("data", Array.new())
+    @exercise_names = @exercises
+    #@exercise_names = @exercise_names.uniq{|x| x.name}
+    #@exercise_names.sort!{|a,b| a.name <=> b.name}
+
+    @exercise_sets = ExerciseSet.find_all_by_exercise_id(
+      @exercise_names.each do |exercise|
+        exercise.id
+      end
+    )
+    
+    @exercise_sets.each do |exercise_set|
+      if exercise_set.weight.to_i > 0 && exercise_set.reps.to_i > 0 then
+        @exercise = Exercise.find_by_id(exercise_set.exercise_id)
+        max_label = @exercise.name + " Maximum"
+          @maximum_ruby_hash[max_label] = Hash.new()
+          @maximum_ruby_hash[max_label].store("label", max_label)
+          @maximum_ruby_hash[max_label].store("data", Array.new())
       end
     end
-    @exercise_names.each do |exercise_name|
-      @exercises.each do |exercise|
-        max_temp = exercise.name + " Maximum"
-        max_temp2 = exercise_name.name + " Maximum"
-        if max_temp === max_temp2 then
-          @maximum_ruby_hash[max_temp].fetch("data").push([(WorkoutLog.find_by_id(exercise.workout_log_id)).date.strftime('%s').to_f*1000,ExerciseSet.where(:exercise_id => exercise.id).maximum('weight')])
-          #@maximum_ruby_hash[max_temp].fetch("data").push([(WorkoutLog.find_by_id(exercise.workout_log_id)).date,ExrciseSet.where(:exercise_id => exercise.id).maximum('weight')])
-          end
+
+    @exercise_names.each do |exercise|
+      key = exercise.name + " Maximum"
+      if @maximum_ruby_hash[key] != nil then
+        max_push = ExerciseSet.where("exercise_id = ? AND reps > '0'", exercise.id).maximum('weight')
+        date_push = WorkoutLog.find_by_id(exercise.workout_log_id).date.strftime('%s').to_f*1000
+        arry_push = [date_push,max_push]
+        @orig_hash = @maximum_ruby_hash[key]
+        @orig_hash.fetch("data").push(arry_push) 
+        @maximum_ruby_hash.merge(@orig_hash)
       end
     end
   end
