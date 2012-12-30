@@ -33,18 +33,14 @@
 <table align="center">
 <td><%= paginate @workout_logs %></td>
 </table>
-  <td><%= link_to t('.new', :default => t("helpers.links.new")),
-              new_workout_log_path,
-              :class => 'btn btn-primary' %></td>
-  <td><%= link_to t('.new', :default => t("Import")),
-              importlifts_workout_log_path,
-              :class => 'btn btn-primary' %></td>
-  <td><%= link_to t('.new', :default => t("Show All Notes")),
-              showallnotes_workout_log_path,
-              :class => 'btn btn-success' %></td>
-  <td><%= link_to t('.new', :default => t("Show All Workouts")),
-              showall_workout_log_path,
-              :class => 'btn btn-success' %></td>
-  <td><%= link_to t('.new', :default => t("Show Charts")),
-              showcharts_workout_log_path,
-              :class => 'btn btn-success' %></td>
+<table>
+  <tr>
+    <td><%= link_to t('.new', :default => t("helpers.links.new")), new_workout_log_path, :class => 'btn btn-primary' %></td>
+    <td><%= link_to t('.new', :default => t("Import")), importlifts_workout_log_path, :class => 'btn btn-primary' %></td>
+    <td><%= link_to t('.new', :default => t("Charts")), showcharts_workout_log_path, :class => 'btn btn-success' %></td>
+    <td><%= link_to t('.new', :default => t("All Workouts")), showall_workout_log_path, :class => 'btn btn-success' %></td>
+    <td><%= link_to t('.new', :default => t("All Notes")), showallnotes_workout_log_path, :class => 'btn btn-success' %></td>
+    <td><%= link_to " All Data Spreadsheet Format", showallprint_workout_log_path, :class => 'btn icon-print' %></td>
+    <td><%= link_to " All Data JSON Format", showall_workout_log_path(:format=>:json), :class => 'btn icon-list-alt' %></td>
+  </tr>
+</table>
