@@ -20,30 +20,30 @@ class WorkoutLogsController < ApplicationController
     @maximum_ruby_hash = Hash.new()
     @exercises = Exercise.all
     @exercises.each do |exercise|
-      #@workout_logs = WorkoutLog.find_all_by_id(exercise.workout_log_id)
+      #Filters exercises that don't have 4 or more days of data
       @workout_logs = WorkoutLog.joins(:exercises).where(:exercises => {:name => exercise.name})
       if @workout_logs.count > 4 then
-      @exercise_sets = ExerciseSet.find_all_by_exercise_id(exercise.id)
-      @exercise_sets.each do |exercise_set|
-        if exercise_set.weight.to_i > 0 && exercise_set.reps > 0 && exercise.name != "" then
-          @max_label = exercise.name + " Maximum"
-          if @maximum_ruby_hash[@max_label] == nil then
-            @maximum_ruby_hash[@max_label] = Hash.new()
-            @maximum_ruby_hash[@max_label].store("label", @max_label)
-            @maximum_ruby_hash[@max_label].store("data", Array.new())
+        @exercise_sets = ExerciseSet.find_all_by_exercise_id(exercise.id)
+        @exercise_sets.each do |exercise_set|
+          if exercise_set.weight.to_i > 0 && exercise_set.reps > 0 && exercise.name != "" then
+            @max_label = exercise.name + " Maximum"
+            if @maximum_ruby_hash[@max_label] == nil then
+              @maximum_ruby_hash[@max_label] = Hash.new()
+              @maximum_ruby_hash[@max_label].store("label", @max_label)
+              @maximum_ruby_hash[@max_label].store("data", Array.new())
+            end
+            #Only adding exercise data where there was weight involved and a completed rep because there's a failed column
+            max_push = ExerciseSet.where("exercise_id = ? AND reps > 0 AND weight > 0", exercise.id).maximum('weight')
+            date_push = WorkoutLog.find_by_id(exercise.workout_log_id).date.strftime('%s').to_f*1000
+            array_push = [date_push,max_push]
+            @temp_hash = @maximum_ruby_hash[@max_label]
+            @temp_hash.fetch("data").push(array_push) 
+            @maximum_ruby_hash.merge(@temp_hash)
           end
-          max_push = ExerciseSet.where("exercise_id = ? AND reps > 0 AND weight > 0", exercise.id).maximum('weight')
-          date_push = WorkoutLog.find_by_id(exercise.workout_log_id).date.strftime('%s').to_f*1000
-          arry_push = [date_push,max_push]
-          @orig_hash = @maximum_ruby_hash[@max_label]
-          @orig_hash.fetch("data").push(arry_push) 
-          @maximum_ruby_hash.merge(@orig_hash)
         end
-      end
       end
     end
     @maximum_ruby_hash = Hash[@maximum_ruby_hash.sort]
-
   end
 
   def showallnotes
@@ -181,7 +181,7 @@ class WorkoutLogsController < ApplicationController
     @workout_log.destroy
 
     respond_to do |format|
-      format.html { redirect_to workout_logs_url }
+      format.html { redirect_to workout_logs_url, notice: 'Workout log was successfully deleted.' }
       format.json { head :no_content }
     end
   end

@@ -10,6 +10,14 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <% flash.each do |name, msg| %>
+    <% if msg.is_a?(String) %>
+      <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+        <a class="close" data-dismiss="alert">&#215;</a>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      </div>
+    <% end %>
+  <% end %>
 </head>
 <body>
 	<div class="navbar navbar-fixed-top">
@@ -38,8 +46,6 @@
           <p>StrongApe is designed to easily log and track workouts.</p>        
     </div>
   </div>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 </div>
 </body>
 </html>
